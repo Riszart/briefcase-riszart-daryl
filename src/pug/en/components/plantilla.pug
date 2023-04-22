@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+	include head.pug
+	include settings.pug
+	include mixin.pug
+	body
+		include temporalStart.pug
+		include temporalEnd.pug
+		include header.pug
+		block content 
+		include footer.pug
+		script(src="/public/js/changePage.js") 
+		script(src="/public/js/script.js") 

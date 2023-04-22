@@ -1,0 +1,44 @@
+extends components/plantilla.pug
+block content 
+  main.container--contact
+    section.contact
+      h2.contact-tittle Let's do a great job.
+      div.contact-text 
+        h3 CONTACT
+        p Helllo, I'm Riszart, front-end web developer specialized in JavaScript, with approximately one year of experience carrying out various projects, feel free to contact me to ask me what you want regarding my area that I work in, I am a person who is committed to what you do, I became passionate about programming, and I love solving problems.
+      div.contact-send
+        p Send me a email
+      div.contact-social
+        ul 
+          li linkedin
+          li Twitter
+          li Facebook
+          li Instagram
+    section.content-formulario
+      div.back-formulario
+      form(action="/../js/mailler.js", method="post").formulario
+        div.formulario-close
+          span
+        div.formulario-contact
+          p contact 
+        div.formulario-input
+          div.formulario-input__left
+            label(for="name") name
+            input(type="text" name="name" id="name-subject")
+          div.formulario-input__right
+            label(for="email") email
+            input(type="email" name="email" id="email-subject")
+        div.formulario-message 
+          label(for="message") message
+          textarea(name="message", cols="30", rows="10" id="content-subject")
+        div.formulario-buttons
+          button(type="submit").formulario-buttons__send
+            p send message
+          div.formulario-buttons__reset
+            p reset
+        div.formulario-icons
+          img(src="", alt="")
+          img(src="", alt="")
+          img(src="", alt="")
+          img(src="", alt="")
+  //- script(src="../js/scriptContact.js") 

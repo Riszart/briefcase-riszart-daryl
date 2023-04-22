@@ -1,0 +1,62 @@
+.container--about {
+  margin-left: 200px;
+  position: relative;
+  .about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 50px 150px;
+    flex-direction: column;
+    &__tittle {
+      align-self: self-start;
+      @include font-size(48px)
+    }
+    &__photo {
+      margin-top: 0px;
+      width: 400px;
+      height: 400px;
+      align-self: self-end;
+      img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+      }
+    }
+    &__text {
+      width: 800px;
+      height: auto;
+      margin-top: 50px;
+      padding: 15px;
+      align-self: self-start;
+      border: solid 1px $color-primary;
+      p {
+        color: white;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+          margin: 0;
+          color: $color-hover;
+          @include font-size(12px)
+        }
+        &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+          margin: 10px 0 0 0;
+          @include font-size(16px)
+        }
+        &:nth-child(8), &:nth-child(9) {
+          margin: 0;
+          @include font-size(16px)
+        }
+        &:nth-child(10){
+          margin-top: 10px;
+          @include font-size(16px)
+        }
+      }
+      li {
+        color: white;
+        display: inline-block;
+      }
+      span {
+        color: $color-hover;
+        @include font-size(12px)
+      }
+    }
+  }
+}

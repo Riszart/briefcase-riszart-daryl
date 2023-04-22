@@ -1,0 +1,102 @@
+doctype html
+html(lang="en")
+	include components/head.pug
+	include components/settings.pug
+	include components/mixin.pug
+	body.container--summary
+		section.inicio-back__start
+			div 
+				h2 wait
+		section.inicio-back__end
+			div 
+				h2 wait
+		header.summary-nav
+			img(src="/src/img/web/riszart-logo-white.webp", alt="")
+			nav
+				ul
+					li: a(href="#profile") Profile
+					li: a(href="#education") Education
+					li: a(href="#technologies") Technologies
+					li: a(href="#experience") Work Experience
+		main.summary-main
+			section.summary-main__inicio
+				div.summary-main__inicio-up
+					h2 RISZART DARYL
+					h3 JAVASCRIPT DEVELOPER
+					p Web developer with more than one year of experience carrying
+					p out web projects, specialized in JavaScript.
+				div.summary-main__inicio-down
+			section.summary-main__grid
+				div.grid-img.card
+					div.card2
+				div.profile#profile
+					h6 Professional Profile
+					div.profile--efect 
+						div.profile--efect-content
+							section.profile--efect-content__up 
+								img(src="/src/img/web/riszart.jpeg", alt="")
+								div
+									h5 Riszart Daryl
+									span Professional JavaScript
+							section.profile--efect-content__down 
+								p I'am a JavaScript Developer with approximately one year of experience carrying out various projects such as: a game developed with canvas as well as statistics where it is graphed on canvas, landinpage, my own web page, ATM simulation, others. Passionate about technology, and committed to the projects I carry out.
+				div.education#education
+					h6 Professional Education
+					div.education--efect
+						div.education--efect-content
+							section.education--efect-content__top 
+								h5 Online Professional Courses
+								li Object oriented programming, (OOP) with js
+								li Closures and Scope in js
+								li Math and Statistics with js
+								li Creation workshop of the first video game with js
+								li Git and GitHub programming
+								li Transformation and Transition in css 
+								li Animations with CSS
+								li Web Design with css Grid and Flexbox
+								li Responsive Design: Mobile First Layout
+								li Web Design with HTML and CSS
+								li Frontend Developer course programming with js
+							section.education--efect-content__middle 
+								h5 Institute
+								span (Industrial Mechatronics Technician)
+								li Industrial Electronics
+								li Industrial Mechanics
+								li Solidwork Design
+								li Technical English
+								li Programming in C++
+								li PLC programming
+								li Processor programming with MAPLA
+								li Pneumatics and electro-pneumatics
+								li Industrial Robotics
+							section.education--efect-content__down
+								h5 High School
+								span (Elementary studies carried out in adolescence in a state school)
+				div.experience#experience
+					h6 Work Experience
+					div.experience--efect
+						div.experience--efect-content
+							ul 
+								li: p 2019 - actualidad: 
+									p freelancer
+								//- li: p 2018 - 2019:
+								//- 	p nose
+								//- li: p 2017 - 2018:
+								//- 	p nose
+								
+				div.technologies#technologies
+					h6 technologies
+					div.technologies--efect
+						div.technologies--efect-content
+							img(src="/src/img/svg/html-icon.svg", alt="")
+							img(src="/src/img/svg/css-icon.svg", alt="")
+							img(src="/src/img/svg/less-icon.svg", alt="")
+							img(src="/src/img/svg/sass-icon.svg", alt="")
+							img(src="/src/img/svg/javascript-icon.svg", alt="")
+							img(src="/src/img/svg/github-icon.svg", alt="")
+							img(src="/src/img/svg/nodejs-icon.svg", alt="")
+							img(src="/src/img/web/pug.png", alt="")
+			section.summary-main__coments
+		include components/footer.pug
+		//- script(src="/public/js/changePage.js") 
+		script(src="/public/js/summary.js") 

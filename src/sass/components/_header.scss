@@ -1,0 +1,87 @@
+.header-principal {
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  padding: 20px;
+  background-color: $color-dark;
+  border-right: solid get-opacity($color-sky, .5) 2px;
+  z-index: 100;
+  .header-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 150px;
+      height: 220px;
+      top: 0;
+      .name {
+        width: 100%;
+      }
+      .photo {
+        border: solid 2px $color-sky;
+        border-radius: 50%;
+      }
+      .logo {
+        border: solid $color-sky 1px;
+        width: 100%;
+        cursor: pointer;
+        &:hover {
+          border: solid 2px $color-hover;
+        }
+      }
+    }
+    &__list {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 0;
+      li {
+        width: 100%;
+        height: 50px;
+        border-top: solid get-opacity($color-sky, .5) 1px;
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+        @include border;
+        p {
+          color: $color-sky;
+          text-transform: capitalize;
+          font-weight: 500;
+          margin-bottom: 0;
+          @include font-size(20px)
+        }
+        &:last-child{
+          border-bottom: solid get-opacity($color-sky, .5) 1px;
+        }
+        &:hover p{
+          text-decoration: none;
+        }
+      }
+    }
+    &__icons {
+      display: grid;
+      grid-template-columns: 50px 50px;
+      gap: 20px;
+      img {
+        height: 50px;
+        width: 50px;
+        @include hoverBorderAfter;
+        @include hoverBorderBefore;
+      }
+    }
+    &__footernav {
+      width: 100%;
+      p {
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 0;
+        color: $color-sky;
+      }
+    }
+  }
+}

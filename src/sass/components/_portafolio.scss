@@ -1,0 +1,174 @@
+.container--portafolio {
+  margin-left: 200px;
+  height: auto;
+  .portafolio {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    &__tittle {
+      align-self: flex-end;
+      margin: 0;
+      @include font-size(58px)
+    }
+    &__text {
+      align-self: flex-start;
+      margin-bottom: 50px;
+      @include font-size(28px);
+      p {
+        margin-bottom: 0;
+        color: $color-sky;
+      }
+    }
+    &__content-li {
+      align-self: flex-end;
+      height: auto;
+      width: 80%;
+      padding: 0;
+      .content-project__item {
+        list-style: none;
+        width: 80%;
+        height: 400px;
+        position: relative;
+        margin: 50px auto;
+        border: solid 1px $color-sky;
+        border-radius: 5px;
+        overflow: hidden;
+        &:hover {
+          border: solid 2px $color-hover;
+        }
+        div {
+          width: calc(100% + 20px);
+          height: 100%;
+          position: relative;
+          cursor: pointer;
+          overflow-y: scroll;
+          img {
+            filter: blur(5px);
+            width: 100%;
+            &:hover {
+              filter: blur(0);
+              .project-name:hover {
+                color: $color-hover;
+              }
+            }
+          }
+        }
+        .project-name {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          padding-left: 10px;
+          margin: 0;
+          text-transform: capitalize;
+          font-weight: 800;
+          color: $color-primary;
+          letter-spacing: 5px;
+          @include font-size(24px)
+        }
+      }
+    }
+  }
+  .box-float {
+    display: none;
+    height: auto;
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: solid 2px $color-primary;
+    background-color: $color-dark;
+    margin-top: 100px;
+    z-index: 1000;
+    &:hover {
+      .box-float__close {
+        display: block;
+      }
+    }
+    &__close {
+      display: none;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      border-radius: 50%;
+      background-color: $color-dark;
+      border: solid 2px $color-sky;
+      cursor: pointer;
+      &:hover {
+        border: solid 2px $color-hover;
+        .box-float__close-item {
+          background-color: $color-hover;
+        }
+        .box-float__close-item::before {
+          background-color: $color-hover;
+        }
+      }
+      &-item {
+        height: 4px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 5px;
+        border-radius: 2px;
+        background-color: $color-sky;
+        transform: rotate(45deg);
+        &::before {
+          content: "";
+          display: block;
+          height: 4px;
+          width: 35px;
+        border-radius: 2px;
+          background-color: $color-sky;
+          transform: rotate(90deg);
+      }
+      }
+    }
+    &__img-project {
+      width: 100%;
+      height: auto;
+      .img-project {
+        width: 100%;  
+      }
+    }
+    &__project-name {
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 0;
+      font-weight: 600;
+      @include font-size(24px)
+    }
+    &__project-description {
+      padding-left: 10px;
+      margin-bottom: 0;
+      @include font-size(16px)
+    }
+    &__project-programs {
+      display: flex;
+      p {
+        padding-left: 10px;
+        margin-bottom: 0;
+        margin-right: 10px;
+        @include font-size(18px)
+      }
+      div {
+        height: 20px;
+        width: 20px;
+        background-color: black;
+      }
+    }
+    .go-to-page {
+      margin: 0;
+      position: absolute;
+      padding-right: 10px;
+      bottom: 0;
+      right: 0;
+      @include font-size(24px);
+      cursor: pointer;
+      &:hover {
+        color: $color-hover;
+      }
+    }
+  }
+}

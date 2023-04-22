@@ -1,0 +1,246 @@
+.container--contact {
+  margin-left: 200px;
+  height: auto;
+  .contact {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    &-tittle {
+      align-self: flex-start;
+      margin: 0;
+      @include font-size(58px)
+    }
+    &-text {
+      margin-top: 50px;
+      margin-left: 50px;
+      h3 {
+        @include font-size(32px);
+      }
+      p {
+        display: block;
+        height: auto;
+        width: 800px;
+        color: $color-sky;
+        @include font-size(22px);
+      }
+    }
+    &-send {
+      width: 250px;
+      padding: 15px 0;
+      margin-top: 50px;
+      margin-left: 50px;
+      margin-bottom: 50px;
+      border: solid 2px $color-primary;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      @include font-size(28px);
+      p {
+        margin: 0;
+      }
+      &:hover {
+        border: solid 2px $color-hover;
+        color: $color-hover;
+      }
+    }
+    &-social {
+      height: auto;
+      width: 150px;
+      margin-left: 50px;
+      border: solid 2px $color-primary;
+      ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include reset;
+        li {
+          padding: 15px 0;
+          cursor: pointer;
+          font-weight: 600;
+          transition: 0.6s;
+          @include font-size(22px);
+          &:hover {
+            transition: 0.8s;
+            transition-timing-function: ease-in-out;
+            color: $color-hover;
+          }
+        }
+      }
+      &:hover {
+        border: solid 2px $color-hover;
+      }
+    }
+  }
+  .content-formulario {
+    display: block;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-image: url(../img/ocean.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: height 1s ease-in;
+    .back-formulario {
+      height: 600px;
+      width: 700px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      background-color: get-opacity($color-dark, 0.8);
+    }
+    .formulario {
+      height: 600px;
+      width: 700px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      padding: 0 50px;
+      &-close {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        background-color: get-opacity(red, 0.5);
+        &:hover {
+          background-color: get-opacity(red, 1);
+        }
+        span {
+          display: block;
+          width: 40px;
+          height: 4px;
+          position: absolute;
+          top: 18px;
+          transform: rotate(45deg);
+          border-radius: 5px;
+          background-color: $color-sky;
+          &::before {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 4px;
+            border-radius: 5px;
+            transform: rotate(90deg);
+            background-color: $color-sky;
+          }
+        }
+      }
+      &-contact {
+        p {
+          padding-top: 15px;
+          margin: 0;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: $color-sky;
+          border-bottom: solid 1px $color-sky;
+          @include font-size(28px)
+        }
+      }
+      label {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: 100;
+        color: $color-sky;
+        text-transform: uppercase;
+      }
+      &-input {
+        display: flex;
+        justify-content: space-between;
+        
+        &__left, &__right {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+        }
+        input {
+          height: 40px;
+          width: 250px;
+          border-radius: 5px;
+          background-color: transparent;
+          border: solid 1px $color-sky;
+          color: $color-sky;
+          cursor: text;
+          &:hover {
+            size: 15;
+          }
+        }
+      }
+      &-message {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        textarea{
+          height: 150px;
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          background-color: transparent;
+          border: solid 1px $color-sky;
+          color: $color-sky;
+          cursor: text;
+        }
+      }
+      &-buttons {
+        display: flex;
+        gap: 15px;
+        &__send, &__reset {
+          height: 40px;
+          width: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 15px;
+          background-color: $color-sky;
+          border-radius: 5px;
+          cursor: pointer;
+          p {
+            display: block;
+            margin: 0;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+          }
+        }
+        &__reset {
+          background-color: transparent;
+          border: solid 1px $color-sky;
+          p {
+            color: $color-sky;
+          }
+        }
+      }
+      &-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 25px;
+        img {
+          height: 35px;
+          width: 35px;
+          background-color: transparent;
+          border-radius: 50%;
+          border: solid 1px $color-sky;
+          &:hover {
+            background-color: get-opacity($color-sky, 0.2);
+          }
+        }
+        
+      }
+
+    }
+  }
+}
+
+.change-property{
+  height: 100% !important;
+  transition: height 1s ease-out !important;
+}

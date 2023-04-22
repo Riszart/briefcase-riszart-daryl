@@ -1,0 +1,134 @@
+$color-dark: #252525;
+$color-sky: #ffffff;
+$color-primary: #318CE7;
+$color-hover: #00ff75;
+$side-box: 40px;
+
+
+@mixin border{
+	position: relative;
+	overflow: hidden;
+	background-color: transparent;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	transition: .5s;
+	z-index: 1;
+	font-family: inherit;
+	color: $color-hover;
+	&::before {
+		content: '';
+		width: 0;
+		height: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(0);
+		background: $color-hover;
+		transition: 1s ease;
+		display: block;
+		z-index: -1;
+	}
+	&:hover::before {
+		width: 100%;
+		border: solid 2px $color-hover;
+	}
+	&:hover {
+		border: solid 2px $color-hover;
+	}
+}
+
+@mixin hoverBorderAfter{
+	transform: scale(1);
+	transition: 1s ease-out;
+	cursor: pointer;
+}
+@mixin hoverBorderBefore{
+	&:hover {
+		transition: .4s ease-in;
+		transform: scale(0.9);
+		outline: solid 2px $color-hover;
+		border-radius: 20px;
+	}
+}
+
+@mixin reset{
+	margin: 0;
+	padding: 0;
+}
+@mixin box {
+	padding: 50px;
+	height: 100%;
+	width: 100%;
+	border-radius: 5px;
+}
+
+@mixin h6{
+	position: absolute;
+	top: 0;
+	@include reset;
+	@include font-size(24px)
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size)*1.5;
+}
+
+@function calculateRem($size){
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@function get-opacity($color, $nivel) {
+	@return rgba($color, $nivel)
+}
+
+
+body {
+  user-select: none;
+  background-color: $color-dark;
+	color: $color-primary;
+}
+body::-webkit-scrollbar {
+	background-color: $color-dark;
+	width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: $color-primary;
+
+}
+
+
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+@mixin contend-efect1{
+	background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+	transition: all .3s;
+	border-radius: 5px;
+	&:hover {
+		box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+	 }
+}
+@mixin item-efect1{
+	background-color: #1a1a1a;
+	transition: all .2s;
+	border-radius: 5px;
+	&:hover {
+		transform: scale(0.99);
+		border-radius: 5px;
+	 }
+}
+
+@mixin background-propiedad {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
