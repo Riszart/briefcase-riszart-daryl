@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "css": "sass src/sass: public/css",
-    "html": "pug ./src/pug/en --out ./public/html/en --pretty"
+    "html": "pug ./src/pug/en --out ./public/html/en --pretty",
+    "deploy": "gh-pages -d public/html/en"
   },
   "author": "Riszart Daryl",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
