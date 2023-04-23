@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "portafolio",
   "main": "index.js",
+  "homepage": "https://riszart.github.io/briefcase-riszart-daryl/",
   "scripts": {
     "css": "sass src/sass: public/css",
     "html": "pug ./src/pug/en --out ./public/html/en --pretty --watch",
     "deploy": "gh-pages -d public/html/en"
   },
-  "author": "Riszart Daryl",
+  "author": "Riszart Daryl 22.r.d.v.c.12@gmail.com ",
   "license": "MIT",
   "devDependencies": {
     "gh-pages": "^5.0.0"
