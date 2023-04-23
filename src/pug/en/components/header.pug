@@ -1,3 +1,4 @@
+include settings.pug
 header.header-principal
   div.header-container
     div.header-container__logo
@@ -10,7 +11,7 @@ header.header-principal
         else
           li(class=item): p=item
     div.header-container__icons
-      img(src="/src/img/svg/github-icon.svg", alt='github', class='github')
+      img(src="./src/img/svg/github-icon.svg", alt='github', class='github')
       img(src="/src/img/svg/linkedin-icon.svg", alt='linkeding', class='linkeding')
       img(src="/src/img/svg/twitter-icon.svg", alt='twitter', class='twitter')
       img(src="/src/img/svg/facebook-icon.svg", alt='facebook', class='facebook')
