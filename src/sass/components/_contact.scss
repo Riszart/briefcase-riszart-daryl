@@ -41,6 +41,7 @@
       &:hover {
         border: solid 2px $color-hover;
         color: $color-hover;
+
       }
     }
     &-social {
@@ -81,11 +82,15 @@
     top: 0;
     left: 0;
     z-index: 100;
-    background-image: url(../img/ocean.jpg);
+    background-color: $color-dark;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     transition: height 1s ease-in;
+    box-shadow:  
+      0px 0px 10px 0px $color-hover inset,
+      -0px -0px 10px 0px $color-hover inset;
+
     .back-formulario {
       height: 600px;
       width: 700px;
@@ -96,6 +101,7 @@
       background-color: get-opacity($color-dark, 0.8);
     }
     .formulario {
+      background-color: $color-primary;
       height: 600px;
       width: 700px;
       position: absolute;
@@ -179,7 +185,7 @@
         display: flex;
         flex-direction: column;
         textarea{
-          height: 150px;
+          height: 200px;
           width: 100%;
           padding: 10px;
           border-radius: 5px;
@@ -187,36 +193,42 @@
           border: solid 1px $color-sky;
           color: $color-sky;
           cursor: text;
+          resize:none;
         }
       }
       &-buttons {
         display: flex;
         gap: 15px;
-        &__send, &__reset {
+        &__send{
           height: 40px;
-          width: 200px;
+          width: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
           margin-top: 15px;
-          background-color: $color-sky;
+          background-color: $color-hover;
           border-radius: 5px;
+          border: solid white 2px;
           cursor: pointer;
           p {
+            font-weight: 900;
             display: block;
             margin: 0;
             color: black;
             text-transform: uppercase;
             letter-spacing: 3px;
           }
-        }
-        &__reset {
-          background-color: transparent;
-          border: solid 1px $color-sky;
-          p {
-            color: $color-sky;
+          &:hover {
+            background-color: $color-sky;
           }
         }
+        // &__reset {
+        //   background-color: transparent;
+        //   border: solid 1px $color-sky;
+        //   p {
+        //     color: $color-sky;
+        //   }
+        // }
       }
       &-icons {
         display: flex;

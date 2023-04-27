@@ -1,4 +1,5 @@
-//document.body.style.overflow = "hidden"
+document.body.style.overflow = "hidden"
+setTimeout(()=>{document.body.style.overflow = "auto"},2000)
 const start = ()=>{
 	setTimeout(()=>{
 		let a = document.querySelector(".inicio-back__start")
@@ -9,15 +10,12 @@ const start = ()=>{
 }
 start()
 
-function end(){
+async function end(){
+	return new Promise((resolve, reject)=>{
 		let b = document.querySelector(".inicio-back__end")
 		b.style.width = "100vw"
 		b.style.transition = "width 1s ease"
-}
-if(window.location.pathname == '/my-portfolio-riszart/'){
-	document.querySelector('.logo').src = 'img/riszart-logo-white.webp'	
-	document.querySelector('.github').src = 'img/github-icon.svg'
-	document.querySelector('.linkeding').src = 'img/linkedin-icon.svg'
-	document.querySelector('.twitter').src = 'img/twitter-icon.svg'
-	document.querySelector('.facebook').src = 'img/facebook-icon.svg'
+		setTimeout(()=>{resolve()},1000)
+		setTimeout(()=>{b.style.width = "0";},1250)
+	})
 }

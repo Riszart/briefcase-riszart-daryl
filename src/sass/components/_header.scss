@@ -4,7 +4,10 @@
   position: fixed;
   padding: 20px;
   background-color: $color-dark;
-  border-right: solid get-opacity($color-sky, .5) 2px;
+  border-right: solid $color-primary 2px;
+  box-shadow:
+    -50px 50vh 500px $color-primary,
+    -50px -50vh 500px $color-hover;
   z-index: 100;
   .header-container {
     width: 100%;

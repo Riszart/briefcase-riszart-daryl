@@ -1,6 +1,6 @@
-$color-dark: #252525;
+$color-dark: #161616;
 $color-sky: #ffffff;
-$color-primary: #318CE7;
+$color-primary: #0080ff;
 $color-hover: #00ff75;
 $side-box: 40px;
 
@@ -77,7 +77,7 @@ $side-box: 40px;
 }
 
 @function calculateRem($size){
-	$remSize: $size / 16px;
+	$remSize: calc($size / 16px);
 	@return $remSize * 1rem;
 }
 
@@ -97,7 +97,6 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-thumb {
 	background-color: $color-primary;
-
 }
 
 

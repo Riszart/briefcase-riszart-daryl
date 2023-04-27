@@ -12,7 +12,7 @@
     background-color: $color-dark;
     img {
       height: 50px;
-      width: 150px;
+      width: 130px;
     }
     nav {
       ul {
@@ -85,9 +85,9 @@
         border-radius: 5px;
         @include contend-efect1;
         div {
-          background-image: url(../img/riszart-logo-white.webp);
+          background-image: url('/src/img/web/riszart-logo-white.webp');
           @include background-propiedad;
-	        @include item-efect1;
+          @include item-efect1;
           @include box;
         }
       }
@@ -255,9 +255,7 @@
             img {
               height: 100px;
               width: 100px;
-
             }
-
           }
         }
       }

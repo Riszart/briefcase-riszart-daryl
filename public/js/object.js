@@ -19,6 +19,9 @@ class project{
     const div = document.createElement("div")
     div.addEventListener("click", ()=>{
       this.showItem()
+      window.scroll({
+        top: 50,
+      });
     })
     const img = document.createElement("img")
     div.appendChild(img)
@@ -40,12 +43,11 @@ class project{
     document.querySelector(".box-float__project-name ").innerText = this.name
     document.querySelector(".box-float__project-description").innerText = this.description
     document.querySelector(".box-float__project-programs").innerText = this.programs
-    document.querySelector(".box-float__close").addEventListener("click", ()=>this.closeItem())
-    const p = document.createElement("p")
-    p.classList.add("go-to-page")
-    p.innerText = "Ir a la pagina"
-    p.addEventListener("click", ()=>this.openItem())
-    document.querySelector(".box-float").appendChild(p)
+    document.querySelector(".box-float__close").addEventListener("click", ()=>{
+      this.closeItem()
+    })
+    document.querySelector(".go-to-page").onclick = ()=>this.openItem()
+    document.querySelector(".go-to-page").innerText = "Ir a la pagina"
   }
 
   closeItem(){
@@ -54,10 +56,12 @@ class project{
 
     document.querySelector(".box-float").style.display = "none"
     document.querySelector(".portafolio").style.filter = "blur(0)"
-    document.querySelector(".img-project").src = "none"
+    document.querySelector(".img-project").src = ""
     document.querySelector(".box-float__project-name").innerText = "none"
     document.querySelector(".box-float__project-description").innerText = "none"
     document.querySelector(".box-float__project-programs").innerText = "none"
+    document.querySelector(".go-to-page").onclick = ()=>{}
+    document.querySelector(".go-to-page").innerText = ""
 }
   openItem(){
     window.open(this.url, "_blank")
@@ -65,7 +69,7 @@ class project{
 }
 
 const item6 = {
-  img: "../img/project/api-rest/index.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/src/img/projects/api-rest/index.png",
   url: "https://riszart.github.io/api-rest_practice/",
   name: "API-rest con Fetch",
   description: "uso de API-rest con metodo fetch, traer, agregar a favoritos, eliminar de favoritos y agregar una nueva imagen de gato o perro al backend con el uso de FECTH",
@@ -75,7 +79,7 @@ const obj6=  new project(item6)
 obj6.createElement()
 
 const item5 = {
-  img: "../img/project/atm/atm-index.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/src/img/projects/atm/atm-index.png",
   url: "https://riszart.github.io/ATM-practice/",
   name: "RISZBANK",
   description: "pagina realisada, donde practico lo aprendido con itenacion en funcione y Promise asi como avansando en como comprender para evitar repetir codigo en js, avansando en el entendimiento de preprosesadores: PUG y SASS",
@@ -85,7 +89,7 @@ const obj5=  new project(item5)
 obj5.createElement()
 
 const item4 = {
-  img: "../img/project/screencapture-riszart-github-io-processors-practice-project-2023-03-03-22_03_59.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/src/img/projects/screencapture-riszart-github-io-processors-practice-project-2023-03-03-22_03_59.png",
   url: "https://riszart.github.io/processors-practice-project/",
   name: "page BLACKPINK",
   description: "pagina realisada donde pongo aprueba lo aprendido con preprosesadores como HTML por PUG y CSS por SASS",
@@ -95,7 +99,7 @@ const obj4=  new project(item4)
 obj4.createElement()
 
 const item3 = {
-  img: "../img/project/screencapture-riszart-github-io-proyecto-game-2023-03-03-22_03_31.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/src/img/projects/screencapture-riszart-github-io-proyecto-game-2023-03-03-22_03_31.png",
   url: "https://riszart.github.io/proyecto-game/",
   name: "riszgame",
   description: "pagina realisa usando canvas para poniendo en practica lo aprendido",
@@ -105,7 +109,7 @@ const obj3=  new project(item3)
 obj3.createElement()
 
 const item2 = {
-  img: "../img/project/screencapture-riszart-github-io-frontend-developer-js-practico-2023-03-03-21_36_40.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/src/img/projects/screencapture-riszart-github-io-frontend-developer-js-practico-2023-03-03-21_36_40.png",
   url: "https://riszart.github.io/frontend-developer-js-practico/",
   name: "shop",
   description: "aplicando el paradigma de objetos, modifique un proyecto que lo realise anteriormente modificandolo, agragando el uso de proprosesadores como PUG para HTML y SASS para CSS, en caso de javscript cambie la logiaca para que funcione con objetos",
@@ -115,7 +119,7 @@ const obj2=  new project(item2)
 obj2.createElement()
 
 const item1 = {
-  img: "../img/project/screencapture-riszart-github-io-estadistica-math-2023-03-03-19_57_59.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/src/img/projects/screencapture-riszart-github-io-estadistica-math-2023-03-03-19_57_59.png",
   url: "https://riszart.github.io/estadistica-math/",
   name: "proyecto de estadistica",
   description: "proyecto de estadisca realisado con canvas de javascript",

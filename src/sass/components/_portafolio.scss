@@ -1,8 +1,11 @@
+html {
+  scroll-behavior: initial;
+}
 .container--portafolio {
-  margin-left: 200px;
+  margin-left: 20%;
+  margin-right: 5%;
   height: auto;
   .portafolio {
-    padding: 50px 100px;
     display: flex;
     flex-direction: column;
     &__tittle {
@@ -12,7 +15,7 @@
     }
     &__text {
       align-self: flex-start;
-      margin-bottom: 50px;
+      margin-bottom: 0px;
       @include font-size(28px);
       p {
         margin-bottom: 0;
@@ -30,11 +33,17 @@
         height: 400px;
         position: relative;
         margin: 50px auto;
-        border: solid 1px $color-sky;
+        border: solid 1px $color-primary;
         border-radius: 5px;
         overflow: hidden;
+        box-shadow:
+          5px 5px 30px 0px $color-hover,
+          -5px -5px 30px 0px $color-primary;
         &:hover {
           border: solid 2px $color-hover;
+          box-shadow:
+          15px 15px 50px 0px $color-primary ,
+          -15px -15px 50px 0px $color-hover;
         }
         div {
           width: calc(100% + 20px);
@@ -43,17 +52,15 @@
           cursor: pointer;
           overflow-y: scroll;
           img {
-            filter: blur(5px);
+            filter: blur(2px);
             width: 100%;
             &:hover {
               filter: blur(0);
-              .project-name:hover {
-                color: $color-hover;
-              }
             }
           }
         }
         .project-name {
+          background-color: black;
           width: 100%;
           position: absolute;
           bottom: 0;
@@ -119,7 +126,7 @@
           display: block;
           height: 4px;
           width: 35px;
-        border-radius: 2px;
+          border-radius: 2px;
           background-color: $color-sky;
           transform: rotate(90deg);
       }
@@ -133,18 +140,21 @@
       }
     }
     &__project-name {
-      text-transform: uppercase;
+      text-transform: capitalize;
       text-align: center;
       margin-bottom: 0;
       font-weight: 600;
       @include font-size(24px)
     }
     &__project-description {
+      text-transform: capitalize;
       padding-left: 10px;
       margin-bottom: 0;
+      color: white;
       @include font-size(16px)
     }
     &__project-programs {
+      margin: 10px;
       display: flex;
       p {
         padding-left: 10px;
@@ -159,6 +169,7 @@
       }
     }
     .go-to-page {
+      text-transform: capitalize;
       margin: 0;
       position: absolute;
       padding-right: 10px;
