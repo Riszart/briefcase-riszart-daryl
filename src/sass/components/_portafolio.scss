@@ -2,48 +2,75 @@ html {
   scroll-behavior: initial;
 }
 .container--portafolio {
-  margin-left: 20%;
-  margin-right: 5%;
+  margin: 0;
+  padding: 70px 15px 0;
   height: auto;
+  @include media(tablet){
+    margin-left: 20%;
+    margin-right: 5%;
+  }
   .portafolio {
     display: flex;
     flex-direction: column;
     &__tittle {
-      align-self: flex-end;
+      align-self: center;
       margin: 0;
-      @include font-size(58px)
+      @include font-size(24px);
+      @include media(tablet){
+        align-self: flex-end;
+        @include font-size(58px);
+      }
     }
     &__text {
-      align-self: flex-start;
+      align-self: center;
       margin-bottom: 0px;
-      @include font-size(28px);
+      @include font-size(18px);
+      @include media(tablet){
+        align-self: flex-start;
+        @include font-size(28px);
+      }
       p {
+        display: inline;
         margin-bottom: 0;
         color: $color-sky;
+        @include media(tablet){
+          display: block;
+        }
       }
     }
     &__content-li {
-      align-self: flex-end;
+      align-self: center;
       height: auto;
-      width: 80%;
+      width: 95%;
       padding: 0;
+      @include media(tablet){
+        align-self: flex-end;
+        width: 80%;
+      }
       .content-project__item {
         list-style: none;
-        width: 80%;
+        width: 100%;
         height: 400px;
         position: relative;
-        margin: 50px auto;
+        margin: 10px auto;
         border: solid 1px $color-primary;
         border-radius: 5px;
         overflow: hidden;
         box-shadow:
+          0px 0px 10px 0px $color-hover,
+          -0px -0px 10px 0px $color-primary;
+        @include media(tablet){
+          width: 80%;
+          margin: 50px auto;
+          box-shadow:
           5px 5px 30px 0px $color-hover,
           -5px -5px 30px 0px $color-primary;
-        &:hover {
-          border: solid 2px $color-hover;
-          box-shadow:
-          15px 15px 50px 0px $color-primary ,
-          -15px -15px 50px 0px $color-hover;
+          &:hover {
+            border: solid 2px $color-hover;
+            box-shadow:
+            15px 15px 50px 0px $color-primary ,
+            -15px -15px 50px 0px $color-hover;
+          }
         }
         div {
           width: calc(100% + 20px);
@@ -52,8 +79,11 @@ html {
           cursor: pointer;
           overflow-y: scroll;
           img {
-            filter: blur(2px);
+            filter: blur(0);
             width: 100%;
+            @include media(tablet){
+              filter: blur(2px);
+            }
             &:hover {
               filter: blur(0);
             }
@@ -78,7 +108,7 @@ html {
   .box-float {
     display: none;
     height: auto;
-    width: 70%;
+    width: 90%;
     position: absolute;
     top: 0;
     left: 50%;
@@ -87,13 +117,21 @@ html {
     background-color: $color-dark;
     margin-top: 100px;
     z-index: 1000;
-    &:hover {
-      .box-float__close {
-        display: block;
+    @include media(tablet){
+      width: 70%;
+    }
+    .box-float__close {
+      display: block;
+    }
+    @include media(tablet){
+      &:hover {
+        .box-float__close {
+          display: block;
+        }
       }
     }
+
     &__close {
-      display: none;
       height: 50px;
       width: 50px;
       position: absolute;
@@ -103,6 +141,9 @@ html {
       background-color: $color-dark;
       border: solid 2px $color-sky;
       cursor: pointer;
+      @include media(tablet){
+        display: none;
+      }
       &:hover {
         border: solid 2px $color-hover;
         .box-float__close-item {
@@ -144,39 +185,52 @@ html {
       text-align: center;
       margin-bottom: 0;
       font-weight: 600;
-      @include font-size(24px)
+      @include font-size(24px);
     }
     &__project-description {
       text-transform: capitalize;
       padding-left: 10px;
+      padding-right: 10px;
       margin-bottom: 0;
       color: white;
-      @include font-size(16px)
+      @include font-size(16px);
+      @include media(tablet){
+        padding-left: 10px;
+        padding-right: 0px;
+      }
     }
     &__project-programs {
       margin: 10px;
-      display: flex;
-      p {
-        padding-left: 10px;
-        margin-bottom: 0;
-        margin-right: 10px;
-        @include font-size(18px)
+      display: block;
+      text-align: center;
+      @include media(tablet){
+        display: flex;
       }
-      div {
-        height: 20px;
-        width: 20px;
-        background-color: black;
-      }
+      // p {
+      //   padding-left: 10px;
+      //   margin-bottom: 0;
+      //   margin-right: 10px;
+      //   @include font-size(18px)
+      // }
+      // div {
+      //   height: 20px;
+      //   width: 20px;
+      //   background-color: black;
+      // }
     }
     .go-to-page {
       text-transform: capitalize;
       margin: 0;
-      position: absolute;
+      position: relative;
       padding-right: 10px;
       bottom: 0;
       right: 0;
+      text-align: center;
       @include font-size(24px);
       cursor: pointer;
+      @include media(tablet){
+        position: absolute;
+      }
       &:hover {
         color: $color-hover;
       }

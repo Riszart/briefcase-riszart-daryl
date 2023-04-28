@@ -9,7 +9,7 @@
   }  
   
   @else if $breakpoint == desktop-s {  
-    @media only screen and (min-width: 992px) { @content; }  
+    @media only screen and (min-width: 1000px) { @content; }  
   } 
   
   @else if $breakpoint == desktop-m {  

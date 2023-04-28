@@ -1,38 +1,76 @@
+html {
+  scroll-behavior: smooth;
+}
 .container--summary {
   width: 100%;
   height: auto;
   .summary-nav {
-    height: 60px;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
     padding: 0 25px;
-    border-bottom: solid 1px $color-sky;
+    top: 0;
+    border-bottom: solid 1px $color-primary;
     background-color: $color-dark;
-    img {
+    z-index: 100;
+    @include media(desktop-s){
+      height: 60px;
+      border-bottom: solid 1px $color-sky;
+    }
+    img{
       height: 50px;
       width: 130px;
+      &:nth-child(3){
+        height: 30px;
+        width: 30px;
+        @include media(desktop-s){
+          display: none;
+        }
+      }
     }
     nav {
-      ul {
+      width: 100%;
+      position: absolute;
+      display: none;
+      left: 0;
+      top: 50px;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      flex-direction: column;
+      background-color: $color-dark;
+      @include media(desktop-s){
         display: flex;
-        gap: 10px;
-        padding: 0;
-        margin: 0;
-        li{
-          text-align: center;
+        flex-direction: row;
+        position: relative;
+        width: auto;
+        background-color: transparent;
+        top: 0px;
+      }
+      li{
+        display: block;
+        height: 30px;
+        width: 180px;
+        list-style: none;
+        text-align: center;
+        border: solid 2px $color-primary;
+        @include border;
+        @include media(desktop-s){
+          border: none;
+        }
+        a{
           display: block;
-          height: 30px;
-          width: 180px;
-          list-style: none;
-          @include border;
-          a{
-            display: block;
-            height: 100%;
-            width: 100%;
-            color: $color-sky;
-            text-decoration: none;
+          height: 100%;
+          width: 100%;
+          color: $color-sky;
+          text-decoration: none;
+          background-color: $color-dark;
+          @include media(desktop-s){
+            background-color: transparent;
           }
         }
       }
@@ -41,67 +79,102 @@
   .summary-main {
     &__inicio {
       width: 100%;
-      height: 700px;
+      height: 400px;
+      @include media(desktop-s){
+        height: 700px;
+      }
       &-up {
         height: 90%;
         display: flex;
         flex-direction: column; 
         justify-content: center;
-        margin: 0 70px;
+        margin: 10px;
+        text-align: center;
+        @include media(desktop-s){
+          margin: 0 70px;
+          text-align: start;
+        }
         h2 {
           font-weight: 900;
-          @include font-size(68px);
+          @include font-size(40px);
           @include reset;
+          @include media(desktop-s){
+            @include font-size(68px);
+          }
         }
         h3{
           color: get-opacity($color-primary, .8);
           font-weight: 700;
-          @include font-size(32px);
+          @include font-size(22px);
           @include reset;
+          @include media(desktop-s){
+            @include font-size(32px);
+          }
         }
         p{
           font-weight: 400;
           color: get-opacity($color-sky, .5);
-          @include font-size(18px);
+          @include font-size(14px);
           @include reset;
+          @include media(desktop-s){
+            @include font-size(18px);
+          }
         }
       }
       &-down {
         width: 100%;
         height: 10%;
         background-color: $color-primary;
+        @include media(desktop-s){
+          height: 10%;
+        }
       }
     }
     &__grid {
       display: grid;
-      margin: 0 150px;
-      margin-top: 50px;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(11, 150px);
+      margin: 0;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(auto-fill, auto);
+      @include media(desktop-s){
+        margin: 0 150px;
+        margin-top: 50px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(11, 150px);
+      }
       .grid-img {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        margin: 0 0 $side-box $side-box;
+        margin: 40px;
         border-radius: 5px;
         @include contend-efect1;
+        @include media(desktop-s){
+          grid-column: 2/3;
+          grid-row: 1/2;
+          margin: 0 0 $side-box $side-box;
+        }
         div {
           background-image: url('/src/img/web/riszart-logo-white.webp');
           @include background-propiedad;
           @include item-efect1;
-          @include box;
+          padding: 40px;
+          @include media(desktop-s){
+            @include box;
+          }
         }
       }
       .profile {
         height: 100%;
         width: 100%;
-        grid-column: 1/2;
-        grid-row: 1/6;
         position: relative;
         border-top: solid 3px $color-primary;
-        border-right: solid 3px $color-primary;
         padding-top: $side-box;
-        padding-right: $side-box;
-        padding-bottom: $side-box;
+        padding-right: 0;
+        padding-bottom: 0;
+        @include media(desktop-s){
+          grid-column: 1/2;
+          grid-row: 1/6;
+          padding-right: $side-box;
+          border-right: solid 3px $color-primary;
+          padding-bottom: $side-box;
+        }
         h6 {
           @include h6;
         }
@@ -148,14 +221,18 @@
       .experience {
         height: 100%;
         width: 100%;
-        grid-column: 1/2;
-        grid-row: 6/12;
         position: relative;
         border-top: solid 3px $color-primary;
-        border-right: solid 3px $color-primary;
+        
         padding-top: $side-box;
-        padding-right: $side-box;
+        padding-right: 0;
         padding-bottom: $side-box;
+        @include media(desktop-s){
+          grid-column: 1/2;
+          grid-row: 6/12;
+          padding-right: $side-box;
+          border-right: solid 3px $color-primary;
+        }
         h6 {
           @include h6;
         }
@@ -182,16 +259,19 @@
       .education {
         height: 100%;
         width:100%;
-        grid-column: 2/3;
-        grid-row: 2/9;
         display: flex;
         flex-direction: column;
         align-items: end;
         position: relative;
         border-top: solid 3px $color-primary;
         padding-top: $side-box;
-        padding-left: $side-box;
+        padding-left: 0;
         padding-bottom: $side-box;
+        @include media(desktop-s){
+          grid-column: 2/3;
+          grid-row: 2/9;
+          padding-left: $side-box;
+        }
         h6 {
           @include h6;
         }
@@ -207,16 +287,23 @@
             &__top, &__middle, &__down {
               h5 {
                 color: $color-primary;
-                @include font-size(22px);
-                @include reset
+                @include font-size(16px);
+                @include reset;
+                @include media(desktop-s){
+                  @include font-size(22px);
+                }
               }
               li {
                 list-style: circle;
                 color: $color-sky;
-                @include font-size(16px);
+                @include font-size(12px);
+                @include media(desktop-s){
+                  @include font-size(16px);
+                }
                 &:last-child {
                   margin-bottom: 20px;
                 }
+                
               }
               span {
                 color: get-opacity($color-sky, .2);
@@ -230,16 +317,19 @@
       .technologies {
         height: 100%;
         width: 100%;
-        grid-column: 2/3;
-        grid-row: 9/12;
         display: flex;
         flex-direction: column;
         align-items: end;
         position: relative;
         border-top: solid 3px $color-primary;
         padding-top: $side-box;
-        padding-left: $side-box;
+        padding-left: 0;
         padding-bottom: $side-box;
+        @include media(desktop-s){
+          grid-column: 2/3;
+          grid-row: 9/12;
+          padding-left: $side-box;
+        }
         h6 {
           @include h6;
         }

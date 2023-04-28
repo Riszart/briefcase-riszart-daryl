@@ -15,11 +15,19 @@ footer {
       display: flex;
       gap: 15px;
       margin-bottom: 10px;
+      .icon-clase {
+        height: 50px;
+        width: 50px;
+      }
       img {
         height: 50px;
         width: 50px;
         @include hoverBorderAfter;
         @include hoverBorderBefore;
+        @include media(tablet){
+          height: 50px;
+          width: 50px;
+        }
       }
     }
   }

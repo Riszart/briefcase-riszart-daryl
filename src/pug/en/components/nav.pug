@@ -1,0 +1,21 @@
+include settings.pug
+nav.nav-principal
+  div.close-icon__nav
+  div.nav-container
+    div.nav-container__logo
+      img(src="https://riszart.github.io/briefcase-riszart-daryl/src/img/web/riszart.jpeg", alt="photo del autor riszart daryl").photo
+      img(src="https://riszart.github.io/briefcase-riszart-daryl/src/img/web/riszart-logo-white.webp", alt="logo del autor riszart daryl").logo
+    ul.nav-container__list
+      each item in itemNav 
+        if item === "skill"
+          li.my-skill: p= "my " +item
+        else
+          li(class=item): p=item
+    div.nav-container__icons
+      img(src="https://riszart.github.io/briefcase-riszart-daryl/src/img/svg/github-icon.svg", alt='github', class='github')
+      img(src="https://riszart.github.io/briefcase-riszart-daryl/src/img/svg/linkedin-icon.svg", alt='linkeding', class='linkeding')
+      img(src="https://riszart.github.io/briefcase-riszart-daryl/src/img/svg/twitter-icon.svg", alt='twitter', class='twitter')
+      img(src="https://riszart.github.io/briefcase-riszart-daryl/src/img/svg/facebook-icon.svg", alt='facebook', class='facebook')
+    div.nav-container__footernav 
+      p Designed and Developed
+      p by Riszart

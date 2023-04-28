@@ -4,10 +4,19 @@ if(window.location.pathname !== '/public/html/en/summary.html'){
   document.querySelector(".work").onclick = ()=>changePage("portafolio", 'self')
   document.querySelector(".contact").onclick = ()=>changePage("contact", 'self')
   document.querySelector(".CV").onclick = ()=>changePage("summary", 'self')
-  document.querySelector(".facebook").onclick = ()=>sendPage("https://www.facebook.com/")
-  document.querySelector(".twitter").onclick = ()=>sendPage("https://twitter.com/?lang=en")
-  document.querySelector(".linkeding").onclick = ()=>sendPage("https://www.linkedin.com/")
-  document.querySelector(".github").onclick = ()=>sendPage("https://github.com/")
+  document.querySelector(".facebook").onclick = ()=>sendPage("https://www.facebook.com/vergaracajacuririszart/")
+  document.querySelector(".twitter").onclick = ()=>sendPage("https://twitter.com/riszartvc")
+  document.querySelector(".linkeding").onclick = ()=>sendPage("https://www.linkedin.com/in/riszart-vergara-cajacuri-71b935214/")
+  document.querySelector(".github").onclick = ()=>sendPage("https://github.com/Riszart")
+
+  document.querySelector('.deploy-menu').onclick = ()=>{
+    document.querySelector('.nav-principal').style.width = '100%'
+    document.querySelector('.nav-principal').style.padding = '20px'
+  }
+  document.querySelector('.close-icon__nav').onclick = ()=>{
+    document.querySelector('.nav-principal').style.width = '0px'
+    document.querySelector('.nav-principal').style.padding = '0px'
+  }
 }
 document.querySelector(".logo").onclick = ()=>changePage("index", 'self')
 

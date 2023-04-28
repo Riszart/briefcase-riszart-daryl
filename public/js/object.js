@@ -34,7 +34,7 @@ class project{
   }
 
   showItem(){
-    document.querySelector(".header-principal").style.display = "none"
+    document.querySelector(".nav-principal").style.display = "none"
     document.querySelector(".container-footer-main").style.display = "none"
 
     document.querySelector(".box-float").style.display = "block"
@@ -51,7 +51,7 @@ class project{
   }
 
   closeItem(){
-    document.querySelector(".header-principal").style.display = "block"
+    document.querySelector(".nav-principal").style.display = "block"
     document.querySelector(".container-footer-main").style.display = "block"
 
     document.querySelector(".box-float").style.display = "none"

@@ -5,9 +5,10 @@
 	position: fixed;
   right: 0;
 	z-index: 1000;
+  top: 0;
   cursor: wait;
   overflow: hidden;
-	transition: width 1s ease;
+	transition: width 0.5s ease;
 	background-color: $color-dark;
   div {
     width: 100px;

@@ -57,17 +57,27 @@ $side-box: 40px;
 	padding: 0;
 }
 @mixin box {
-	padding: 50px;
+	padding: 20px;
 	height: 100%;
 	width: 100%;
 	border-radius: 5px;
+	@include media(tablet){
+		padding: 50px;
+	}
 }
 
 @mixin h6{
 	position: absolute;
 	top: 0;
+	width: 100%;
+	text-align: center;
 	@include reset;
-	@include font-size(24px)
+	@include font-size(24px);
+	@include media(desktop-s){
+		position: absolute;
+		top: 0;
+		width: auto;
+	}
 }
 
 @mixin font-size($size) {
