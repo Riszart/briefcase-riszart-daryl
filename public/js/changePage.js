@@ -9,14 +9,14 @@ function very(){
 
 document.querySelector('.change-lang').addEventListener('change', ()=>{
   localStorage.setItem('lang', document.querySelector('.change-lang').value)
-  window.open(`https://riszart.github.io/briefcase-riszart-daryl/public/html/${localStorage.getItem('lang')}/index.html`,'_self')
+  window.open(`https://riszart.github.io/riszart-daryl/public/html/${localStorage.getItem('lang')}/index.html`,'_self')
 })
 
 langs = localStorage.getItem('lang')
 
 console.log(document.querySelector('.change-lang').value)
 
-if(window.location.pathname !== `/briefcase-riszart-daryl/public/html/${langs}/summary.html`){
+if(window.location.pathname !== `/riszart-daryl/public/html/${langs}/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
   document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
   document.querySelector(".work").onclick = ()=>changePage("portafolio", 'self')
@@ -39,7 +39,7 @@ if(window.location.pathname !== `/briefcase-riszart-daryl/public/html/${langs}/s
 document.querySelector(".logo").onclick = ()=>changePage("index", 'self')
 
 if(window.location.origin === 'https://riszart.github.io'){
-  link = window.location.origin + '/briefcase-riszart-daryl'
+  link = window.location.origin + '/riszart-daryl'
 }else {
   link = window.location.origin
 }

@@ -500,7 +500,7 @@ a {
   top: 5px;
   right: 5px;
   border-radius: 50%;
-  background-image: url("/src/img/svg/close_icon.svg");
+  background-image: url("https://riszart.github.io/riszart-daryl/src/img/svg/close_icon.svg");
   background-size: cover;
   background-position: center;
 }
@@ -1385,7 +1385,7 @@ html {
   }
 }
 .container--summary .summary-main__grid .grid-img div {
-  background-image: url("https://riszart.github.io/briefcase-riszart-daryl/src/img/web/riszart-logo-white.webp");
+  background-image: url("https://riszart.github.io/riszart-daryl/src/img/web/riszart-logo-white.webp");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2237,7 +2237,7 @@ html {
   width: 40px;
   height: 40px;
   margin-right: 15px;
-  background-image: url("https://riszart.github.io/briefcase-riszart-daryl/src/img/svg/menu-icon-6points.svg");
+  background-image: url("https://riszart.github.io/riszart-daryl/src/img/svg/menu-icon-6points.svg");
   background-position: center;
   background-size: cover;
 }

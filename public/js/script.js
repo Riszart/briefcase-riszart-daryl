@@ -21,16 +21,16 @@ async function end(){
 	})
 }
 switch(window.location.pathname){
-	case `/briefcase-riszart-daryl/public/html/${lang}/about.html`, `/public/html/${lang}/about.html`:
+	case `/riszart-daryl/public/html/${lang}/about.html`, `/public/html/${lang}/about.html`:
 		document.querySelector(`.about`).style.background = `#00ff75`
 		break
-	case `/briefcase-riszart-daryl/public/html/${lang}/skill.html`, `/public/html/${lang}/skill.html`:
+	case `/riszart-daryl/public/html/${lang}/skill.html`, `/public/html/${lang}/skill.html`:
 		document.querySelector(`.my-skill`).style.background = `#00ff75`
 		break
-	case `/briefcase-riszart-daryl/public/html/${lang}/portafolio.html`, `/public/html/${lang}/portafolio.html`:
+	case `/riszart-daryl/public/html/${lang}/portafolio.html`, `/public/html/${lang}/portafolio.html`:
 		document.querySelector(`.work`).style.background = `#00ff75`
 		break
-	case `/briefcase-riszart-daryl/public/html/${lang}/contact.html`, `/public/html/${lang}/contact.html`:
+	case `/riszart-daryl/public/html/${lang}/contact.html`, `/public/html/${lang}/contact.html`:
 		document.querySelector(`.contact`).style.background = `#00ff75`
 		break
 }
