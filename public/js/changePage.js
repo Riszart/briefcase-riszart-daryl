@@ -7,8 +7,8 @@ if(!localStorage.getItem('lang')){
 
 langs = localStorage.getItem('lang')
 
-
-if(window.location.pathname !== `/public/html/${langs}/summary.html`){
+console.log(langs)
+if(window.location.pathname !== `/public/html/en/summary.html`|| window.location.pathname !== `/public/html/es/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
   document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
   document.querySelector(".work").onclick = ()=>changePage("portafolio", 'self')
