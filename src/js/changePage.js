@@ -1,22 +1,9 @@
 let link
-let langs = very()
-document.querySelector('.change-lang').value = langs
+let lengs = localStorage.getItem('leng')
 
-function very(){
-  if(!localStorage.getItem('lang')) localStorage.setItem('lang',document.querySelector('.change-lang').value)
-  return localStorage.getItem('lang')
-}
+console.log(document.querySelector('.change-leng').value)
 
-document.querySelector('.change-lang').addEventListener('change', ()=>{
-  localStorage.setItem('lang', document.querySelector('.change-lang').value)
-  window.open(`https://riszart.github.io/riszart-daryl/public/html/${localStorage.getItem('lang')}/index.html`,'_self')
-})
-
-langs = localStorage.getItem('lang')
-
-console.log(document.querySelector('.change-lang').value)
-
-if(window.location.pathname !== `/riszart-daryl/public/html/${langs}/summary.html`){
+if(window.location.pathname !== `/riszart-daryl/public/html/${lengs}/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
   document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
   document.querySelector(".work").onclick = ()=>changePage("portafolio", 'self')
@@ -36,7 +23,7 @@ if(window.location.pathname !== `/riszart-daryl/public/html/${langs}/summary.htm
     document.querySelector('.nav-principal').style.padding = '0px'
   }
 }
-document.querySelector(".logo").onclick = ()=>changePage("index", 'self')
+document.querySelector(".logo").onclick = ()=>changePage("main", 'self')
 
 if(window.location.origin === 'https://riszart.github.io'){
   link = window.location.origin + '/riszart-daryl'
@@ -45,13 +32,13 @@ if(window.location.origin === 'https://riszart.github.io'){
 }
 
 const changePage = async (page, target)=>{
-  if(window.location.pathname === `/public/html/${langs}/index.html` && page === 'index')return
+  if(window.location.pathname === `/${lengs}/main.html` && page === 'main')return
   await end()
   await goPage(page, target)
 }
 
 const goPage = async (page, target)=> {
-    window.open(`${link}/public/html/${langs}/${page}.html`, `_${target}`)
+    window.open(`${link}/${lengs}/${page}.html`, `_${target}`)
 }
 
 const sendPage = (page)=>{

@@ -1,4 +1,4 @@
-let lang = localStorage.getItem('lang')
+let leng = localStorage.getItem('leng')
 document.body.style.overflow = "hidden"
 setTimeout(()=>{document.body.style.overflow = "auto"},2000)
 const start = ()=>{
@@ -21,16 +21,16 @@ async function end(){
 	})
 }
 switch(window.location.pathname){
-	case `/riszart-daryl/public/html/${lang}/about.html`, `/public/html/${lang}/about.html`:
+	case `/riszart-daryl/public/html/${leng}/about.html`, `/public/html/${leng}/about.html`:
 		document.querySelector(`.about`).style.background = `#00ff75`
 		break
-	case `/riszart-daryl/public/html/${lang}/skill.html`, `/public/html/${lang}/skill.html`:
+	case `/riszart-daryl/public/html/${leng}/skill.html`, `/public/html/${leng}/skill.html`:
 		document.querySelector(`.my-skill`).style.background = `#00ff75`
 		break
-	case `/riszart-daryl/public/html/${lang}/portafolio.html`, `/public/html/${lang}/portafolio.html`:
+	case `/riszart-daryl/public/html/${leng}/portafolio.html`, `/public/html/${leng}/portafolio.html`:
 		document.querySelector(`.work`).style.background = `#00ff75`
 		break
-	case `/riszart-daryl/public/html/${lang}/contact.html`, `/public/html/${lang}/contact.html`:
+	case `/riszart-daryl/public/html/${leng}/contact.html`, `/public/html/${leng}/contact.html`:
 		document.querySelector(`.contact`).style.background = `#00ff75`
 		break
 }
