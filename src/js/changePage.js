@@ -1,5 +1,5 @@
-let link
 let language = localStorage.getItem('leng')
+// let link
 
 console.log(document.querySelector('.change-leng').value)
 
@@ -25,11 +25,11 @@ if(window.location.pathname !== `/riszart-daryl/public/html/${language}/summary.
 }
 document.querySelector(".logo").onclick = ()=>changePage("main", 'self')
 
-if(window.location.origin === 'https://riszart.github.io'){
-  link = window.location.origin + '/riszart-daryl'
-}else {
-  link = window.location.origin
-}
+// if(window.location.origin === 'https://riszart.github.io'){
+//   link = window.location.origin + '/riszart-daryl'
+// }else {
+//   link = window.location.origin
+// }
 
 const changePage = async (page, target)=>{
   if(window.location.pathname === `/${language}/main.html` && page === 'main')return
@@ -38,7 +38,7 @@ const changePage = async (page, target)=>{
 }
 
 const goPage = async (page, target)=> {
-    window.open(`${link}/${language}/${page}.html`, `_${target}`)
+    window.open(`https://riszart-daryl.netlify.app/${language}/${page}.html`, `_${target}`)
 }
 
 const sendPage = (page)=>{
