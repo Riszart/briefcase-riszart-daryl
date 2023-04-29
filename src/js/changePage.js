@@ -1,9 +1,9 @@
 let link
-let lengs = localStorage.getItem('leng')
+let language = localStorage.getItem('leng')
 
 console.log(document.querySelector('.change-leng').value)
 
-if(window.location.pathname !== `/riszart-daryl/public/html/${lengs}/summary.html`){
+if(window.location.pathname !== `/riszart-daryl/public/html/${language}/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
   document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
   document.querySelector(".work").onclick = ()=>changePage("portafolio", 'self')
@@ -32,13 +32,13 @@ if(window.location.origin === 'https://riszart.github.io'){
 }
 
 const changePage = async (page, target)=>{
-  if(window.location.pathname === `/${lengs}/main.html` && page === 'main')return
+  if(window.location.pathname === `/${language}/main.html` && page === 'main')return
   await end()
   await goPage(page, target)
 }
 
 const goPage = async (page, target)=> {
-    window.open(`${link}/${lengs}/${page}.html`, `_${target}`)
+    window.open(`${link}/${language}/${page}.html`, `_${target}`)
 }
 
 const sendPage = (page)=>{
