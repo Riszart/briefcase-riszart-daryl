@@ -129,7 +129,7 @@ const obj3=  new project(item3)
 obj3.createElement()
 
 const item2 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/src/img/projects/riszart-github-io-api-rest_practice/riszart-github-io-api-rest_practice.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/src/img/projects/riszart-github-io-frontend-developer-js-practico/riszart-github-io-frontend-developer-js-practico.png",
   url: "https://riszart.github.io/frontend-developer-js-practico/",
   name: "shop",
   description: "aplicando el paradigma de objetos, modifique un proyecto que lo realise anteriormente modificandolo, agragando el uso de proprosesadores como PUG para HTML y SASS para CSS, en caso de javscript cambie la logiaca para que funcione con objetos",

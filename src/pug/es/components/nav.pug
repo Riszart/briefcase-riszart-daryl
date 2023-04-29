@@ -1,5 +1,8 @@
 include settings.pug
 nav.nav-principal
+  select(name="").change-lang
+    option(value="en").english english
+    option(value="es").spanish spanish
   img(src="https://riszart.github.io/briefcase-riszart-daryl/src/img/svg/close_icon.svg", alt="sierre del nav con icono close").close-icon__nav
   div.nav-container
     div.nav-container__logo
@@ -8,7 +11,7 @@ nav.nav-principal
     ul.nav-container__list
       li.about: p sobre mi
       li.my-skill: p tecnologia
-      li.work: p proyecto
+      li.work: p proyecto 
       li.contact: p contacto
       li.CV: p CV
     div.nav-container__icons

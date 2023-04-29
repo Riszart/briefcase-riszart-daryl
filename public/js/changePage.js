@@ -1,14 +1,22 @@
 let link
-let langs
+let langs = very()
+document.querySelector('.change-lang').value = langs
 
-if(!localStorage.getItem('lang')){
-  localStorage.setItem('lang', 'es')
+function very(){
+  if(!localStorage.getItem('lang')) localStorage.setItem('lang',document.querySelector('.change-lang').value)
+  return localStorage.getItem('lang')
 }
+
+document.querySelector('.change-lang').addEventListener('change', ()=>{
+  localStorage.setItem('lang', document.querySelector('.change-lang').value)
+  window.open(`https://riszart.github.io/briefcase-riszart-daryl/public/html/${localStorage.getItem('lang')}/index.html`,'_self')
+})
 
 langs = localStorage.getItem('lang')
 
-console.log(langs)
-if(window.location.pathname !== `/public/html/en/summary.html`|| window.location.pathname !== `/public/html/es/summary.html`){
+console.log(document.querySelector('.change-lang').value)
+
+if(window.location.pathname !== `/briefcase-riszart-daryl/public/html/${langs}/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
   document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
   document.querySelector(".work").onclick = ()=>changePage("portafolio", 'self')
