@@ -1,0 +1,14 @@
+doctype html
+html(lang="es")
+	include components/head.pug
+	include components/settings.pug
+	include components/mixin.pug
+	body.container-body__index
+		include components/temporalStart.pug
+		include components/temporalEnd.pug
+		include components/nav.pug
+		include components/header.pug
+		canvas#content-index 
+	script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/changePage.js") 
+	script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/script.js") 
+	script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/index.js")

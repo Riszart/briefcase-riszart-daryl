@@ -1,3 +1,4 @@
+let lang = localStorage.getItem('lang')
 document.body.style.overflow = "hidden"
 setTimeout(()=>{document.body.style.overflow = "auto"},2000)
 const start = ()=>{
@@ -20,17 +21,17 @@ async function end(){
 	})
 }
 switch(window.location.pathname){
-	case '/briefcase-riszart-daryl/public/html/en/about.html', '/public/html/en/about.html':
-		document.querySelector('.about').style.background = '#00ff75'
+	case `/briefcase-riszart-daryl/public/html/${lang}/about.html`, `/public/html/${lang}/about.html`:
+		document.querySelector(`.about`).style.background = `#00ff75`
 		break
-	case '/briefcase-riszart-daryl/public/html/en/skill.html', '/public/html/en/skill.html':
-		document.querySelector('.my-skill').style.background = '#00ff75'
+	case `/briefcase-riszart-daryl/public/html/${lang}/skill.html`, `/public/html/${lang}/skill.html`:
+		document.querySelector(`.my-skill`).style.background = `#00ff75`
 		break
-	case '/briefcase-riszart-daryl/public/html/en/portafolio.html', '/public/html/en/portafolio.html':
-		document.querySelector('.work').style.background = '#00ff75'
+	case `/briefcase-riszart-daryl/public/html/${lang}/portafolio.html`, `/public/html/${lang}/portafolio.html`:
+		document.querySelector(`.work`).style.background = `#00ff75`
 		break
-	case '/briefcase-riszart-daryl/public/html/en/contact.html', '/public/html/en/contact.html':
-		document.querySelector('.contact').style.background = '#00ff75'
+	case `/briefcase-riszart-daryl/public/html/${lang}/contact.html`, `/public/html/${lang}/contact.html`:
+		document.querySelector(`.contact`).style.background = `#00ff75`
 		break
 }
 

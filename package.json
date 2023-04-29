@@ -7,7 +7,7 @@
   "scripts": {
     "css": "sass src/sass:public/css",
     "csswatch": "sass ./src/sass:public/css --watch",
-    "html": "pug ./src/pug/en --out ./public/html/en --pretty --watch",
+    "html": "pug ./src/pug/ --out ./public/html/ --pretty --watch",
     "deploy": "gh-pages -d public/html/en"
   },
   "author": "Riszart Daryl 22.r.d.v.c.12@gmail.com ",

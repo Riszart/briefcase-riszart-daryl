@@ -1,4 +1,13 @@
-if(window.location.pathname !== '/public/html/en/summary.html'){
+let link
+let langs
+
+if(localStorage.getItem('lang')){
+  langs = localStorage.getItem('lang')
+}else{
+  localStorage.setItem('lang', 'es')
+}
+
+if(window.location.pathname !== `/public/html/${langs}/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
   document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
   document.querySelector(".work").onclick = ()=>changePage("portafolio", 'self')
@@ -20,8 +29,6 @@ if(window.location.pathname !== '/public/html/en/summary.html'){
 }
 document.querySelector(".logo").onclick = ()=>changePage("index", 'self')
 
-let lang = 'en'
-let link
 if(window.location.origin === 'https://riszart.github.io'){
   link = window.location.origin + '/briefcase-riszart-daryl'
 }else {
@@ -29,13 +36,13 @@ if(window.location.origin === 'https://riszart.github.io'){
 }
 
 const changePage = async (page, target)=>{
-  if(window.location.pathname === `/public/html/en/index.html` && page === 'index')return
+  if(window.location.pathname === `/public/html/${langs}/index.html` && page === 'index')return
   await end()
   await goPage(page, target)
 }
 
 const goPage = async (page, target)=> {
-    window.open(`${link}/public/html/${lang}/${page}.html`, `_${target}`)
+    window.open(`${link}/public/html/${langs}/${page}.html`, `_${target}`)
 }
 
 const sendPage = (page)=>{
