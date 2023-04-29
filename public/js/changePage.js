@@ -1,11 +1,12 @@
 let link
 let langs
 
-if(localStorage.getItem('lang')){
-  langs = localStorage.getItem('lang')
-}else{
+if(!localStorage.getItem('lang')){
   localStorage.setItem('lang', 'es')
 }
+
+langs = localStorage.getItem('lang')
+
 
 if(window.location.pathname !== `/public/html/${langs}/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
