@@ -1,5 +1,4 @@
 let language = localStorage.getItem('leng')
-debugger
 if(window.location.pathname !== `/${language}/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
   document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
@@ -23,6 +22,7 @@ if(window.location.pathname !== `/${language}/summary.html`){
 document.querySelector(".logo").onclick = ()=>changePage("main", 'self')
 
 const changePage = async (page, target)=>{
+  debugger
   if(window.location.pathname === `/${language}/main.html` && page === 'main')return
   await end(false)
     .then(goPage(page, target))
@@ -39,14 +39,15 @@ const start = ()=>{
 	setTimeout(()=>{document.body.style.overflow = "auto"},1500)
 }
 async function end(blocked){
+  debugger
 	return new Promise((resolve, reject)=>{
 		if(blocked === false){
 			let b = document.querySelector(".inicio-back__end")
 			b.style.width = "100vw"
 			b.style.transition = "width 1s ease"
-			setTimeout(()=>{resolve()},1000)
+			setTimeout(()=>{resolve('test')},1000)
 		}else{
-			reject()
+			reject('error')
 		}
 	})
 }
