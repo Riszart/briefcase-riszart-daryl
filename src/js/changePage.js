@@ -21,7 +21,9 @@ if(window.location.pathname !== `/riszart-daryl/public/html/${language}/summary.
   }
 }
 document.querySelector(".logo").onclick = ()=>changePage("main", 'self')
+
 end(true)
+
 const changePage = async (page, target)=>{
   if(window.location.pathname === `/${language}/main.html` && page === 'main')return
   await end(false)
