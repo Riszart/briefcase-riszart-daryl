@@ -4,8 +4,9 @@
   position: absolute;
   background-color: transparent;
   color: $color-hover;
+  border: none;
   option {
-    background-color: transparent;
+    background-color: $color-dark;
   }
 }
 
@@ -72,11 +73,11 @@
       .photo {
         border-radius: 50%;
         width: 180px;
-        box-shadow:
-        0px 0px 8px $color-hover,
-        -0px -0px 8px $color-hover;
+        border: solid 1px $color-sky;
+        // box-shadow:
+        // 0px 0px 8px $color-hover,
+        // -0px -0px 8px $color-hover;
         @include media(tablet){
-          border: solid 2px $color-sky;
           width: 150px;
         }
       }

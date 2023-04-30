@@ -6,18 +6,15 @@ const start = ()=>{
 		let a = document.querySelector(".inicio-back__start")
 		a.style.width = "0px"
 		a.style.transition = "width 1s ease"
-	},1350)
-	setTimeout(()=>{document.body.style.overflow = "auto"},2000)
+	},1300)
+	setTimeout(()=>{document.body.style.overflow = "auto"},1500)
 }
-start()
-
 async function end(){
 	return new Promise((resolve, reject)=>{
 		let b = document.querySelector(".inicio-back__end")
 		b.style.width = "100vw"
 		b.style.transition = "width 1s ease"
-		setTimeout(()=>{resolve()},1500)
-		setTimeout(()=>{b.style.width = "0";},1550)
+		setTimeout(()=>{resolve()},1000)
 	})
 }
 switch(window.location.pathname){

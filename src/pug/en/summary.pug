@@ -4,12 +4,8 @@ html(lang="en")
 	include components/settings.pug
 	include components/mixin.pug
 	body.container--summary
-		section.inicio-back__start
-			div 
-				h2 wait
-		section.inicio-back__end
-			div 
-				h2 wait
+		include components/temporalStart.pug
+		include components/temporalEnd.pug
 		header.summary-nav
 			img(src="https://riszart.github.io/riszart-daryl/src/img/web/sd-removebg-preview.png", alt="logo de la marca riszart").logo
 			nav.nav-deploy-summary
