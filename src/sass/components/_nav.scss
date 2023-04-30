@@ -5,8 +5,10 @@
   background-color: transparent;
   color: $color-hover;
   border: none;
+  border-radius: 0;
   option {
     background-color: $color-dark;
+    border: none;
   }
 }
 
@@ -79,6 +81,10 @@
         // -0px -0px 8px $color-hover;
         @include media(tablet){
           width: 150px;
+        }
+        @include media(desktop-m){
+          margin-bottom: 10px;
+          margin-top: 10px;
         }
       }
       .logo {

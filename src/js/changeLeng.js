@@ -2,7 +2,7 @@ let lengs = very()
 document.querySelector('.change-leng').value = lengs
 
 function very(){
-  if(!localStorage.getItem('leng')) localStorage.setItem('leng',document.querySelector('.change-leng').value)
+  if(!localStorage.getItem('leng')) localStorage.setItem('leng',"en")
   return localStorage.getItem('leng')
 }
 

@@ -487,9 +487,11 @@ a {
   background-color: transparent;
   color: #00ff75;
   border: none;
+  border-radius: 0;
 }
 .change-leng option {
   background-color: #161616;
+  border: none;
 }
 
 .close-icon__nav {
@@ -567,6 +569,12 @@ a {
 @media only screen and (min-width: 768px) {
   .nav-principal .nav-container__logo .photo {
     width: 150px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .nav-principal .nav-container__logo .photo {
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 }
 .nav-principal .nav-container__logo .logo {
