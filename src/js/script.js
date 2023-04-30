@@ -9,13 +9,17 @@ const start = ()=>{
 	},1300)
 	setTimeout(()=>{document.body.style.overflow = "auto"},1500)
 }
-
-async function end(){
+end(true)
+async function end(blocked){
 	return new Promise((resolve, reject)=>{
-		let b = document.querySelector(".inicio-back__end")
-		b.style.width = "100vw"
-		b.style.transition = "width 1s ease"
-		setTimeout(()=>{resolve()},1000)
+		if(blocked === false){
+			let b = document.querySelector(".inicio-back__end")
+			b.style.width = "100vw"
+			b.style.transition = "width 1s ease"
+			setTimeout(()=>{resolve()},1000)
+		}else{
+			reject()
+		}
 	})
 }
 switch(window.location.pathname){

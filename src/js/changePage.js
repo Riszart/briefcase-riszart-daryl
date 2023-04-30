@@ -1,7 +1,5 @@
 let language = localStorage.getItem('leng')
 
-console.log(document.querySelector('.change-leng').value)
-
 if(window.location.pathname !== `/riszart-daryl/public/html/${language}/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
   document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
@@ -23,14 +21,15 @@ if(window.location.pathname !== `/riszart-daryl/public/html/${language}/summary.
   }
 }
 document.querySelector(".logo").onclick = ()=>changePage("main", 'self')
-
+end(true)
 const changePage = async (page, target)=>{
   if(window.location.pathname === `/${language}/main.html` && page === 'main')return
-  await end()
-  await goPage(page, target)
+  await end(false)
+    .then(goPage(page, target))
+    .catch(start())
 }
 
-const goPage = async (page, target)=> {
+const goPage = (page, target)=> {
   window.open(`https://riszart-daryl.netlify.app/${language}/${page}.html`, `_${target}`)
 }
 
