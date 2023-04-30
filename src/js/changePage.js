@@ -1,6 +1,6 @@
 let language = localStorage.getItem('leng')
 
-if(window.location.pathname !== `/riszart-daryl/public/html/${language}/summary.html`){
+if(window.location.pathname !== `/${language}/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
   document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
   document.querySelector(".work").onclick = ()=>changePage("portafolio", 'self')
