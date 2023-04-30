@@ -22,7 +22,6 @@ if(window.location.pathname !== `/${language}/summary.html`){
 document.querySelector(".logo").onclick = ()=>changePage("main", 'self')
 
 const changePage = async (page, target)=>{
-  debugger
   if(window.location.pathname === `/${language}/main.html` && page === 'main')return
   await end(false)
     .then(goPage(page, target))
@@ -39,7 +38,6 @@ const start = ()=>{
 	setTimeout(()=>{document.body.style.overflow = "auto"},1500)
 }
 async function end(blocked){
-  debugger
 	return new Promise((resolve, reject)=>{
 		if(blocked === false){
 			let b = document.querySelector(".inicio-back__end")
@@ -52,7 +50,7 @@ async function end(blocked){
 	})
 }
 const goPage = (page, target)=> {
-  window.open(`https://riszart-daryl.netlify.app/${language}/${page}.html`, `_${target}`)
+  window.open(`https://riszartdaryl.netlify.app/${language}/${page}.html`, `_${target}`)
 }
 
 const sendPage = (page)=>{

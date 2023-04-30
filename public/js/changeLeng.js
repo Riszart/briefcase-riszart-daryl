@@ -8,5 +8,5 @@ function very(){
 
 document.querySelector('.change-leng').addEventListener('change', ()=>{
   localStorage.setItem('leng', document.querySelector('.change-leng').value)
-  window.open(`https://riszart-daryl.netlify.app/${lengs}/main.html`,'_self')
+  window.open(`https://riszartdaryl.netlify.app/${lengs}/main.html`,'_self')
 })

@@ -1,17 +1,15 @@
 doctype html
-html(lang="en")
-	include en/components/head.pug
-	include en/components/settings.pug
-	include en/components/mixin.pug
+html(lang="es")
+	include es/components/head.pug
+	include es/components/settings.pug
+	include es/components/mixin.pug
 	body.container-body__index
-		include en/components/temporalStart.pug
-		include en/components/temporalEnd.pug
-		include en/components/nav.pug
-		header.header-container 
-			img(src="https://riszart.github.io/riszart-daryl/src/img/web/riszart-logo-white.webp", alt="logo, riszart")
-			div.deploy-menu
-		canvas#content-index
-	script(src="https://riszart.github.io/riszart-daryl/src/js/changeLeng.js")
-	script(src="https://riszart.github.io/riszart-daryl/src/js/script.js")
-	script(src="https://riszart.github.io/riszart-daryl/src/js/changePage.js") 
-	script(src="https://riszart.github.io/riszart-daryl/src/js/index.js")
+		include es/components/temporalStart.pug
+		include es/components/temporalEnd.pug
+		include es/components/nav.pug
+		include es/components/header.pug
+		canvas#content-index 
+	script(src="../js/changeLeng.js")
+	script(src="../js/script.js")
+	script(src="../js/changePage.js") 
+	script(src="../js/index.js")
