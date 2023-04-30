@@ -9,6 +9,7 @@ const start = ()=>{
 	},1300)
 	setTimeout(()=>{document.body.style.overflow = "auto"},1500)
 }
+
 async function end(){
 	return new Promise((resolve, reject)=>{
 		let b = document.querySelector(".inicio-back__end")
@@ -31,3 +32,4 @@ switch(window.location.pathname){
 		document.querySelector(`.contact`).style.background = `#00ff75`
 		break
 }
+start()

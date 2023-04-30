@@ -1,7 +1,6 @@
 let language = localStorage.getItem('leng')
 
 console.log(document.querySelector('.change-leng').value)
-start()
 
 if(window.location.pathname !== `/riszart-daryl/public/html/${language}/summary.html`){
   document.querySelector(".about").onclick = ()=>changePage("about", 'self')
@@ -30,7 +29,6 @@ const changePage = async (page, target)=>{
   await end()
   await goPage(page, target)
 }
-start()
 
 const goPage = async (page, target)=> {
   window.open(`https://riszart-daryl.netlify.app/${language}/${page}.html`, `_${target}`)
