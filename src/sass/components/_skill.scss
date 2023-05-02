@@ -9,11 +9,17 @@
   }
 }
 .container-skill {
-  padding-top: 70px;
-  margin: 0;
+  padding-top: 100px;
+  margin: auto;
+  @include media(sm){
+    width: 90%;
+  }
   @include media(tablet){
-    margin-left: 200px;
-    padding-top: 0px;
+    width: 90%;
+  }
+  @include media(desktop-s){
+  }
+  @include media(desktop-m){
   }
   .skill {
     width: 100%;
@@ -39,7 +45,7 @@
         height: inherit;
         width: inherit;
         @include media(tablet){
-          z-index: 100;
+          // z-index: 10;
         }
         &:hover {
           transform: scale(.95);

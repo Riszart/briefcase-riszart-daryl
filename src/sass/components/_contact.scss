@@ -1,27 +1,36 @@
 .container--contact {
-  margin-left: 0;
+  margin: auto;
   height: auto;
+  @include media(sm){
+    width: 90%;
+  }
   @include media(tablet){
-    margin-left: 200px;
+    width: 90%;
+  }
+  @include media(desktop-s){
+    width: 80%;
+  }
+  @include media(desktop-m){
+    width: 1000px;
   }
   .contact {
-    padding: 70px 10px 20px;
+    padding: 80px 10px 20px;
     display: flex;
     flex-direction: column;
     @include media(tablet){
-      padding: 50px 100px;
+      padding: 70px 100px;
     }
     &-tittle {
       margin: 0;
       text-align: center;
       @include font-size(32px);
       @include media(tablet){
-        align-self: flex-start;
         @include font-size(58px);
       }
     }
     &-text {
       margin: 5px 10px;
+      text-align: justify;
       @include media(tablet){
         margin-top: 50px;
         margin-left: 50px;

@@ -480,18 +480,41 @@ a {
   text-decoration: none;
 }
 
-.change-leng {
-  top: 5px;
-  left: 5px;
+.content-flags {
+  width: 100%;
+  height: 40px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 35%;
   position: absolute;
-  background-color: transparent;
-  color: #00ff75;
-  border: none;
-  border-radius: 0;
+  top: 0;
+  left: 0;
 }
-.change-leng option {
-  background-color: #161616;
-  border: none;
+.content-flags .content-flag__en {
+  padding: 1px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.content-flags .content-flag__en-img {
+  height: 25px;
+  width: 25px;
+}
+.content-flags .content-flag__es {
+  padding: 1px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.content-flags .content-flag__es-img {
+  height: 25px;
+  width: 25px;
+}
+.content-flags #es {
+  display: none;
+}
+.content-flags #en {
+  display: none;
 }
 
 .close-icon__nav {
@@ -503,7 +526,7 @@ a {
   top: 5px;
   right: 5px;
   border-radius: 50%;
-  background-image: url("https://riszart.github.io/riszart-daryl/src/img/svg/close_icon.svg");
+  background-image: url("https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/close_icon.svg");
   background-size: cover;
   background-position: center;
 }
@@ -513,16 +536,81 @@ a {
   }
 }
 
+.nav-container__all-elements {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 1000;
+}
+
+.show-navbar {
+  height: 50px;
+  width: 70px;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  left: calc(100vw - 80px);
+  border: solid 2px #0080ff;
+  z-index: 1100;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 1;
+  margin-top: 9px;
+  background-color: #161616;
+}
+@media only screen and (min-width: 768px) {
+  .show-navbar {
+    position: relative;
+    left: 0;
+    margin-top: 100px;
+    border-radius: 5px;
+    opacity: 0.7;
+  }
+}
+.show-navbar div {
+  height: 3px;
+  width: 50px;
+  position: relative;
+  background-color: #0080ff;
+  border-radius: 30%;
+}
+.show-navbar div::after {
+  content: " ";
+  bottom: 10px;
+  height: 3px;
+  position: absolute;
+  width: 50px;
+  background-color: #0080ff;
+  border-radius: 30%;
+}
+.show-navbar div::before {
+  content: " ";
+  height: 3px;
+  width: 50px;
+  position: absolute;
+  bottom: -10px;
+  background-color: #0080ff;
+  border-radius: 30%;
+}
+.show-navbar:hover {
+  border-color: #00ff75;
+  opacity: 1;
+}
+.show-navbar:hover div, .show-navbar:hover div::after, .show-navbar:hover div::before {
+  background-color: #00ff75;
+}
+
 .nav-principal {
   display: block;
   width: 0;
   height: 100vh;
-  position: fixed;
+  position: relative;
   padding: 0;
+  top: 0;
   background-color: #161616;
-  z-index: 100;
-  overflow: hidden;
+  z-index: 1000;
   transition-duration: 0.5s;
+  overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .nav-principal {
@@ -535,7 +623,7 @@ a {
   }
 }
 .nav-principal .nav-container {
-  width: 100%;
+  min-width: 158px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -554,42 +642,26 @@ a {
 @media only screen and (min-width: 768px) {
   .nav-principal .nav-container__logo {
     width: 150px;
-    height: 220px;
     gap: 10px;
-  }
-}
-.nav-principal .nav-container__logo .name {
-  width: 100%;
-}
-.nav-principal .nav-container__logo .photo {
-  border-radius: 50%;
-  width: 180px;
-  border: solid 1px #ffffff;
-}
-@media only screen and (min-width: 768px) {
-  .nav-principal .nav-container__logo .photo {
-    width: 150px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .nav-principal .nav-container__logo .photo {
-    margin-bottom: 10px;
-    margin-top: 10px;
   }
 }
 .nav-principal .nav-container__logo .logo {
   cursor: pointer;
-  width: 200px;
+  height: 150px;
   box-shadow: 0px 0px 8px #00ff75, 0px 0px 8px #00ff75;
+  margin-top: 30px;
+  border-radius: 50%;
 }
 @media only screen and (min-width: 768px) {
   .nav-principal .nav-container__logo .logo {
     border: solid #ffffff 1px;
-    width: 150px;
   }
 }
 .nav-principal .nav-container__logo .logo:hover {
   border: solid 2px #00ff75;
+}
+.nav-principal .nav-container__logo .logo img {
+  height: 100%;
 }
 .nav-principal .nav-container__list {
   width: 100%;
@@ -764,21 +836,24 @@ footer .footer-down p {
   position: relative;
   padding-top: 70px;
 }
+@media only screen and (min-width: 640px) {
+  .container--about {
+    width: 90%;
+  }
+}
 @media only screen and (min-width: 768px) {
   .container--about {
-    padding-top: 0px;
-    padding-left: 200px;
+    width: 90%;
   }
 }
 @media only screen and (min-width: 1000px) {
   .container--about {
-    width: 1000px;
+    width: 80%;
   }
 }
 @media only screen and (min-width: 1200px) {
   .container--about {
-    width: 1200px;
-    padding-left: 200px;
+    width: 1000px;
   }
 }
 .container--about .about {
@@ -790,12 +865,12 @@ footer .footer-down p {
   grid-template-rows: auto auto auto;
   padding: 10px 0;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 640px) {
   .container--about .about {
-    padding: 50px 0;
+    padding-top: 0px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .container--about .about {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -815,7 +890,7 @@ footer .footer-down p {
     line-height: 3.375rem;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .container--about .about__tittle {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -833,7 +908,7 @@ footer .footer-down p {
     height: 300px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .container--about .about__photo {
     place-self: end;
     grid-column: 2/3;
@@ -854,7 +929,7 @@ footer .footer-down p {
   padding: 15px;
   text-align: justify;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
   .container--about .about__text {
     margin-top: 50px;
     grid-column: 1/3;
@@ -906,14 +981,28 @@ html {
 }
 
 .container--portafolio {
-  margin: 0;
+  margin: auto;
   padding: 70px 15px 0;
   height: auto;
 }
+@media only screen and (min-width: 640px) {
+  .container--portafolio {
+    width: 90%;
+  }
+}
 @media only screen and (min-width: 768px) {
   .container--portafolio {
-    margin-left: 20%;
-    margin-right: 5%;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container--portafolio {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container--portafolio {
+    width: 1000px;
   }
 }
 .container--portafolio .portafolio {
@@ -1281,6 +1370,19 @@ html {
     background-color: transparent;
   }
 }
+.container--summary .summary-main {
+  margin: auto;
+}
+@media only screen and (min-width: 640px) {
+  .container--summary .summary-main {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container--summary .summary-main {
+    max-width: 1200px;
+  }
+}
 .container--summary .summary-main__inicio {
   width: 100%;
   height: 400px;
@@ -1361,6 +1463,24 @@ html {
     height: 10%;
   }
 }
+.container--summary .summary-main__line {
+  position: relative;
+  width: 100%;
+  height: 60px;
+}
+.container--summary .summary-main__line div {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0080ff;
+}
+@media only screen and (min-width: 1200px) {
+  .container--summary .summary-main__line div {
+    left: calc(-50vw - 1px + 50% - 1px);
+  }
+}
 .container--summary .summary-main__grid {
   display: grid;
   margin: 0;
@@ -1369,7 +1489,7 @@ html {
 }
 @media only screen and (min-width: 1000px) {
   .container--summary .summary-main__grid {
-    margin: 0 150px;
+    margin: 0 50px;
     margin-top: 50px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(11, 150px);
@@ -1393,7 +1513,7 @@ html {
   }
 }
 .container--summary .summary-main__grid .grid-img div {
-  background-image: url("https://riszart.github.io/riszart-daryl/src/img/web/riszart-logo-white.webp");
+  background-image: url("https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart-logo-white.webp");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1777,22 +1897,37 @@ html {
 }
 
 .container--contact {
-  margin-left: 0;
+  margin: auto;
   height: auto;
+}
+@media only screen and (min-width: 640px) {
+  .container--contact {
+    width: 90%;
+  }
 }
 @media only screen and (min-width: 768px) {
   .container--contact {
-    margin-left: 200px;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container--contact {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container--contact {
+    width: 1000px;
   }
 }
 .container--contact .contact {
-  padding: 70px 10px 20px;
+  padding: 80px 10px 20px;
   display: flex;
   flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
   .container--contact .contact {
-    padding: 50px 100px;
+    padding: 70px 100px;
   }
 }
 .container--contact .contact-tittle {
@@ -1804,7 +1939,6 @@ html {
 }
 @media only screen and (min-width: 768px) {
   .container--contact .contact-tittle {
-    align-self: flex-start;
     font-size: 58px;
     font-size: 3.625rem;
     line-height: 5.4375rem;
@@ -1812,6 +1946,7 @@ html {
 }
 .container--contact .contact-text {
   margin: 5px 10px;
+  text-align: justify;
 }
 @media only screen and (min-width: 768px) {
   .container--contact .contact-text {
@@ -2107,13 +2242,17 @@ html {
   }
 }
 .container-skill {
-  padding-top: 70px;
-  margin: 0;
+  padding-top: 100px;
+  margin: auto;
+}
+@media only screen and (min-width: 640px) {
+  .container-skill {
+    width: 90%;
+  }
 }
 @media only screen and (min-width: 768px) {
   .container-skill {
-    margin-left: 200px;
-    padding-top: 0px;
+    width: 90%;
   }
 }
 .container-skill .skill {
@@ -2144,11 +2283,6 @@ html {
   height: inherit;
   width: inherit;
 }
-@media only screen and (min-width: 768px) {
-  .container-skill .skill div img {
-    z-index: 100;
-  }
-}
 .container-skill .skill div img:hover {
   transform: scale(0.95);
 }
@@ -2159,7 +2293,7 @@ html {
   height: 100vh;
   position: fixed;
   right: 0;
-  z-index: 1000;
+  z-index: 10000;
   top: 0;
   cursor: wait;
   overflow: hidden;
@@ -2187,7 +2321,7 @@ html {
   width: 0;
   height: 100vh;
   position: fixed;
-  z-index: 1000;
+  z-index: 10000;
   top: 0;
   cursor: wait;
   overflow: hidden;
@@ -2229,23 +2363,19 @@ html {
   background-color: #161616;
   z-index: 10;
   border-bottom: solid #0080ff;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-left: 15px;
-}
-@media only screen and (min-width: 768px) {
-  .header-container {
-    display: none;
-  }
 }
 .header-container img {
   height: 50px;
 }
 .header-container .deploy-menu {
+  display: none;
   width: 40px;
   height: 40px;
   margin-right: 15px;
-  background-image: url("https://riszart.github.io/riszart-daryl/src/img/svg/menu-icon-6points.svg");
+  background-image: url("https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/menu-icon-6points.svg");
   background-position: center;
   background-size: cover;
 }

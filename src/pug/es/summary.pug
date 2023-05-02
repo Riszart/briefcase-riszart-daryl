@@ -6,14 +6,15 @@ html(lang="es")
 	body.container--summary
 		include components/temporalStart.pug
 		include components/temporalEnd.pug
+		include components/nav.pug
 		header.summary-nav
-			img(src="https://riszart.github.io/riszart-daryl/src/img/web/sd-removebg-preview.png", alt="logo de la marca riszart").logo
+			img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/sd-removebg-preview.png", alt="logo de la marca riszart").deploy-nav
 			nav.nav-deploy-summary
 				li: a(href="#profile") Perfil
 				li: a(href="#education") Educación
 				li: a(href="#technologies") Tecnologías
 				li: a(href="#experience") Experiencia laboral
-			img(src="https://riszart.github.io/riszart-daryl/src/img/svg/menu-icon-6points.svg", alt="menu desplegable").burger-menu
+			img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/menu-icon-6points.svg", alt="menu desplegable").deploy-menu
 		main.summary-main
 			section.summary-main__inicio
 				div.summary-main__inicio-up
@@ -21,7 +22,7 @@ html(lang="es")
 					h3 DESARROLLADOR JAVASCRIPT
 					p Desarrollador web con aproximadamente un año y medio de experiencia realizando
 					p y estudiando proyectos web, enfocado en JavaScript.
-				div.summary-main__inicio-down
+			section.summary-main__line: div
 			section.summary-main__grid
 				div.grid-img.card
 					div.card2
@@ -30,7 +31,7 @@ html(lang="es")
 					div.profile--efect 
 						div.profile--efect-content
 							section.profile--efect-content__up 
-								img(src="https://riszart.github.io/riszart-daryl/src/img/web/riszart.jpeg", alt="photo de riszart")
+								img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart.jpeg", alt="photo de riszart")
 								div
 									h5 Riszart Daryl
 									span Desarrollador JavaScript
@@ -84,16 +85,18 @@ html(lang="es")
 					h6 tecnologías
 					div.technologies--efect
 						div.technologies--efect-content
-							img(src="https://riszart.github.io/riszart-daryl/src/img/svg/html-icon.svg", alt="lenguaje de programador web html")
-							img(src="https://riszart.github.io/riszart-daryl/src/img/svg/css-icon.svg", alt="lenguaje de programador web css")
-							img(src="https://riszart.github.io/riszart-daryl/src/img/svg/sass-icon.svg", alt="preprocesador de sass, programador web sass")
-							img(src="https://riszart.github.io/riszart-daryl/src/img/svg/javascript-icon.svg", alt="lenguaje de programador web javascript")
-							img(src="https://riszart.github.io/riszart-daryl/src/img/svg/github-icon.svg", alt="repositorio para el almacenamiento de los proyectos")
-							img(src="https://riszart.github.io/riszart-daryl/src/img/svg/nodejs-icon.svg", alt="lenguaje de programador web nodejs")
-							img(src="https://riszart.github.io/riszart-daryl/src/img/web/pug.png", alt="preprocesador de html, programador web pug")
-							img(src="https://riszart.github.io/riszart-daryl/src/img/svg/tailwindcss-text.svg", alt="freenwork de css, programador web tailwind")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/html-icon.svg", alt="lenguaje de programador web html")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/css-icon.svg", alt="lenguaje de programador web css")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="preprocesador de sass, programador web sass")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/javascript-icon.svg", alt="lenguaje de programador web javascript")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/github-icon.svg", alt="repositorio para el almacenamiento de los proyectos")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/nodejs-icon.svg", alt="lenguaje de programador web nodejs")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/pug.png", alt="preprocesador de html, programador web pug")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="freenwork de css, programador web tailwind")
 			section.summary-main__coments
 		include components/footer.pug
-		script(src="../../src/js/script.js") 
-		script(src="../../src/js/changePage.js") 
-		script(src="../../src/js/summary.js") 
+		script(src="../../../public/js/startEnd.js") 
+		script(src="../../../public/js/script.js") 
+		script(src="../../../public/js/changePage.js") 
+		script(src="../../../public/js/summary.js")
+		script(src="../../../public/js/navBar.js") 

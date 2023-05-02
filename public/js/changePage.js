@@ -1,60 +1,50 @@
-let language = localStorage.getItem('leng')
-if(window.location.pathname !== `/${language}/summary.html`){
-  document.querySelector(".about").onclick = ()=>changePage("about", 'self')
-  document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
-  document.querySelector(".work").onclick = ()=>changePage("portafolio", 'self')
-  document.querySelector(".contact").onclick = ()=>changePage("contact", 'self')
-  document.querySelector(".CV").onclick = ()=>changePage("summary", 'self')
-  document.querySelector(".facebook").onclick = ()=>sendPage("https://www.facebook.com/vergaracajacuririszart/")
-  document.querySelector(".twitter").onclick = ()=>sendPage("https://twitter.com/riszartvc")
-  document.querySelector(".linkeding").onclick = ()=>sendPage("https://www.linkedin.com/in/riszart-vergara-cajacuri-71b935214/")
-  document.querySelector(".github").onclick = ()=>sendPage("https://github.com/Riszart")
+let language = localStorage.getItem('language')
 
-  document.querySelector('.deploy-menu').onclick = ()=>{
-    document.querySelector('.nav-principal').style.width = '100%'
-    document.querySelector('.nav-principal').style.padding = '20px'
-  }
-  document.querySelector('.close-icon__nav').onclick = ()=>{
-    document.querySelector('.nav-principal').style.width = '0px'
-    document.querySelector('.nav-principal').style.padding = '0px'
-  }
+switch(window.location.pathname){
+	case `https://riszartdaryl.netlify.app/${language}/about.html`:
+		document.querySelector(`.about`).style.background = `#00ff75`
+		break
+	case `https://riszartdaryl.netlify.app/${language}/skill.html`:
+		document.querySelector(`.my-skill`).style.background = `#00ff75`
+		break
+	case `https://riszartdaryl.netlify.app/${language}/portafolio.html`:
+		document.querySelector(`.work`).style.background = `#00ff75`
+		break
+	case `https://riszartdaryl.netlify.app/${language}/contact.html`:
+		document.querySelector(`.contact`).style.background = `#00ff75`
+		break
 }
-document.querySelector(".logo").onclick = ()=>changePage("main", 'self')
+document.querySelector(".about").onclick = ()=>changePage("about", 'self')
+document.querySelector(".my-skill").onclick = ()=>changePage("skill", 'self')
+document.querySelector(".work").onclick = ()=>changePage("portafolio", 'self')
+document.querySelector(".contact").onclick = ()=>changePage("contact", 'self')
+document.querySelector(".CV").onclick = ()=>changePage("summary", 'self')
+document.querySelector(".facebook").onclick = ()=>sendPage("https://www.facebook.com/vergaracajacuririszart/")
+document.querySelector(".twitter").onclick = ()=>sendPage("https://twitter.com/riszartvc")
+document.querySelector(".linkeding").onclick = ()=>sendPage("https://www.linkedin.com/in/riszart-vergara-cajacuri-71b935214/")
+document.querySelector(".github").onclick = ()=>sendPage("https://github.com/Riszart")
 
 const changePage = async (page, target)=>{
   if(window.location.pathname === `/${language}/main.html` && page === 'main')return
-  await end(false)
-    .then(goPage(page, target))
-    .catch(start())
+  await end()
+  await goPage(page, target)
 }
-// document.body.style.overflow = "hidden"
-setTimeout(()=>{document.body.style.overflow = "auto"},2000)
+
 const start = ()=>{
-	setTimeout(()=>{
-		let a = document.querySelector(".inicio-back__start")
-		a.style.width = "0px"
-		a.style.transition = "width 1s ease"
-	},1300)
-	setTimeout(()=>{document.body.style.overflow = "auto"},1500)
+	setTimeout(()=>FunctionExport.openWindow(),1000)
 }
+
 async function end(blocked){
 	return new Promise((resolve, reject)=>{
-		if(blocked === false){
-			let b = document.querySelector(".inicio-back__end")
-			b.style.width = "100vw"
-			b.style.transition = "width 1s ease"
-			setTimeout(()=>{resolve('test')},1000)
-		}else{
-			reject('error')
-		}
+			FunctionExport.closeWindow(()=>{resolve('test')})
 	})
 }
-const goPage = (page, target)=> {
-  window.open(`https://riszartdaryl.netlify.app/${language}/${page}.html`, `_${target}`)
+const goPage = async (page, target)=> {
+  location.href = `${window.location.origin}/es/${page}.html`, `_${target}`	//public/html/
 }
 
 const sendPage = (page)=>{
   window.open(page, `_blank`)
 }
 
-end(true)
+start()

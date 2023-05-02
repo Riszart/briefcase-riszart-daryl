@@ -1,14 +1,38 @@
-.change-leng {
-  top: 5px;
-  left: 5px;
+.content-flags {
+  width: 100%;
+  height: 40px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 35%;
   position: absolute;
-  background-color: transparent;
-  color: $color-hover;
-  border: none;
-  border-radius: 0;
-  option {
-    background-color: $color-dark;
-    border: none;
+  top: 0;
+  left: 0;
+  .content-flag__en {
+    padding: 1px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    &-img {
+      height: 25px;
+      width: 25px;
+    }
+  }
+  .content-flag__es {
+    padding: 1px 8px;
+    border-radius: 2px;
+
+    cursor: pointer;
+    &-img {
+      height: 25px;
+      width: 25px;
+    }
+  }
+  #es {
+    display: none;
+  }
+  #en {
+    display: none;
   }
 }
 
@@ -21,23 +45,84 @@
   top: 5px;
   right: 5px;
   border-radius: 50%;
-  background-image: url('https://riszart.github.io/riszart-daryl/src/img/svg/close_icon.svg');
+  background-image: url('https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/close_icon.svg');
   background-size: cover;
   background-position: center;
   @include media(tablet){
     display: none;
   }
 }
+.nav-container__all-elements {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 1000;
+}
+.show-navbar {
+  height: 50px;
+  width: 70px;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  left: calc(100vw - 80px);
+  border: solid 2px $color-primary;
+  z-index: 1100;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 1;
+  margin-top: 9px;
+  background-color: $color-dark;
+  @include media(tablet){
+    position: relative;
+    left: 0;
+    margin-top: 100px;
+    border-radius: 5px;
+    opacity: .7;
+  }
+  div {
+    height: 3px;
+    width: 50px;
+    position: relative;
+    background-color: $color-primary;
+    border-radius: 30%;
+    &::after {
+      content: " ";
+      bottom: 10px;
+      height: 3px;
+      position: absolute;
+      width: 50px;
+      background-color: $color-primary;
+      border-radius: 30%;
+    }
+    &::before {
+      content: " ";
+      height: 3px;
+      width: 50px;
+      position: absolute;
+      bottom: -10px;
+      background-color: $color-primary;
+      border-radius: 30%;
+    }
+  }
+  &:hover {
+    border-color: $color-hover;
+    opacity: 1;
+    div, div::after, div::before {
+      background-color: $color-hover;
+    }
+  }
+}
 .nav-principal {
   display: block;
   width: 0;
   height: 100vh;
-  position: fixed;
+  position: relative;
   padding: 0;
+  top: 0;
   background-color: $color-dark;
-  z-index: 100;
-  overflow: hidden;
+  z-index: 1000;
   transition-duration: 0.5s;
+  overflow: hidden;
   @include media(tablet){
     display: block;
     height: 100vh;
@@ -49,7 +134,7 @@
     border-right: solid $color-primary 2px;
   }
   .nav-container {
-    width: 100%;
+    min-width: 158px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -65,39 +150,43 @@
       gap: 20px;
       @include media(tablet){
         width: 150px;
-        height: 220px;
+        // height: 220px;
         gap: 10px;
       }
-      .name {
-        width: 100%;
-      }
-      .photo {
-        border-radius: 50%;
-        width: 180px;
-        border: solid 1px $color-sky;
-        // box-shadow:
-        // 0px 0px 8px $color-hover,
-        // -0px -0px 8px $color-hover;
-        @include media(tablet){
-          width: 150px;
-        }
-        @include media(desktop-m){
-          margin-bottom: 10px;
-          margin-top: 10px;
-        }
-      }
+      // .name {
+      //   width: 100%;
+      // }
+      // .photo {
+      //   border-radius: 5%;
+      //   width: 180px;
+      //   border: solid 1px $color-sky;
+      //   // box-shadow:
+      //   // 0px 0px 8px $color-hover,
+      //   // -0px -0px 8px $color-hover;
+      //   @include media(tablet){
+      //     width: 120px;
+      //   }
+      //   @include media(desktop-m){
+      //     margin-bottom: 10px;
+      //     margin-top: 50px;
+      //   }
+      // }
       .logo {
         cursor: pointer;
-        width: 200px;
+        height: 150px;
         box-shadow:
         0px 0px 8px $color-hover,
         -0px -0px 8px $color-hover;
+        margin-top: 30px;
+        border-radius: 50%;
         @include media(tablet){
           border: solid $color-sky 1px;
-          width: 150px;
         }
         &:hover {
           border: solid 2px $color-hover;
+        }
+        img {
+          height: 100%;
         }
       }
     }

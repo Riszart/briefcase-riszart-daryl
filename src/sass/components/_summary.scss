@@ -77,6 +77,13 @@ html {
     }
   }
   .summary-main {
+    margin: auto;
+    @include media(sm){
+      width: 100%;
+    }
+    @include media(desktop-m){
+      max-width: 1200px;
+    }
     &__inicio {
       width: 100%;
       height: 400px;
@@ -130,13 +137,29 @@ html {
         }
       }
     }
+    &__line{
+      position: relative;
+      width: 100%;
+      height: 60px;
+      div {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: $color-primary;
+        @include media(desktop-m){
+          left: calc(-50vw - 1px + 50% - 1px);
+        }
+      }
+    }
     &__grid {
       display: grid;
       margin: 0;
       grid-template-columns: auto;
       grid-template-rows: repeat(auto-fill, auto);
       @include media(desktop-s){
-        margin: 0 150px;
+        margin: 0 50px;
         margin-top: 50px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(11, 150px);
@@ -151,7 +174,7 @@ html {
           margin: 0 0 $side-box $side-box;
         }
         div {
-          background-image: url('https://riszart.github.io/riszart-daryl/src/img/web/riszart-logo-white.webp');
+          background-image: url('https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart-logo-white.webp');
           @include background-propiedad;
           @include item-efect1;
           padding: 40px;

@@ -2,12 +2,20 @@ html {
   scroll-behavior: initial;
 }
 .container--portafolio {
-  margin: 0;
+  margin: auto;
   padding: 70px 15px 0;
   height: auto;
+  @include media(sm){
+    width: 90%;
+  }
   @include media(tablet){
-    margin-left: 20%;
-    margin-right: 5%;
+    width: 90%;
+  }
+  @include media(desktop-s){
+    width: 80%;
+  }
+  @include media(desktop-m){
+    width: 1000px;
   }
   .portafolio {
     display: flex;
