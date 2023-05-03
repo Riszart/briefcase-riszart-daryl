@@ -43,6 +43,10 @@ footer {
       color: get-opacity($color-sky, .3);
       margin: 0;
       font-weight: 700;
+      @include font-size(12px);
+      @include media(sm){
+        @include font-size(18px)
+      }
     }
   }
 }

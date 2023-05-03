@@ -36,22 +36,22 @@
   }
 }
 
-.close-icon__nav {
-  display: block;
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  z-index: 1000;
-  top: 5px;
-  right: 5px;
-  border-radius: 50%;
-  background-image: url('https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/close_icon.svg');
-  background-size: cover;
-  background-position: center;
-  @include media(tablet){
-    display: none;
-  }
-}
+// .close-icon__nav {
+//   display: block;
+//   height: 50px;
+//   width: 50px;
+//   position: absolute;
+//   z-index: 1000;
+//   top: 5px;
+//   right: 5px;
+//   border-radius: 50%;
+//   background-image: url('https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/close_icon.svg');
+//   background-size: cover;
+//   background-position: center;
+//   @include media(tablet){
+//     display: none;
+//   }
+// }
 .nav-container__all-elements {
   display: flex;
   flex-direction: row;
@@ -60,12 +60,11 @@
 }
 .show-navbar {
   height: 50px;
-  width: 70px;
+  width: 50px;
   display: grid;
   place-content: center;
-  position: absolute;
-  left: calc(100vw - 80px);
-  border: solid 2px $color-primary;
+  position: relative;
+  // left: calc(100vw - 60px);
   z-index: 1100;
   cursor: pointer;
   border-radius: 5px;
@@ -73,42 +72,56 @@
   margin-top: 9px;
   background-color: $color-dark;
   @include media(tablet){
+    width: 70px;
+    border: solid 2px $color-primary;
     position: relative;
-    left: 0;
+    // left: 0;
     margin-top: 100px;
     border-radius: 5px;
     opacity: .7;
   }
   div {
     height: 3px;
-    width: 50px;
+    width: 40px;
     position: relative;
     background-color: $color-primary;
     border-radius: 30%;
+    @include media(tablet){
+      width: 50px;
+      background-color: $color-primary;
+    }
     &::after {
       content: " ";
       bottom: 10px;
       height: 3px;
       position: absolute;
-      width: 50px;
+      width: 40px;
       background-color: $color-primary;
       border-radius: 30%;
+      @include media(tablet){
+        width: 50px;
+      }
     }
     &::before {
       content: " ";
       height: 3px;
-      width: 50px;
+      width: 40px;
       position: absolute;
       bottom: -10px;
       background-color: $color-primary;
       border-radius: 30%;
+      @include media(tablet){
+        width: 50px;
+      }
     }
   }
   &:hover {
-    border-color: $color-hover;
-    opacity: 1;
-    div, div::after, div::before {
+    @include media(tablet){
+      border-color: $color-hover;
+      opacity: 1;
+      div, div::after, div::before {
       background-color: $color-hover;
+      }
     }
   }
 }
@@ -116,7 +129,7 @@
   display: block;
   width: 0;
   height: 100vh;
-  position: relative;
+  position: fixed;
   padding: 0;
   top: 0;
   background-color: $color-dark;
@@ -124,6 +137,7 @@
   transition-duration: 0.5s;
   overflow: hidden;
   @include media(tablet){
+    position: relative;
     display: block;
     height: 100vh;
     width: 200px;

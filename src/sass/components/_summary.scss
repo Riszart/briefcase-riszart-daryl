@@ -4,78 +4,78 @@ html {
 .container--summary {
   width: 100%;
   height: auto;
-  .summary-nav {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    padding: 0 25px;
-    top: 0;
-    border-bottom: solid 1px $color-primary;
-    background-color: $color-dark;
-    z-index: 100;
-    @include media(desktop-s){
-      height: 60px;
-      border-bottom: solid 1px $color-sky;
-    }
-    img{
-      height: 50px;
-      width: 60px;
-      &:nth-child(3){
-        height: 30px;
-        width: 30px;
-        @include media(desktop-s){
-          display: none;
-        }
-      }
-    }
-    nav {
-      width: 100%;
-      position: absolute;
-      display: none;
-      left: 0;
-      top: 50px;
-      gap: 10px;
-      padding: 0;
-      margin: 0;
-      align-items: center;
-      flex-direction: column;
-      background-color: $color-dark;
-      @include media(desktop-s){
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        width: auto;
-        background-color: transparent;
-        top: 0px;
-      }
-      li{
-        display: block;
-        height: 30px;
-        width: 180px;
-        list-style: none;
-        text-align: center;
-        border: solid 2px $color-primary;
-        @include border;
-        @include media(desktop-s){
-          border: none;
-        }
-        a{
-          display: block;
-          height: 100%;
-          width: 100%;
-          color: $color-sky;
-          text-decoration: none;
-          background-color: $color-dark;
-          @include media(desktop-s){
-            background-color: transparent;
-          }
-        }
-      }
-    }
-  }
+  // .summary-nav {
+  //   height: 70px;
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   position: fixed;
+  //   padding: 0 25px;
+  //   top: 0;
+  //   border-bottom: solid 1px $color-primary;
+  //   background-color: $color-dark;
+  //   z-index: 100;
+  //   @include media(desktop-s){
+  //     height: 60px;
+  //     border-bottom: solid 1px $color-sky;
+  //   }
+  //   img{
+  //     height: 50px;
+  //     width: 60px;
+  //     &:nth-child(3){
+  //       height: 30px;
+  //       width: 30px;
+  //       @include media(desktop-s){
+  //         display: none;
+  //       }
+  //     }
+  //   }
+  //   nav {
+  //     width: 100%;
+  //     position: absolute;
+  //     display: none;
+  //     left: 0;
+  //     top: 50px;
+  //     gap: 10px;
+  //     padding: 0;
+  //     margin: 0;
+  //     align-items: center;
+  //     flex-direction: column;
+  //     background-color: $color-dark;
+  //     @include media(desktop-s){
+  //       display: flex;
+  //       flex-direction: row;
+  //       position: relative;
+  //       width: auto;
+  //       background-color: transparent;
+  //       top: 0px;
+  //     }
+  //     li{
+  //       display: block;
+  //       height: 30px;
+  //       width: 180px;
+  //       list-style: none;
+  //       text-align: center;
+  //       border: solid 2px $color-primary;
+  //       @include border;
+  //       @include media(desktop-s){
+  //         border: none;
+  //       }
+  //       a{
+  //         display: block;
+  //         height: 100%;
+  //         width: 100%;
+  //         color: $color-sky;
+  //         text-decoration: none;
+  //         background-color: $color-dark;
+  //         @include media(desktop-s){
+  //           background-color: transparent;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
   .summary-main {
     margin: auto;
     @include media(sm){
@@ -95,7 +95,7 @@ html {
         display: flex;
         flex-direction: column; 
         justify-content: center;
-        margin: 10px;
+        margin: 0 10px 10px;
         text-align: center;
         @include media(desktop-s){
           margin: 0 70px;
@@ -198,8 +198,8 @@ html {
           border-right: solid 3px $color-primary;
           padding-bottom: $side-box;
         }
-        h6 {
-          @include h6;
+        h4 {
+          @include h4;
         }
         &--efect {
           height: inherit;
@@ -235,7 +235,8 @@ html {
             &__down {
               margin-top: 30px;
               p {
-                color: $color-sky
+                color: $color-sky;
+                text-align: justify;
               }
             }
           }
@@ -256,8 +257,8 @@ html {
           padding-right: $side-box;
           border-right: solid 3px $color-primary;
         }
-        h6 {
-          @include h6;
+        h4 {
+          @include h4;
         }
         &--efect {
           height: inherit;
@@ -268,12 +269,19 @@ html {
             width:inherit;
             @include item-efect1;
             @include box;
-            ul {
-              color: $color-sky;
-              @include reset;
-              li {
-                display: flex;
-                gap: 5px;
+            h5 {
+              color: $color-primary;
+              ul {
+                text-transform: capitalize;
+                color: $color-sky;
+                margin-left: -20px;
+                font-weight: 600;
+                li {
+                  margin-left: 15px;
+                  color: rgba(255, 255, 255, 0.2);;
+                  list-style: circle;
+                  font-weight: 400;
+                }
               }
             }
           }
@@ -295,8 +303,8 @@ html {
           grid-row: 2/9;
           padding-left: $side-box;
         }
-        h6 {
-          @include h6;
+        h4 {
+          @include h4;
         }
         &--efect {
           height: inherit;
@@ -353,8 +361,8 @@ html {
           grid-row: 9/12;
           padding-left: $side-box;
         }
-        h6 {
-          @include h6;
+        h4 {
+          @include h4;
         }
         &--efect {
           height: inherit;
