@@ -6,95 +6,109 @@ html(lang="en")
 	body.container--summary
 		include components/temporalStart.pug
 		include components/temporalEnd.pug
-		header.summary-nav
-			img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/sd-removebg-preview.png", alt="logo de la marca riszart").logo
-			nav.nav-deploy-summary
-				li: a(href="#profile") Profile
-				li: a(href="#education") Education
-				li: a(href="#technologies") Technologies
-				li: a(href="#experience") Work Experience
-			img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/menu-icon-6points.svg", alt="menu desplegable").burger-menu
+		include components/nav.pug
+		include components/header.pug
 		main.summary-main
 			section.summary-main__inicio
 				div.summary-main__inicio-up
 					h2 RISZART DARYL
-					h3 JAVASCRIPT DEVELOPER
-					p Web developer with more than one year of experience carrying
-					p out web projects, specialized in JavaScript.
-				div.summary-main__inicio-down
+					h3 WEB DEVELOPER
+					p Web developer with approximately a year and a half of experience, making
+					p and studying web projects.
+			section.summary-main__line: div
 			section.summary-main__grid
 				div.grid-img.card
 					div.card2
 				div.profile#profile
-					h6 Professional Profile
+					h4 Professional profile
 					div.profile--efect 
 						div.profile--efect-content
 							section.profile--efect-content__up 
-								img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart.jpeg", alt="photo de riszart")
+								img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart.jpeg", alt="photo by riszart")
 								div
 									h5 Riszart Daryl
-									span Professional JavaScript
+									span Web developer
 							section.profile--efect-content__down 
-								p I'am a JavaScript Developer with approximately one year of experience carrying out various projects such as: a game developed with canvas as well as statistics where it is graphed on canvas, landinpage, my own web page, ATM simulation, others. Passionate about technology, and committed to the projects I carry out.
+								p Hello, I am a Web Developer with approximately a year and a half of experience, having carried out several projects such as: a game developed with canvas as well as statistics where it is graphed on canvas, landinpage, my own web page, ATM simulation, others. Passionate about technology, and committed to the projects that were done.
 				div.education#education
-					h6 Professional Education
+					h4 Education
 					div.education--efect
 						div.education--efect-content
 							section.education--efect-content__top 
 								h5 Online Professional Courses
-								li Object oriented programming, (OOP) with js
+								li Object Oriented Programming (OOP) with js
 								li Closures and Scope in js
-								li Math and Statistics with js
-								li Creation workshop of the first video game with js
-								li Git and GitHub programming
-								li Transformation and Transition in css 
+								li Mathematics and Statistics with js
+								li Workshop to create the first video game with js
+								li Programming in Git and GitHub
+								li Transformation and Transition in css
 								li Animations with CSS
 								li Web Design with css Grid and Flexbox
-								li Responsive Design: Mobile First Layout
+								li Responsive Design: mobile and desktop design
 								li Web Design with HTML and CSS
-								li Frontend Developer course programming with js
+								li Programming of the Frontend Developer course with js
 							section.education--efect-content__middle 
-								h5 Institute
+								h5 institute
 								span (Industrial Mechatronics Technician)
-								li Industrial Electronics
+								li industrial electronics
 								li Industrial Mechanics
 								li Solidwork Design
-								li Technical English
-								li Programming in C++
+								li technical english
+								li c++ Programming
 								li PLC programming
 								li Processor programming with MAPLA
-								li Pneumatics and electro-pneumatics
+								li Pneumatics and Electropneumatics
 								li Industrial Robotics
 							section.education--efect-content__down
-								h5 High School
-								span (Elementary studies carried out in adolescence in a state school)
+								h5 Academy preparation
+								span (Approximately 1 year of studies)
+							section.education--efect-content__down
+								h5 High school
+								span (Elementary studies carried out in adolescence in a public school)
 				div.experience#experience
-					h6 Work Experience
+					h4 Work experience
 					div.experience--efect
 						div.experience--efect-content
-							ul 
-								li: p 2019 - actualidad: 
-									p freelancer
-								//- li: p 2018 - 2019:
-								//- 	p nose
-								//- li: p 2017 - 2018:
-								//- 	p nose
-								
+							h5 2021/08 - present:
+								ul freelancer front-end developer
+									li website development
+							h5 2021 - 2018:
+								ul independent
+									li Carpentry (furniture assembly)
+									li Upholstery (car seat restoration)
+									li construction (home construction helper)
+									li Electrician (electrical installations in homes)
+									li Electronics (appliance repair)
+									li computation (computer maintenance)
+									li Automotive mechanics (wiring - car ironing)
+							h5 2017/07 - 2018/06:
+								ul Elevator installation
+									li assembly of elevators in buildings
+							h5 2017/04 - 2017/01
+								ul metalworking
+									li light box manufacturing
+									li installation of meters in light box
+							h5 2015/12 - 2016/04
+								ul Museum of robotics and technology of Peru
+									li maintenance of museum projects
+									li Development of new robotic projects for the museum
+									li Basic robotics teaching
 				div.technologies#technologies
-					h6 technologies
+					h4 technologies
 					div.technologies--efect
 						div.technologies--efect-content
-							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/html-icon.svg", alt="tecnologia de html aprendida")
-							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/css-icon.svg", alt="tecnologia de css aprendida")
-							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="tecnologia de sass aprendida")
-							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/javascript-icon.svg", alt="tecnologia de javascript aprendida")
-							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/github-icon.svg", alt="tecnologia de github aprendida")
-							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/nodejs-icon.svg", alt="tecnologia de html aprendida")
-							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/pug.png", alt="tecnologia de pug aprendida")
-							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="tecnologia de tailwind aprendida")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/html-icon.svg", alt="web programming language html")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/css-icon.svg", alt="web programming language css")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="css preprocessor, web scheduler sass")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/javascript-icon.svg", alt="web programming language javascript")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/github-icon.svg", alt="repository for project storage")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/nodejs-icon.svg", alt="web programming language nodejs")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/pug.png", alt="html preprocessor, web programmer pug")
+							img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="css framework, tailwind web developer")
 			section.summary-main__coments
 		include components/footer.pug
-		script(src="/public/js/changeLeng.js") 
-		script(src="https://riszart.github.io/riszart-daryl/src/js/script.js") 
-		script(src="https://riszart.github.io/riszart-daryl/src/js/changePage.js") 
-		script(src="https://riszart.github.io/riszart-daryl/src/js/summary.js") 
+		script(src="ttps://riszart.github.io/briefcase-riszart-daryl/public/js/startEnd.js") 
+		script(src="ttps://riszart.github.io/briefcase-riszart-daryl/public/js/script.js") 
+		script(src="ttps://riszart.github.io/briefcase-riszart-daryl/public/js/changePage.js") 
+		script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/summary.js")
+		script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/navBar.js") 

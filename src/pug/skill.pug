@@ -1,25 +1,25 @@
 doctype html
 html(lang="es")
-	include components/head.pug
-	include components/settings.pug
-	include components/mixin.pug
+	include es/components/head.pug
+	include es/components/settings.pug
+	include es/components/mixin.pug
 	body
-		include components/temporalStart.pug
-		include components/temporalEnd.pug
-		include components/nav.pug
-		include components/header.pug
+		include es/components/temporalStart.pug
+		include es/components/temporalEnd.pug
+		include es/components/nav.pug
+		include es/components/header.pug
 		main.container-skill 
 			section.skill 
 				div: img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/html-icon.svg", alt="lenguaje de programador web html")
 				div: img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/css-icon.svg", alt="lenguaje de programador web css")
 				div: img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/javascript-icon.svg", alt="lenguaje de programador web javascript")
 				div: img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/pug-js.svg", alt="preprocesador de html, programador web pug")
-				div: img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="preprocesador de sass, programador web sass")
+				div: img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="preprocesador de css, programador web sass")
 				div: img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/nodejs-icon.svg", alt="lenguaje de programador web nodejs")
-				div: img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="freenwork de css, programador web tailwind")
+				div: img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="framework de css, programador web tailwind")
 				div
-		script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/startEnd.js") 
-		script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/script.js")
-		script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/changePage.js") 
+		script(src="../../../public/js/startEnd.js") 
+		script(src="../../../public/js/script.js")
+		script(src="../../../public/js/changePage.js") 
 		script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/changeLeng.js")
 		script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/navBar.js") 

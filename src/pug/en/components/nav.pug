@@ -1,28 +1,28 @@
 include settings.pug
-nav.nav-principal
-  div.content-flags
-    label(for="english").content-flag__en 
-      img(src="/public/img/web/us.png", alt="").content-flag__en-img
-    input(type="radio" name="leng" checked)#en
-    label(for="spanish").content-flag__es
-      img(src="/public/img/web/pe.png", alt="").content-flag__es-img
-    input(type="radio" name="leng")#es
-  img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/close_icon.svg", alt="sierre del nav con icono close").close-icon__nav
-  div.nav-container
-    div.nav-container__logo
-      img(src="/public/img/web/riszart.jpeg", alt="photo del autor riszart daryl").photo
-      img(src="/public/img/web/riszart-logo-white.webp", alt="logo del autor riszart daryl").logo
-    ul.nav-container__list
-      each item in itemNav 
-        if item === "skill"
-          li.my-skill: p= "my " +item
-        else
-          li(class=item): p=item
-    div.nav-container__icons
-      img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/github-icon.svg", alt='github', class='github')
-      img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/linkedin-icon.svg", alt='linkeding', class='linkeding')
-      img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/twitter-icon.svg", alt='twitter', class='twitter')
-      img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/facebook-icon.svg", alt='facebook', class='facebook')
-    div.nav-container__footernav 
-      p Designed and Developed
-      p by Riszart
+section.nav-container__all-elements 
+  nav.nav-principal
+    div.content-flags
+      label(for="english").content-flag__en 
+        img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/us.png", alt="cambio de idioma english").content-flag__en-img
+      input(type="radio" name="leng")#en
+      label(for="spanish").content-flag__es
+        img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/pe.png", alt="cambio de idioma spanish").content-flag__es-img
+      input(type="radio" name="leng" checked)#es
+    div.nav-container
+      div.nav-container__logo
+        img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart.jpeg", alt="foto de perfil del programador web riszart").logo
+      ul.nav-container__list
+        li.about: p about me
+        li.my-skill: p technology
+        li.work: p projects 
+        li.contact: p contact
+        li.CV: p CV
+      div.nav-container__icons
+        a(href="https://github.com/Riszart" target="_blank"): img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/github-icon.svg", alt='enlace github del programador web riszart', class='github')
+        a(href="https://www.linkedin.com/in/riszart-vergara-cajacuri-71b935214/" target="_blank"): img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/linkedin-icon.svg", alt='enlace linkedin del programador web riszart', class='linkeding')
+        a(href="https://twitter.com/riszartvc" target="_blank"): img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/twitter-icon.svg", alt='enlace twitter del programador web riszart', class='twitter')
+        a(href="https://www.facebook.com/vergaracajacuririszart/" target="_blank"): img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/facebook-icon.svg", alt='enlace facebook del programador web riszart', class='facebook')
+      div.nav-container__footernav 
+        p designed and developed
+        p by Riszart
+  div.show-navbar: div

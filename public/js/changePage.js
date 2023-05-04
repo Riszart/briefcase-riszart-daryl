@@ -1,57 +1,56 @@
+let en
 let language = localStorage.getItem('language')
+language === "en" ?en = '/en' :en = ''
 
 switch(window.location.pathname){
-	case `/${language}/about.html`:
+	case `${en}/about.html`:
 		document.querySelector(`.about`).style.background = `#00ff75`
 		break
-	case `/${language}/skill.html`:
+	case `${en}/skill.html`:
 		document.querySelector(`.my-skill`).style.background = `#00ff75`
 		break
-	case `/${language}/portafolio.html`:
+	case `${en}/portafolio.html`:
 		document.querySelector(`.work`).style.background = `#00ff75`
 		break
-	case `/${language}/contact.html`:
+	case `${en}/contact.html`:
 		document.querySelector(`.contact`).style.background = `#00ff75`
 		break
 }
-document.querySelector(".about").onclick = ()=>changePage("about", '_self')
-document.querySelector(".my-skill").onclick = ()=>changePage("skill", '_self')
-document.querySelector(".work").onclick = ()=>changePage("portafolio", '_self')
-document.querySelector(".contact").onclick = ()=>changePage("contact", '_self')
-document.querySelector(".CV").onclick = ()=>changePage("summary", '_self')
-document.querySelector(".facebook").onclick = ()=>sendPage("https://www.facebook.com/vergaracajacuririszart/", `_blank`)
-document.querySelector(".twitter").onclick = ()=>sendPage("https://twitter.com/riszartvc", `_blank`)
-document.querySelector(".linkeding").onclick = ()=>sendPage("https://www.linkedin.com/in/riszart-vergara-cajacuri-71b935214/", `_blank`)
-document.querySelector(".github").onclick = ()=>sendPage("https://github.com/Riszart", `_blank`)
+document.querySelector(".about").onclick = ()=>changePage("/about")
+document.querySelector(".my-skill").onclick = ()=>changePage("/skill")
+document.querySelector(".work").onclick = ()=>changePage("/portafolio")
+document.querySelector(".contact").onclick = ()=>changePage("/contact")
+document.querySelector(".CV").onclick = ()=>changePage("/summary")
 document.querySelector(".go-inicio").onclick = ()=>{
 	language === 'es'
-		?changePage('https://riszartdaryl.netlify.app/', `_self`)
-		:changePage(`https://riszartdaryl.netlify.app/en/index.html`,`_self`)
+		?changePage('/')
+		:changePage(`/index.html`)
 }
 
-const changePage = async (page, target)=>{
-  // if(window.location.pathname === `/${language}/main.html` && page === 'main')return
+const changePage = async (page)=>{
+  if(window.location.pathname === `${en}${page}`)return
   await end()
-	page === `https://riszartdaryl.netlify.app/` || page === `https://riszartdaryl.netlify.app/en/index.html`
-  ?await sendPage(page, target)
-	:await goPage(page, target)
+	page === `/` || page === `/en/index.html`
+		?await sendPage(page)
+		:await goPage(page)
+	await start(page)
 }
 
-const start = ()=>{
+const start = async ()=>{
 	setTimeout(()=>FunctionExport.openWindow(),1000)
 }
 
-async function end(blocked){
+async function end(){
 	return new Promise((resolve, reject)=>{
-			FunctionExport.closeWindow(()=>{resolve('test')})
+		FunctionExport.closeWindow(()=>{resolve('test')})
 	})
 }
-const goPage = async (page, target)=> {
-  location.href = `${window.location.origin}/es/${page}.html`, `${target}`	//public/html/
+const goPage = async (page)=> {
+	location.href = `${window.location.origin}/public/html${en}${page}.html`, `_self`	//public/html/
 }
 
-const sendPage = async (page, target)=>{
-  window.open(page, target)
+const sendPage = async (page)=>{
+  window.open(`https://riszartdaryl.netlify.app${en}${page}`, `_self`)
 }
-
 start()
+

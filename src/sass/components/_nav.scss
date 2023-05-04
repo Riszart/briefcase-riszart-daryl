@@ -130,11 +130,12 @@
   width: 0;
   height: 100vh;
   position: fixed;
-  padding: 0;
+  padding: 20px 0;
   top: 0;
   background-color: $color-dark;
   z-index: 1000;
   transition-duration: 0.5s;
+  visibility: hidden;
   overflow: hidden;
   @include media(tablet){
     position: relative;
