@@ -35,23 +35,6 @@
     display: none;
   }
 }
-
-// .close-icon__nav {
-//   display: block;
-//   height: 50px;
-//   width: 50px;
-//   position: absolute;
-//   z-index: 1000;
-//   top: 5px;
-//   right: 5px;
-//   border-radius: 50%;
-//   background-image: url('https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/close_icon.svg');
-//   background-size: cover;
-//   background-position: center;
-//   @include media(tablet){
-//     display: none;
-//   }
-// }
 .nav-container__all-elements {
   display: flex;
   flex-direction: row;
@@ -141,8 +124,6 @@
     position: relative;
     display: block;
     height: 100vh;
-    width: 200px;
-    padding: 20px;
     box-shadow:
     -50px 50vh 500px $color-primary,
     -50px -50vh 500px $color-hover;

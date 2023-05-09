@@ -46,7 +46,7 @@ async function end(){
 	})
 }
 const goPage = async (page)=> {
-	location.href = `${window.location.origin}/public/html${en}${page}.html`, `_self`	//public/html/
+	location.href = `${window.location.origin}/${en}${page}.html`, `_self`	//public/html/
 }
 
 const sendPage = async (page)=>{

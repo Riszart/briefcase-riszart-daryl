@@ -616,8 +616,6 @@ a {
     position: relative;
     display: block;
     height: 100vh;
-    width: 200px;
-    padding: 20px;
     box-shadow: -50px 50vh 500px #0080ff, -50px -50vh 500px #00ff75;
     border-right: solid #0080ff 2px;
   }
