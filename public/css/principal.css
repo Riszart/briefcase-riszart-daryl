@@ -825,7 +825,7 @@ footer .footer-down {
   border-top: solid rgba(255, 255, 255, 0.3) 3px;
 }
 footer .footer-down p {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.4);
   margin: 0;
   font-weight: 700;
   font-size: 12px;
@@ -1663,7 +1663,7 @@ html {
 }
 .container--summary .summary-main__grid .experience--efect-content h5 ul li {
   margin-left: 15px;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
   list-style: circle;
   font-weight: 400;
 }
@@ -1767,7 +1767,7 @@ html {
   margin-bottom: 20px;
 }
 .container--summary .summary-main__grid .education--efect-content__top span, .container--summary .summary-main__grid .education--efect-content__middle span, .container--summary .summary-main__grid .education--efect-content__down span {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 500;
   margin: 0;
   padding: 0;
@@ -2296,15 +2296,15 @@ html {
   line-height: 4.5rem;
 }
 
-#content-index {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-}
-
 .container-body__index {
   overflow: hidden !important;
+}
+
+#content-index {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: linear-gradient(0.25turn, #00ff75, #0080ff 90%);
 }
 
 .header-container {

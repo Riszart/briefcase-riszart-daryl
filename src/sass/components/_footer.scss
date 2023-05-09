@@ -40,7 +40,7 @@ footer {
     bottom: 0;
     border-top: solid get-opacity($color-sky, .3) 3px;
     p {
-      color: get-opacity($color-sky, .3);
+      color: rgba(255, 255, 255, 0.4);
       margin: 0;
       font-weight: 700;
       @include font-size(12px);

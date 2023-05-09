@@ -1,6 +1,7 @@
 class project{
   constructor({
     img,
+    alt,
     url,
     name,
     description,
@@ -8,6 +9,7 @@ class project{
     classIten
   }){
     this.img = img
+    this.alt = alt
     this.url = url
     this.name = name
     this.description = description
@@ -31,6 +33,7 @@ class project{
       });
     })
     const img = document.createElement("img")
+    img.setAttribute("alt", this.alt)
     div.appendChild(img)
     img.src = this.img
     const p = document.createElement("p")
@@ -96,9 +99,10 @@ class project{
 }
 
 const item8 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-tourism.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-tourism.avif",
+  alt: "landing page turismo Peru",
   url: "https://riszart.github.io/landing-page-tourism/",
-  name: "landing page turismo Peru",
+  name: "desarrollo web de landing page turismo Peru",
   description: "landing page realizado con tailwindcss, poniendo en práctica lo aprendido en los cursos de tailwindcss. Diseño con modo oscuro y claro, direccionando a la página de Wikipedia, correspondiendo a cada opción de lugares turísticos",
   programs: "TailwindCSS JavaScript",
   classIten: "landing-page-turismo-peru"
@@ -107,7 +111,8 @@ const obj8=  new project(item8)
 obj8.createElement()
 
 const item7 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food.avif",
+  alt: "desarrollo web de landing page comida del Peru",
   url: "https://riszart.github.io/landing-page-food/",
   name: "landing page comida del Peru",
   description: "landing page realisado con tailwindcss, práctica en la estructuración así como en la parte de construcción con mobile first, agregando funcionalidades con JavaScript, reto del curso de tailwindcss",
@@ -118,7 +123,8 @@ const obj7=  new project(item7)
 obj7.createElement()
 
 const item6 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-api-rest_practice/index.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-api-rest_practice/index.avif",
+  alt: "desarrollo web de agregar y eliminar gatos o perros",
   url: "https://riszart.github.io/api-rest_practice/",
   name: "API-rest con Fetch",
   description: "Uso de API-rest con método fetch, traer, agregar a favoritos, eliminar de favoritos y agregar una nueva imagen de gato o perro al backend con el uso de FECTH",
@@ -129,7 +135,8 @@ const obj6=  new project(item6)
 obj6.createElement()
 
 const item5 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-ATM-practice/atm-index.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-ATM-practice/atm-index.avif",
+  alt: "desarrollo web de cajero automatica",
   url: "https://riszart.github.io/ATM-practice/",
   name: "RISZBANK",
   description: "Página realizada, donde practico lo aprendido con iteración de funciones y Promise así como avanzando en como comprender para evitar repetir código en JS, avanzando en el entendimiento de preprocesadores: PUG y SASS",
@@ -140,7 +147,8 @@ const obj5=  new project(item5)
 obj5.createElement()
 
 const item4 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-processors-practice-project/riszart-github-io-processors-practice-project.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-processors-practice-project/riszart-github-io-processors-practice-project.avif",
+  alt: "desarrollo web de pagina del grupo blackpink",
   url: "https://riszart.github.io/processors-practice-project/",
   name: "page BLACKPINK",
   description: "Página realizada con preprocesadores, HTML por PUG y CSS por SASS, donde pongo a prueba lo aprendido para el mejor entendimiento de curso, así como independientemente realizándolo solo con consola, comprendiendo mejor su funcionamiento.",
@@ -151,7 +159,8 @@ const obj4=  new project(item4)
 obj4.createElement()
 
 const item3 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-proyecto-game/riszart-github-io-proyecto-game.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-proyecto-game/riszart-github-io-proyecto-game.avif",
+  alt: "desarrollo web de un juego riszgame",
   url: "https://riszart.github.io/proyecto-game/",
   name: "riszgame",
   description: "Proyecto juego, donde se ve el uso de canvas y las diferentes formas de mejorarlo con transiciones y la corrupción con imágenes i/o emojis para mejora la interfaz así como el funcionamiento del juego",
@@ -162,7 +171,8 @@ const obj3=  new project(item3)
 obj3.createElement()
 
 const item2 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-frontend-developer-js-practico/riszart-github-io-frontend-developer-js-practico.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-frontend-developer-js-practico/riszart-github-io-frontend-developer-js-practico.avif",
+  alt: "desarrollo web tienda en linea como practica",
   url: "https://riszart.github.io/frontend-developer-js-practico/",
   name: "proyecto de tienda online basico",
   description: "desarrollo de un e-commerce y el funcionamiento (...), - proyecto mejorado, aplicando el paradigma de objetos, modificándolo y agregándole el uso de preprocesadores como PUG para HTML y SASS para CSS, en caso de JavaScript cambie la lógica para que funcione con objetos. y se agregó la función de agregar nuevos productos",
@@ -173,7 +183,8 @@ const obj2=  new project(item2)
 obj2.createElement()
 
 const item1 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-estadistica-math/riszart-github-io-estadistica-math.png",
+  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-estadistica-math/riszart-github-io-estadistica-math.avif",
+  alt: "desarrollo web de estadistica de reduccion de ingresos",
   url: "https://riszart.github.io/estadistica-math/",
   name: "proyecto de estadistica",
   description: "Proyecto realizado para la comprensión de funcionamiento de objetos y arrays así como introducción a canvas, aplicando matemática para funciones lógicas quedaran resultados y poder mostrarlo en estadística, así como el uso de objetos para reutilizar funciones de otros archivos JavaScript. ",
