@@ -89,7 +89,7 @@ html {
         }
         .content-project__item {
           list-style: none;
-          width: 100%;
+          width: inherit;
           height: 400px;
           position: relative;
           margin: 10px auto;
@@ -114,14 +114,15 @@ html {
           }
           div {
             width: calc(100% + 20px);
-            height: 100%;
+            height: inherit;
             position: relative;
             cursor: pointer;
             overflow: hidden;
             // overflow-y: scroll;
             img {
               filter: blur(0);
-              width: 100%;
+              width: inherit;
+              height: auto;
               @include media(tablet){
                 filter: blur(2px);
               }
@@ -173,7 +174,6 @@ html {
         }
       }
     }
-
     &__close {
       height: 50px;
       width: 50px;
@@ -217,10 +217,11 @@ html {
       }
     }
     &__img-project {
-      width: 100%;
+      width: inherit;
       height: auto;
       .img-project {
-        width: 100%;
+        width: inherit;
+        height: auto;
       }
     }
     &__project-name {
