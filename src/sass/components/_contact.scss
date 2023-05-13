@@ -121,31 +121,28 @@
     background-repeat: no-repeat;
     background-size: cover;
     transition: height 1s ease-in;
-    box-shadow:  
-      0px 0px 10px 0px $color-hover inset,
-      -0px -0px 10px 0px $color-hover inset;
-
+    // box-shadow:  
+    //   0px 0px 10px 0px $color-primary inset,
+    //   -0px -0px 10px 0px $color-primary inset;
     .back-formulario {
       width: 95%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50% , -50%);
-      background-color: get-opacity($color-dark, 0.8);
+      // background-color: get-opacity($color-dark, 0.1);
       @include media(tablet){
         height: 600px;
         width: 700px;
       }
     }
     .formulario {
-      background-color: $color-primary;
+      // background-color: $color-primary;
+      border: solid $color-primary 2px;
       width: 95%;
       padding: 0 50px;
       margin: auto;
       margin-top: 10px;
-      box-shadow:  
-      0px 0px 10px 0px $color-hover,
-      -0px -0px 10px 0px $color-hover;
       transition: height 1s ease-out;
       @include media(tablet){
         margin: 0px;
@@ -193,36 +190,54 @@
           margin: 0;
           font-weight: 600;
           text-transform: uppercase;
-          color: $color-sky;
-          border-bottom: solid 1px $color-sky;
+          color: $color-primary;
+          border-bottom: solid 1px $color-primary;
           @include font-size(28px)
         }
       }
       label {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         font-weight: 100;
-        color: $color-sky;
+        color: $color-primary;
         text-transform: uppercase;
+      }
+      .formulario-input__center input {
+        display: flex;
+        height: 40px;
+        width: 250px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: solid 1px $color-primary;
+        color: $color-sky;
+        cursor: text;
+        &:hover {
+          size: 15;
+        }
       }
       &-input {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 5px;
         @include media(tablet){
           flex-direction: row;
+          margin-bottom: 10px;
         }
         &__left, &__right {
-          margin-top: 40px;
+          margin-top: 5px;
           display: flex;
           flex-direction: column;
+          @include media(tablet){
+            margin-top: 20px;
+          }
         }
         input {
           height: 40px;
           width: 250px;
           border-radius: 5px;
           background-color: transparent;
-          border: solid 1px $color-sky;
+          border: solid 1px $color-primary;
           color: $color-sky;
           cursor: text;
           &:hover {
@@ -231,7 +246,7 @@
         }
       }
       &-message {
-        margin-top: 15px;
+        margin-top: 5px;
         display: flex;
         flex-direction: column;
         textarea{
@@ -240,10 +255,11 @@
           padding: 10px;
           border-radius: 5px;
           background-color: transparent;
-          border: solid 1px $color-sky;
+          border: solid 1px $color-primary;
           color: $color-sky;
           cursor: text;
           resize:none;
+          margin-top: 15px;
         }
       }
       &-buttons {
@@ -255,11 +271,15 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-top: 15px;
+          margin-top: 5px;
+          margin-bottom: 5px;
           background-color: $color-hover;
           border-radius: 5px;
-          border: solid white 2px;
+          border: solid $color-primary 2px;
           cursor: pointer;
+          @include media(tablet){
+            margin-top: 15px;
+          }
           p {
             font-weight: 900;
             display: block;
@@ -269,7 +289,7 @@
             letter-spacing: 3px;
           }
           &:hover {
-            background-color: $color-sky;
+            background-color: $color-primary;
           }
         }
       }

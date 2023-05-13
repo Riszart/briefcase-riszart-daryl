@@ -3,7 +3,6 @@ const ctx = canvas.getContext('2d')
 canvas.width = innerWidth
 canvas.height = innerHeight
 const polygonArray = []
-console.log(polygonArray)
 
 const radioGeneral = 40
 

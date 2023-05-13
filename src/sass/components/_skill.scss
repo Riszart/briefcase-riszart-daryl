@@ -9,7 +9,7 @@
   }
 }
 .container-skill {
-  padding-top: 100px;
+  padding-top: 70px;
   margin: auto;
   @include media(sm){
     width: 90%;
@@ -22,6 +22,7 @@
   @include media(desktop-m){
   }
   .skill {
+    margin-top: 20px;
     width: 100%;
     height: auto;
     display: grid;
@@ -30,9 +31,9 @@
     gap: 20px;
     padding: 15px;
     @include media(tablet){
-      grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
-      grid-template-rows: repeat(6, 300px);
-      gap: 0px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+      grid-template-rows: repeat(6, 200px);
+      gap: 30px;
       height: 100vh;
       padding: 0;
     }
@@ -48,6 +49,8 @@
           // z-index: 10;
         }
         &:hover {
+          border: solid $color-hover 5px;
+          border-radius: 35px;
           transform: scale(.95);
         }
       }

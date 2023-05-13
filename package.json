@@ -5,8 +5,7 @@
   "main": "index.js",
   "homepage": "https://riszart.github.io/briefcase-riszart-daryl/",
   "scripts": {
-    "css": "sass src/sass:public/css",
-    "csswatch": "sass ./src/sass:public/css --watch",
+    "css": "sass ./src/sass:public/css --watch",
     "html": "pug ./src/pug/ --out ./public/html/ --pretty --watch",
     "deploy": "gh-pages -d public/html/en"
   },

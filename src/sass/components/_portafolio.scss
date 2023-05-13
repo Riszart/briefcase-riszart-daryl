@@ -26,7 +26,7 @@ html {
       @include font-size(24px);
       @include media(tablet){
         align-self: flex-end;
-        @include font-size(58px);
+        @include font-size(36px);
       }
     }
     &__text {
@@ -93,7 +93,7 @@ html {
           height: 400px;
           position: relative;
           margin: 10px auto;
-          border: solid 1px $color-primary;
+          border: solid 10px get-opacity($color-primary, 0.3);
           border-radius: 5px;
           overflow: hidden;
           // box-shadow:
@@ -121,8 +121,7 @@ html {
             // overflow-y: scroll;
             img {
               filter: blur(0);
-              width: inherit;
-              height: auto;
+              width: 100%;
               @include media(tablet){
                 filter: blur(2px);
               }
@@ -132,7 +131,7 @@ html {
             }
           }
           .project-name {
-            background-color: black;
+            background-color: get-opacity(black, 0.8);
             width: 100%;
             position: absolute;
             bottom: 0;
@@ -217,7 +216,7 @@ html {
       }
     }
     &__img-project {
-      width: inherit;
+      width: 100%;
       height: auto;
       .img-project {
         width: inherit;

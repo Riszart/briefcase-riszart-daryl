@@ -4,7 +4,7 @@ block content
     section.contact
       h1.contact-tittle Hagamos un gran trabajo.
       div.contact-text 
-        p Hola, soy Riszart, desarrollador web front-end, con aproximadamente un año y medio de experiencia, estudiando y realizando varios proyectos, no dudes en contactarme para preguntarme lo que deseas sobre el desarrollo de un proyecto o si deseas que trabajemos juntos, soy una persona que se compromete con lo que hace y apasionado por la programación.
+        p Hola, no dudes en contactarme para preguntarme lo que deseas sobre el desarrollo de un proyecto o si deseas que trabajemos juntos, soy una persona que se compromete con lo que realiza y apasionado por la tecnología.
       div.contact-send
         p Envíame un correo
       div.contact-social
@@ -22,14 +22,17 @@ block content
           p contactame 
         div.formulario-input
           div.formulario-input__left
-            label(for="name-subject") nombre:
-            input(type="text" name="name" id="name-subject")
+            label(for="name-subject") (*)nombre:
+            input(type="text" name="name" id="name-subject" placeholder="ejemplo" required)
           div.formulario-input__right
-            label(for="email-subject") email:
-            input(type="email" name="email" id="email-subject")
+            label(for="email-subject") (*)email:
+            input(type="email" name="email" id="email-subject" placeholder="ejemplo@gmail.com" required)
+        div.formulario-input__center
+          label(for="number-subject") N° celular:
+          input(type="number" name="number" id="number-subject" placeholder="+51 987654321")
         div.formulario-message 
-          label(for="content-subject") mensaje:
-          textarea(name="message", cols="30", rows="10" id="content-subject")
+          label(for="content-subject") (*)mensaje:
+          textarea(name="message", cols="30", rows="10" id="content-subject" placeholder="Detalle su pregunta o consulta" required)
         div.formulario-buttons
           button(type="submit").formulario-buttons__send
             p enviar mensaje

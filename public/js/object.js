@@ -34,8 +34,9 @@ class project{
     })
     const img = document.createElement("img")
     img.setAttribute("alt", this.alt)
+    img.setAttribute("width", "617px")
     div.appendChild(img)
-    img.src = this.img
+    img.src = this.img.sm
     const p = document.createElement("p")
     p.classList.add("project-name")
     p.innerText = this.name
@@ -49,15 +50,15 @@ class project{
     document.querySelector(".container-footer-main").style.display = "none"
     document.querySelector(".show-navbar").style.display = "none"
     document.querySelector(".header-container").style.filter = "blur(4px)"
+    document.querySelector(".content-tittle-h1").style.filter = "blur(4px)"
 
-    // document.querySelector(".box-float").style.display = "block"
     document.querySelector(".box-float").style.visibility = "visible"
     document.querySelector(".box-float").style.width = "70%"
     document.querySelector(".box-float").style.height = "auto"
     document.querySelector(".box-float").style.borderWidth = "2px"
 
     document.querySelector(".portafolio").style.filter = "blur(15px)"
-    document.querySelector(".img-project").src = this.img
+    document.querySelector(".img-project").src = this.img.lg
     document.querySelector(".box-float__project-name ").innerText = this.name
     document.querySelector(".box-float__project-description").innerText = this.description
     document.querySelector(".box-float__project-programs").innerText = this.programs
@@ -80,6 +81,7 @@ class project{
       boxFloat.style.height = "0"
       boxFloat.style.borderWidth = "0"
       document.querySelector(".portafolio").style.filter = "blur(0)"
+      document.querySelector(".content-tittle-h1").style.filter = "blur(0)"
       document.querySelector(".img-project").src = ""
       document.querySelector(".box-float__project-name").innerText = "none"
       document.querySelector(".box-float__project-description").innerText = "none"
@@ -99,7 +101,10 @@ class project{
 }
 
 const item8 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-tourism.avif",
+  img: {
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-tourism/lg/main-lg.avif",
+    sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-tourism/sm/main-sm.png"
+  },
   alt: "landing page turismo Peru",
   url: "https://riszart.github.io/landing-page-tourism/",
   name: "desarrollo web de landing page turismo Peru",
@@ -111,7 +116,10 @@ const obj8=  new project(item8)
 obj8.createElement()
 
 const item7 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food.avif",
+  img: {
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/lg/main-lg.avif",
+    sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food/sm/main-sm.png"
+  },
   alt: "desarrollo web de landing page comida del Peru",
   url: "https://riszart.github.io/landing-page-food/",
   name: "landing page comida del Peru",
@@ -123,7 +131,10 @@ const obj7=  new project(item7)
 obj7.createElement()
 
 const item6 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-api-rest_practice/index.avif",
+  img: {
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-api-rest_practice/lg/index.avif",
+    sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-api-rest_practice/sm/main-sm.png"
+  },
   alt: "desarrollo web de agregar y eliminar gatos o perros",
   url: "https://riszart.github.io/api-rest_practice/",
   name: "API-rest con Fetch",
@@ -135,7 +146,10 @@ const obj6=  new project(item6)
 obj6.createElement()
 
 const item5 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-ATM-practice/atm-index.avif",
+  img: {
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-ATM-practice/lg/atm-index.avif",
+    sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-ATM-practice/sm/main-sm.png"
+  },
   alt: "desarrollo web de cajero automatica",
   url: "https://riszart.github.io/ATM-practice/",
   name: "RISZBANK",
@@ -147,7 +161,10 @@ const obj5=  new project(item5)
 obj5.createElement()
 
 const item4 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-processors-practice-project/riszart-github-io-processors-practice-project.avif",
+  img: {
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-processors-practice-project/lg/main-lg.avif",
+    sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-processors-practice-project/sm/main-sm.png"
+  },
   alt: "desarrollo web de pagina del grupo blackpink",
   url: "https://riszart.github.io/processors-practice-project/",
   name: "page BLACKPINK",
@@ -159,7 +176,10 @@ const obj4=  new project(item4)
 obj4.createElement()
 
 const item3 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-proyecto-game/riszart-github-io-proyecto-game.avif",
+  img: {
+    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-proyecto-game/lg/main-lg.avif",
+    sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-proyecto-game/sm/main-sm.png"
+  },
   alt: "desarrollo web de un juego riszgame",
   url: "https://riszart.github.io/proyecto-game/",
   name: "riszgame",
@@ -171,7 +191,10 @@ const obj3=  new project(item3)
 obj3.createElement()
 
 const item2 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-frontend-developer-js-practico/riszart-github-io-frontend-developer-js-practico.avif",
+  img: {
+    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-frontend-developer-js-practico/lg/main-lg.avif",
+    sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-frontend-developer-js-practico/sm/main-sm.png"
+  },
   alt: "desarrollo web tienda en linea como practica",
   url: "https://riszart.github.io/frontend-developer-js-practico/",
   name: "proyecto de tienda online basico",
@@ -183,7 +206,10 @@ const obj2=  new project(item2)
 obj2.createElement()
 
 const item1 = {
-  img: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-estadistica-math/riszart-github-io-estadistica-math.avif",
+  img: {
+    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-estadistica-math/lg/main-lg.avif",
+    sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-estadistica-math/sm/main-sm.png"
+  },
   alt: "desarrollo web de estadistica de reduccion de ingresos",
   url: "https://riszart.github.io/estadistica-math/",
   name: "proyecto de estadistica",

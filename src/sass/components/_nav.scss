@@ -63,6 +63,12 @@
     border-radius: 5px;
     opacity: .7;
   }
+  // label input:checked ~ div::after {
+  //   background-color: red !important;
+  // }
+  input {
+    visibility: hidden;
+  }
   div {
     height: 3px;
     width: 40px;
@@ -141,12 +147,8 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      width: auto;
-      height: auto;
       gap: 20px;
       @include media(tablet){
-        width: 150px;
-        // height: 220px;
         gap: 10px;
       }
       // .name {

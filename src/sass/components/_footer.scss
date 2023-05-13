@@ -38,9 +38,9 @@ footer {
     place-content: center;
     position: absolute;
     bottom: 0;
-    border-top: solid get-opacity($color-sky, .3) 3px;
+    border-top: solid get-opacity($color-hover, .5) 3px;
     p {
-      color: rgba(255, 255, 255, 0.4);
+      color: get-opacity($color-hover, .7);
       margin: 0;
       font-weight: 700;
       @include font-size(12px);
