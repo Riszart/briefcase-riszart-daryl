@@ -117,7 +117,7 @@ obj8.createElement()
 
 const item7 = {
   img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/lg/main-lg.avif",
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food/lg/main-lg.avif",
     sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food/sm/main-sm.png"
   },
   alt: "desarrollo web de landing page comida del Peru",

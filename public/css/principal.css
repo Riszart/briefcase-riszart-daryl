@@ -549,7 +549,7 @@ a {
   }
 }
 .show-navbar input {
-  visibility: hidden;
+  display: none;
 }
 .show-navbar div {
   height: 3px;
