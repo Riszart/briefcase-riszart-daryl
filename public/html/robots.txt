@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://riszartdaryl.netlify.app/sitemap.xml
