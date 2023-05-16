@@ -6,27 +6,27 @@ const loadTittlePagEnd = document.querySelector(".load-tittle-page-end")
 const loadTittlePagstart = document.querySelector(".load-tittle-page-start")
 
 switch(window.location.pathname){
-	case `${en}/about.html`, '/public/html/about.html':
+	case `${en}/about.html`:		//'/public/html/about.html'
 		document.querySelector(`.about`).style.background = `#0080ff`
 		tittleH1.innerText = "sobre mi"
 		loadTittlePagstart.innerText = loadTittlePagEnd.innerText = "sobre mi"
 		break
-	case `${en}/skill.html`, '/public/html/skill.html':
+	case `${en}/skill.html`:		//'/public/html/skill.html'
 		document.querySelector(`.my-skill`).style.background = `#0080ff`
 		tittleH1.innerText = "tecnologias de desarrollo"
 		loadTittlePagstart.innerText = loadTittlePagEnd.innerText = "tecnologias de desarrollo"
 		break
-	case `${en}/portafolio.html`, '/public/html/portafolio.html':
+	case `${en}/portafolio.html`:		//, '/public/html/portafolio.html'
 		document.querySelector(`.work`).style.background = `#0080ff`
 		tittleH1.innerText = "proyectos realizados"
 		loadTittlePagstart.innerText = loadTittlePagEnd.innerText = "proyectos realizados"
 		break
-	case `${en}/contact.html`, '/public/html/contact.html':
+	case `${en}/contact.html`:		//, '/public/html/contact.html'
 		document.querySelector(`.contact`).style.background = `#0080ff`
 		tittleH1.innerText = "contactame"
 		loadTittlePagstart.innerText = loadTittlePagEnd.innerText = "contactame"
 		break
-	case `${en}/summary.html`, '/public/html/summary.html':
+	case `${en}/summary.html`:		//, '/public/html/summary.html'
 		document.querySelector(`.CV`).style.background = `#0080ff`
 		tittleH1.innerText = "curriculum vitae"
 		loadTittlePagstart.innerText = loadTittlePagEnd.innerText = "curriculum vitae"
