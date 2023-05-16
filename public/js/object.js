@@ -100,7 +100,7 @@ const item9 = {
   alt: "landing page de HH",
   url: "https://riszart.github.io/landing-HH/",
   name: "desarrollo web de landing page del programa de youtube HH",
-  description: "landing page realizado con tailwindcss, poniendo en práctica lo aprendido en los cursos de tailwindcss. Diseño con modo oscuro y claro, direccionando a la página de Wikipedia, correspondiendo a cada opción de lugares turísticos",
+  description: "landing page realizado con tailwindcss, poniendo en práctica lo aprendido en los cursos de tailwindcss. y en el comsumo de API y con las clases de js sobre promesa try catch, async and await",
   programs: "TailwindCSS JavaScript",
   classIten: "landing-page-h-h"
 }
