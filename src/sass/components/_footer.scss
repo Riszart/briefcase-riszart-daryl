@@ -1,4 +1,5 @@
 footer {
+  background-color: get-opacity($color-sky, .1);
   height: 200px;
   width: 100%;
   border-top: solid $color-primary 1px;
@@ -32,15 +33,16 @@ footer {
     }
   }
   .footer-down {
+    background-color: $color-primary;
     width: 100%;
     height: 30px;
     display: grid;
     place-content: center;
     position: absolute;
     bottom: 0;
-    border-top: solid get-opacity($color-hover, .5) 3px;
+    border-top: solid get-opacity($color-primary, .5) 3px;
     p {
-      color: get-opacity($color-hover, .7);
+      color: get-opacity($color-dark, 1);
       margin: 0;
       font-weight: 700;
       @include font-size(12px);

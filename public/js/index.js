@@ -28,7 +28,7 @@ class Polygon{
     this.color = color
   }
   draw(){
-    ctx.beginPath()
+    ctx.beginPath() 
     ctx.fillStyle = '#000'
     ctx.lineWidth = 10
     ctx.moveTo(this.x-this.radio, this.y)
@@ -51,9 +51,7 @@ class Polygon{
       this.radio = 20
       this.apothem = caclApothem(this.radio)
       this.color = '#00ff75'
-      //clearInterval(a)
-      // this.x = this.x-0.5
-      // this.y = this.y-0.5
+
     }else{
       this.color = '#000'
       this.radio = radioGeneral -5
@@ -62,26 +60,7 @@ class Polygon{
   }
   updateUnit(){
     let a
-    // if(this.x > 0){
-    // console.log('dentro',this.x)
-
-    //   clearInterval(a)
-    //   setInterval(()=>{
-    //     this.x = this.x-1
-    //   },100)
-    // }else{
-    // console.log('otro',this.x)
-
-    //   clearInterval(a) 
-    //   setInterval(()=>{
-    //     this.x = this.x+1
-    //   },100)
-    // }
-    
     this.color = '#0080ff'
-    // this.radio = radioGeneral 
-    // this.apothem = caclApothem(this.radio)
-
   }
 }
 
@@ -121,7 +100,6 @@ function init(radio){
     let count = -5
     iterationPar = iterationPar +2
     let iterationPar2 = 0
-
     for(let a=0; a<columns+1; a++){
       let y = Number((apothem*iterationPar2 +(count)).toFixed(2))
       polygonArray.push(new Polygon(radio,x,y,apothem))
@@ -142,15 +120,6 @@ function animate(){
   }
   requestAnimationFrame(animate)
 }
-
-//   for(let i in polygonArray){
-//     polygonArray[i].draw()
-//     polygonArray[i].updateUnit()
-//   }
-// let a = setInterval(()=>{
-
-//   // polygonArray[Number(Math.random()*170).toFixed(0)].draw()
-// },500)
 
 animate()
 

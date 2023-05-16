@@ -3,20 +3,30 @@ section.nav-container__all-elements
   nav.nav-principal
     div.content-flags
       label(for="english").content-flag__en 
-        img(width="10px" height="10px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/us.png", alt="cambio de idioma english").content-flag__en-img
+        img(defer width="10px" height="10px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/us.png", alt="cambio de idioma english").content-flag__en-img
       input(type="radio" name="leng")#en
       label(for="spanish").content-flag__es
-        img(width="10px" height="10px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/pe.png", alt="cambio de idioma spanish").content-flag__es-img
+        img(defer width="10px" height="10px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/pe.png", alt="cambio de idioma spanish").content-flag__es-img
       input(type="radio" name="leng" checked)#es
     div.nav-container
       div.nav-container__logo
-        img(width="148px" height="148px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart.jpeg", alt="foto de perfil del programador web riszart").logo
+        img(width="148px" height="148px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart.webp", alt="foto de perfil del programador web riszart").logo
       ul.nav-container__list
-        li.about: p sobre mi
-        li.my-skill: p tecnología
-        li.work: p proyectos 
-        li.contact: p contacto
-        li.CV: p CV
+        li.about
+          p sobre mi  
+          a(href="./about.html") sobre mi  
+        li.my-skill
+          p tecnología
+          a(href="./skill.html") tecnología
+        li.work
+          p proyectos 
+          a(href="./portafolio.html") proyectos
+        li.contact
+          p contacto
+          a(href="./contact.html") contacto
+        li.CV
+          p CV
+          a(href="./summary.html") CV
       div.nav-container__icons
         a(href="https://github.com/Riszart" target="_blank"): img(width="50px" height="50px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/github-icon.svg", alt='enlace github del programador web riszart', class='github')
         a(href="https://www.linkedin.com/in/riszart-vergara-cajacuri-71b935214/" target="_blank"): img(width="50px" height="50px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/linkedin-icon.svg", alt='enlace linkedin del programador web riszart', class='linkeding')
@@ -28,4 +38,3 @@ section.nav-container__all-elements
   label(for="check-menu").show-navbar
     div
     input(type="checkbox", name="check-menu")
-    

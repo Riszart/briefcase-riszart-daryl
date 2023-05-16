@@ -1,12 +1,27 @@
-extends es/components/plantilla.pug
-block content 
-	main.container-skill 
-		h1.content-tittle-h1 tegnologías que uso
-		section.skill 
-			div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/html-icon.svg", alt="lenguaje de programador web html")
-			div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/css-icon.svg", alt="lenguaje de programador web css")
-			div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/javascript-icon.svg", alt="lenguaje de programador web javascript")
-			div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/pug-js.svg", alt="preprocesador de html, programador web pug")
-			div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="preprocesador de css, programador web sass")
-			div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/nodejs-icon.svg", alt="lenguaje de programador web nodejs")
-			div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="framework de css, programador web tailwind")
+doctype html
+html(lang="es")
+	//- include es/components/settings.pug
+	//- include es/components/mixin.pug
+	head 
+		include es/components/head.pug
+		title Riszart Daryl - Tecnologías de Programación
+		meta(name="theme-color" content="#101010")
+		meta(name="description", content="Riszart Daryl es un desarrollador web especializado en crear sitios web atractivos y funcionales. Contacta con él para mejorar tu presencia en línea.")
+		link(rel="canonical", href="https://riszartdaryl.netlify.app/skill.html")
+		link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/skill.css")
+	body.container-body__index
+		include es/components/temporalStart.pug
+		include es/components/temporalEnd.pug
+		include es/components/nav.pug
+		include es/components/header.pug
+		main.container-skill 
+			section.skill 
+				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/html-icon.svg", alt="lenguaje de programador web html")
+				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/css-icon.svg", alt="lenguaje de programador web css")
+				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/javascript-icon.svg", alt="lenguaje de programador web javascript")
+				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/pug-js.svg", alt="preprocesador de html, programador web pug")
+				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="preprocesador de css, programador web sass")
+				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/nodejs-icon.svg", alt="lenguaje de programador web nodejs")
+				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="framework de css, programador web tailwind")
+		include es/components/footer.pug
+		include es/components/scriptGeneral.pug

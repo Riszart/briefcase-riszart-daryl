@@ -14,13 +14,16 @@
     cursor: pointer;
     height: 50px;
   }
-//   .deploy-menu {
-//     display: none;
-//     width: 40px;
-//     height: 40px;
-//     margin-right: 15px;
-//     background-image: url('https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/menu-icon-6points.svg');
-//     background-position: center;
-//     background-size: cover;
-//   }
+  .content-tittle-h1 {
+    display: block;
+    position: absolute;
+    bottom: -31px;
+    margin: 0;
+    right: 30px;
+    padding: 1px 10px;
+    color: $color-dark;
+    text-transform: uppercase;
+    background-color: $color-primary;
+    @include font-size(18px);
+  }
 }

@@ -3,7 +3,7 @@ html {
 }
 .container--portafolio {
   margin: auto;
-  padding: 70px 15px 0;
+  padding: 100px 15px 0;
   height: auto;
   @include media(sm){
     width: 90%;
@@ -73,11 +73,11 @@ html {
           width: 300px;
           left: -250px;
           background-color: $color-dark;
-          border: solid 1px $color-hover;
+          border: solid 1px $color-primary;
           border-radius: 5px;
           text-align: justify;
           overflow: visible;
-          color: $color-hover;
+          color: $color-primary;
           @include font-size(14px);
           &::first-letter {
             text-transform: capitalize;
@@ -108,7 +108,7 @@ html {
             &:hover {
               border: solid 2px $color-hover;
               box-shadow:
-              15px 15px 50px 0px $color-primary ,
+              15px 15px 50px 0px $color-hover ,
               -15px -15px 50px 0px $color-hover;
             }
           }

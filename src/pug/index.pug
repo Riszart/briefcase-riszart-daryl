@@ -1,8 +1,13 @@
 doctype html
 html(lang="es")
-	include es/components/headIndex.pug
-	include es/components/settings.pug
-	include es/components/mixin.pug
+	//- include es/components/settings.pug
+	//- include es/components/mixin.pug
+	head 
+		include es/components/head.pug
+		title Riszart Daryl - Desarrolador Web
+		meta(name="description", content="Riszart Daryl es un desarrollador web con experiencia en la creación de sitios web funcionales y atractivos para empresas y particulares. ¡Visita su sitio web ahora!")
+		link(rel="canonical", href="https://riszartdaryl.netlify.app/")
+		link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/index.css")
 	body.container-body__index
 		include es/components/temporalStart.pug
 		include es/components/temporalEnd.pug
@@ -10,10 +15,5 @@ html(lang="es")
 		include es/components/header.pug
 		main
 			canvas#content-index()
-	script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/startEnd.js")  
-	script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/changePage.js")
-	script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/changeLeng.js")
-	script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/index.js")
-	script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/navBar.js")
-	script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/script.js")
-
+		include es/components/scriptGeneral.pug
+		script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/index.js")

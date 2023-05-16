@@ -1,5 +1,7 @@
 .inicio-back__start {
-	display: block;
+	// display: block;
+  display: grid;
+  place-content: center;
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
@@ -10,17 +12,20 @@
   overflow: hidden;
 	transition: width 0.5s ease;
 	background-color: $color-dark;
-  div {
-    width: 100px;
+  img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
-    h2 {
-      margin: 0;
-      text-transform: capitalize;
-      color: $color-hover;
-      @include font-size(48px)
-    }
+  }
+  p{
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    margin-top: 120px;
+    @include font-size(18px)
   }
 }

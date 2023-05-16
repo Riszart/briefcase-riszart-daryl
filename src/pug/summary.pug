@@ -1,6 +1,11 @@
 doctype html
 html(lang="es")
-	include es/components/head.pug
+	head
+		include es/components/head.pug
+		title Riszart Daryl - Curriculum Vitae
+		meta(name="description", content="Riszart Daryl es un desarrollador web con experiencia en la creación de sitios web funcionales y atractivos para empresas y particulares. ¡Visita su sitio web ahora!")
+		link(rel="canonical", href="https://riszartdaryl.netlify.app/summary.html")
+		link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/summary.css")
 	include es/components/settings.pug
 	include es/components/mixin.pug
 	body.container--summary
@@ -11,6 +16,7 @@ html(lang="es")
 		main.summary-main
 			section.summary-main__inicio
 				div.summary-main__inicio-up
+					canvas.canvas-summary
 					h2 RISZART DARYL
 					h3 DESARROLLADOR WEB
 					p Desarrollador web con aproximadamente un año y medio de experiencia, realizando
@@ -72,10 +78,12 @@ html(lang="es")
 					div.experience--efect
 						div.experience--efect-content
 							h5 2021/08 - actualidad:
-								ul freelancer front-end developer
+								p freelancer front-end developer
+								ul 
 									li desarrollo de páginas web
 							h5 2021 - 2018:
-								ul independiente
+								p independiente
+								ul 
 									li Carpintería (ensamblado de muebles)
 									li Tapicería (restauración de asientos de automóviles)
 									li construcción (ayudante en construcción de viviendas)
@@ -84,14 +92,17 @@ html(lang="es")
 									li computación (mantenimiento de computadoras)
 									li Mecánica automotriz (cableado - planchado de autos)
 							h5 2017/07 - 2018/06:
-								ul Instalación de ascensores
+								p Instalación de ascensores
+								ul 
 									li ensamblado de ascensores en edificios
 							h5 2017/04 - 2017/01
-								ul metalmecánica
+								p metalmecánica
+								ul 
 									li fabricación de caja de luz
 									li instalación de medidores en caja de luz
 							h5 2015/12 - 2016/04
-								ul Museo de robótica y tecnología de Perú
+								p Museo de robótica y tecnología de Perú
+								ul 
 									li mantenimiento de los proyectos del museo 
 									li Desarrollo de nuevos proyectos robóticos para el museo
 									li Enseñanza de robótica básica
@@ -109,8 +120,5 @@ html(lang="es")
 							img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="freenwork de css, programador web tailwind")
 			section.summary-main__coments
 		include es/components/footer.pug
-		script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/startEnd.js") 
-		script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/changePage.js") 
-		script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/script.js") 
 		script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/summary.js")
-		script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/navBar.js") 
+		include es/components/scriptGeneral.pug 

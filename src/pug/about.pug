@@ -1,46 +1,50 @@
-extends es/components/plantilla.pug
-block content 
-  main.container--about 
-    h1.content-tittle-h1 sobre mi
-    section.about
-      div.about__content
-        h2.about__tittle Frelancer - Desarrollador Web
-        artice.about__article 
-          div.about__article-project
-            img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/maletin.svg", alt="icono proyectos de desarrollador web")
-            p 8 proyectos
-          div.about__article-experience
-            img(src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/network-icon.svg", alt="icono experiencia desarrollador web")
-            p  +1 año esperiencia
-      div.about__photo 
-        img(width="300px" height="300px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart.jpeg", alt="foto de perfil del programador web riszart")
-      div.about__text
-        p Riszart Daryl (riszart.v.c.2250@gmail.com)
-        p Hola lector, soy un desarrollador web profesional (enfocado en JavaScript) con aproximado un año y medio de experiencia desarrollando proyectos enfocados en frontend con tecnologías HTML, CSS y JavaScript, además de usar preprocesadores como sass y pug para proyectos más grandes.
-        P En la parte de JavaScript, actualmente estoy enfocando en hacer proyectos con API, fetch para realizar llamadas al backend trayendo datos que se utilizan para modificar parte del DOM de la página y, por lo tanto, hacerlo más interactivo y amigable.
-        p Comencé con la programación cuando cursaba el instituto, con un enfoque más en los sistemas eléctricos, después de culminar el instituto me interesó más la programación fuera del enfoque de la industria (programación de procesadores, plc, etc.) y desde entonces comencé a estudiarla de manera más autodidacta con la ayuda de la plataforma de YouTube y Platzi:
-        p Comencé aprendiendo HTML, CSS y JavaScript, después de aprenderlos, seguí con los preprocesadores de HTML y CSS
-        p Actualmente me encuentro aprendiendo mas de js y en paralelo nodejs.
-        p Además de estudiar me encuentro realizando proyectos en JavaScript, haciendo prácticas con promesas, objetos, APIs, etc.
-        p para mejorar mis habilidades, lo que me ha enseñado mucho. Anteriormente estudié en el Instituto SENATI de la carrera (Mecatrónica Industrial) donde aprendí sobre programación: programación de procesadores, programación de PLC, etc. Así como también he adquirido conocimientos de otras áreas como:
-        span •
-        li Mecanica Industrial
-        span (mecanizado de piezas con fresadora, torno, fresadora lineal)
-        br
-        span •
-        li Electrónica Industrial
-        span (desarrollo y diseño de circuitos con componentes electrónicos así como procesadores y su programación)
-        br
-        span •
-        li Electricidad Industrial
-        span (desarrollo y diseño de circuitos eléctricos para sistemas industriales así como programación de PLC, LOGO y su integración con circuitos eléctricos)
-        br
-        span •
-        li Robótica industrial
-        span (desarrollo de un proceso industrial así como su programación de sistemas eléctricos con PLC y programación de robots industriales (brazo robótico KUKA))
-        br
-        span •
-        li Neumática y Electroneumática
-        br
-        span •
-        li Programación de PLC
+doctype html
+html(lang="es")
+  //- include es/components/settings.pug
+  //- include es/components/mixin.pug
+  head 
+    include es/components/head.pug
+    title Riszart Daryl - Sobre Mi (freelancer)
+    meta(name="description", content="Riszart Daryl es un desarrollador web con experiencia en la creación de sitios web funcionales y atractivos para empresas y particulares. ¡Visita su sitio web ahora!")
+    link(rel="canonical", href="https://riszartdaryl.netlify.app/about.html")
+    link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/about.css")
+  body.container-body__index
+    include es/components/temporalStart.pug
+    include es/components/temporalEnd.pug
+    include es/components/nav.pug
+    include es/components/header.pug
+    main.container--about 
+      section.about
+        div.about__content
+          h2.about__tittle Frelancer - Desarrollador Web
+          artice.about__article 
+            div.about__article-project
+              img(width="30px" height="30px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/maletin.svg", alt="icono proyectos de desarrollador web")
+              p 9 proyectos
+            div.about__article-experience
+              img(width="30px" height="30px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/network-icon.svg", alt="icono experiencia desarrollador web")
+              p  +1 1/2 año esperiencia
+        div.about__photo 
+          img(width="300px" height="300px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart.webp", alt="foto de perfil del programador web riszart" title="foto del autor")
+        div.about__text
+          p Riszart Daryl (riszart.v.c.2250@gmail.com)
+          p Hola lector, soy un desarrollador web profesional con aproximado un año y medio de experiencia desarrollando proyectos enfocados en frontend con tecnologías HTML, CSS y JavaScript, además de usar preprocesadores como sass y pug para proyectos más grandes.
+          P En la parte de JavaScript, actualmente estoy enfocando en hacer proyectos con API, fetch para realizar llamadas al backend trayendo datos que se utilizan para modificar parte del DOM de la página y, por lo tanto, hacerlo más interactivo y amigable.
+          p Comencé con la programación cuando cursaba el instituto, con un enfoque más en los sistemas eléctricos, después de culminar el instituto me interesó más la programación fuera del enfoque de la industria (programación de procesadores, plc, etc.) y desde entonces comencé a estudiarla de manera más autodidacta con la ayuda de la plataforma de YouTube y Platzi:
+          p Comencé aprendiendo HTML, CSS y JavaScript, después de aprenderlos, seguí con los preprocesadores de HTML y CSS
+          p Actualmente me encuentro aprendiendo mas de js y en paralelo nodejs.
+          p Además de estudiar me encuentro realizando proyectos en JavaScript, haciendo prácticas con promesas, objetos, APIs, etc.
+          p para mejorar mis habilidades, lo que me ha enseñado mucho. Anteriormente estudié en el Instituto SENATI de la carrera (Mecatrónica Industrial) donde aprendí sobre programación: programación de procesadores, programación de PLC, etc. Así como también he adquirido conocimientos de otras áreas como:
+          ul
+            li Mecanica Industrial
+              span (mecanizado de piezas con fresadora, torno, fresadora ulneal)
+            li Electrónica Industrial
+              span (desarrollo y diseño de circuitos con componentes electrónicos así como procesadores y su programación)
+            li Electricidad Industrial
+              span (desarrollo y diseño de circuitos eléctricos para sistemas industriales así como programación de PLC, LOGO y su integración con circuitos eléctricos)
+            li Robótica industrial
+              span (desarrollo de un proceso industrial así como su programación de sistemas eléctricos con PLC y programación de robots industrazo robótico KUKA)
+            li Neumática y Electroneumática
+            li Programación de PLC
+    include es/components/footer.pug
+    include es/components/scriptGeneral.pug

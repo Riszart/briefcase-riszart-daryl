@@ -1,19 +1,35 @@
 let en
 let language = localStorage.getItem('language')
 language === "en" ?en = '/en' :en = ''
+const tittleH1 = document.querySelector(".content-tittle-h1")
+const loadTittlePagEnd = document.querySelector(".load-tittle-page-end")
+const loadTittlePagstart = document.querySelector(".load-tittle-page-start")
 
 switch(window.location.pathname){
-	case `${en}/about.html`:
-		document.querySelector(`.about`).style.background = `#00ff75`
+	case `${en}/about.html`, '/public/html/about.html':
+		document.querySelector(`.about`).style.background = `#0080ff`
+		tittleH1.innerText = "sobre mi"
+		loadTittlePagstart.innerText = loadTittlePagEnd.innerText = "sobre mi"
 		break
-	case `${en}/skill.html`:
-		document.querySelector(`.my-skill`).style.background = `#00ff75`
+	case `${en}/skill.html`, '/public/html/skill.html':
+		document.querySelector(`.my-skill`).style.background = `#0080ff`
+		tittleH1.innerText = "tecnologias de desarrollo"
+		loadTittlePagstart.innerText = loadTittlePagEnd.innerText = "tecnologias de desarrollo"
 		break
-	case `${en}/portafolio.html`:
-		document.querySelector(`.work`).style.background = `#00ff75`
+	case `${en}/portafolio.html`, '/public/html/portafolio.html':
+		document.querySelector(`.work`).style.background = `#0080ff`
+		tittleH1.innerText = "proyectos realizados"
+		loadTittlePagstart.innerText = loadTittlePagEnd.innerText = "proyectos realizados"
 		break
-	case `${en}/contact.html`:
-		document.querySelector(`.contact`).style.background = `#00ff75`
+	case `${en}/contact.html`, '/public/html/contact.html':
+		document.querySelector(`.contact`).style.background = `#0080ff`
+		tittleH1.innerText = "contactame"
+		loadTittlePagstart.innerText = loadTittlePagEnd.innerText = "contactame"
+		break
+	case `${en}/summary.html`, '/public/html/summary.html':
+		document.querySelector(`.CV`).style.background = `#0080ff`
+		tittleH1.innerText = "curriculum vitae"
+		loadTittlePagstart.innerText = loadTittlePagEnd.innerText = "curriculum vitae"
 		break
 }
 document.querySelector(".about").onclick = ()=>changePage("/about")
@@ -28,7 +44,9 @@ document.querySelector(".go-inicio").onclick = ()=>{
 }
 
 const changePage = async (page)=>{
-  if(window.location.pathname === `${en}${page}`)return
+	console.log(`${en}${page}`)
+	console.log(window.location.pathname)
+  if(window.location.pathname === `${en}${page}.html`|| window.location.pathname === `/public/html${page}.html`)return
   await end()
 	page === `/` || page === `/en/index.html`
 		?await sendPage(page)

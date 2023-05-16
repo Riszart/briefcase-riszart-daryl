@@ -1,4 +1,4 @@
-class project{
+class Project{
   constructor({
     img,
     alt,
@@ -47,7 +47,6 @@ class project{
 
   showItem(){
     document.querySelector(".nav-principal").style.display = "none"
-    document.querySelector(".container-footer-main").style.display = "none"
     document.querySelector(".show-navbar").style.display = "none"
     document.querySelector(".header-container").style.filter = "blur(4px)"
     document.querySelector(".content-tittle-h1").style.filter = "blur(4px)"
@@ -62,22 +61,16 @@ class project{
     document.querySelector(".box-float__project-name ").innerText = this.name
     document.querySelector(".box-float__project-description").innerText = this.description
     document.querySelector(".box-float__project-programs").innerText = this.programs
-    document.querySelector(".box-float__close").addEventListener("click", ()=>{
-      this.closeItem()
-      const positionTop = document.querySelector(`.${this.classIten}`).offsetTop
-      window.scroll({
-        top: positionTop - 150,
-      });
-    })
+    document.querySelector(".box-float__close").onclick = ()=>{this.closeItem()}
+    document.body.addEventListener("keydown", (event)=>{if(event.code === "Escape")this.closeItem()})
     document.querySelector(".go-to-page").onclick = ()=>this.openItem()
     document.querySelector(".go-to-page").innerText = "Ir a la pagina"
   }
 
   closeItem(){
-    const boxFloat = document.querySelector(".box-float")
-    // document.querySelector(".box-float").style.visibility = "hidden"
-    boxFloat.style.width = "0"
     setTimeout(()=>{
+      const positionTop = document.querySelector(`.${this.classIten}`).offsetTop
+      window.scroll({top: positionTop - 150})
       boxFloat.style.height = "0"
       boxFloat.style.borderWidth = "0"
       document.querySelector(".portafolio").style.filter = "blur(0)"
@@ -89,10 +82,9 @@ class project{
       document.querySelector(".show-navbar").style.display = "grid"
       document.querySelector(".header-container").style.filter = "blur(0)"
     },400)
+    const boxFloat = document.querySelector(".box-float")
+    boxFloat.style.width = "0"
     document.querySelector(".nav-principal").style.display = "block"
-    document.querySelector(".container-footer-main").style.display = "block"
-
-    document.querySelector(".go-to-page").onclick = ()=>{}
     document.querySelector(".go-to-page").innerText = ""
 }
   openItem(){
@@ -100,9 +92,24 @@ class project{
   }
 }
 
+const item9 = {
+  img: {
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-HH/lg/main-lg.webp",
+    sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-HH/sm/main-sm.png"
+  },
+  alt: "landing page de HH",
+  url: "https://riszart.github.io/landing-HH/",
+  name: "desarrollo web de landing page del programa de youtube HH",
+  description: "landing page realizado con tailwindcss, poniendo en práctica lo aprendido en los cursos de tailwindcss. Diseño con modo oscuro y claro, direccionando a la página de Wikipedia, correspondiendo a cada opción de lugares turísticos",
+  programs: "TailwindCSS JavaScript",
+  classIten: "landing-page-h-h"
+}
+const obj9=  new Project(item9)
+obj9.createElement()
+
 const item8 = {
   img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-tourism/lg/main-lg.avif",
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-tourism/lg/main-lg.webp",
     sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-tourism/sm/main-sm.png"
   },
   alt: "landing page turismo Peru",
@@ -112,12 +119,12 @@ const item8 = {
   programs: "TailwindCSS JavaScript",
   classIten: "landing-page-turismo-peru"
 }
-const obj8=  new project(item8)
+const obj8=  new Project(item8)
 obj8.createElement()
 
 const item7 = {
   img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food/lg/main-lg.avif",
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food/lg/main-lg.webp",
     sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food/sm/main-sm.png"
   },
   alt: "desarrollo web de landing page comida del Peru",
@@ -127,12 +134,12 @@ const item7 = {
   programs: "TailwindCSS JavaScript",
   classIten: "landing-page-comida-del-peru"
 }
-const obj7=  new project(item7)
+const obj7=  new Project(item7)
 obj7.createElement()
 
 const item6 = {
   img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-api-rest_practice/lg/index.avif",
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-api-rest_practice/lg/index.webp",
     sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-api-rest_practice/sm/main-sm.png"
   },
   alt: "desarrollo web de agregar y eliminar gatos o perros",
@@ -142,12 +149,12 @@ const item6 = {
   programs: "JavaScript HTML CSS",
   classIten: "api-rest-con-fetch"
 }
-const obj6=  new project(item6)
+const obj6=  new Project(item6)
 obj6.createElement()
 
 const item5 = {
   img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-ATM-practice/lg/atm-index.avif",
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-ATM-practice/lg/atm-index.webp",
     sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-ATM-practice/sm/main-sm.png"
   },
   alt: "desarrollo web de cajero automatica",
@@ -157,12 +164,12 @@ const item5 = {
   programs: "HTML CSS PUG SASS JavaScript",
   classIten: "riszbank"
 }
-const obj5=  new project(item5)
+const obj5=  new Project(item5)
 obj5.createElement()
 
 const item4 = {
   img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-processors-practice-project/lg/main-lg.avif",
+    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-processors-practice-project/lg/main-lg.webp",
     sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-processors-practice-project/sm/main-sm.png"
   },
   alt: "desarrollo web de pagina del grupo blackpink",
@@ -172,12 +179,12 @@ const item4 = {
   programs: "HTML CSS PUG SASS JavaScript",
   classIten: "page-blackpink"
 }
-const obj4=  new project(item4)
+const obj4=  new Project(item4)
 obj4.createElement()
 
 const item3 = {
   img: {
-    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-proyecto-game/lg/main-lg.avif",
+    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-proyecto-game/lg/main-lg.webp",
     sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-proyecto-game/sm/main-sm.png"
   },
   alt: "desarrollo web de un juego riszgame",
@@ -187,12 +194,12 @@ const item3 = {
   programs: "HTML CSS PUG SASS JavaScript",
   classIten: "riszgame"
 }
-const obj3=  new project(item3)
+const obj3=  new Project(item3)
 obj3.createElement()
 
 const item2 = {
   img: {
-    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-frontend-developer-js-practico/lg/main-lg.avif",
+    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-frontend-developer-js-practico/lg/main-lg.webp",
     sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-frontend-developer-js-practico/sm/main-sm.png"
   },
   alt: "desarrollo web tienda en linea como practica",
@@ -202,12 +209,12 @@ const item2 = {
   programs: "HTML CSS PUG SASS JavaScript",
   classIten: "shop"
 }
-const obj2=  new project(item2)
+const obj2=  new Project(item2)
 obj2.createElement()
 
 const item1 = {
   img: {
-    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-estadistica-math/lg/main-lg.avif",
+    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-estadistica-math/lg/main-lg.webp",
     sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-estadistica-math/sm/main-sm.png"
   },
   alt: "desarrollo web de estadistica de reduccion de ingresos",
@@ -217,5 +224,5 @@ const item1 = {
   programs: "html, css, javascript",
   classIten: "proyecto-de-estadistica"
 }
-const obj1=  new project(item1)
+const obj1=  new Project(item1)
 obj1.createElement()

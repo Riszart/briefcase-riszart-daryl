@@ -14,11 +14,11 @@
     width: 1000px;
   }
   .contact {
-    padding: 80px 10px 20px;
+    padding: 100px 10px 20px;
     display: flex;
     flex-direction: column;
     @include media(tablet){
-      padding: 70px 100px;
+      padding: 100px 100px;
     }
     &-tittle {
       margin: 0;

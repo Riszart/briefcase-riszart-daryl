@@ -1,7 +1,7 @@
 $color-dark: #161616;
 $color-sky: #ffffff;
-$color-primary: #0080ff;
-$color-hover: #00ff75;
+$color-primary: #00ff75;
+$color-hover:  #0080ff;
 $side-box: 40px;
 
 
@@ -125,7 +125,7 @@ a {
 	border-radius: 5px;
 	&:hover {
 		box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-	 }
+	}
 }
 @mixin item-efect1{
 	background-color: #1a1a1a;
@@ -134,11 +134,59 @@ a {
 	&:hover {
 		transform: scale(0.99);
 		border-radius: 5px;
-	 }
+	}
 }
 
 @mixin background-propiedad {
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+
+
+.load-animation  {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: dotted $color-hover 5px;
+  border-color:  transparent $color-hover transparent $color-hover;
+  animation: moveLoad 5s infinite;
+  &::after{
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    margin: -15px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: solid 15px $color-primary;
+    border-color: $color-primary transparent $color-primary transparent;
+    animation: moveLoad 5s infinite;
+  }
+}
+
+@keyframes moveLoad {
+  0% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(450deg);
+  }
+  30% {
+    transform: rotate(900deg);
+  }
+  50% {
+    transform: rotate(1800deg);
+  }
+  65% {
+    transform: rotate(900deg);
+  }
+  80% {
+    transform: rotate(450deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
