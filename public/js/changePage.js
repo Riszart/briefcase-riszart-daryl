@@ -68,7 +68,7 @@ const goPage = async (page)=> {
 }
 
 const sendPage = async (page)=>{
-  window.open(`https://riszartdaryl.netlify.app${en}${page}`, `_self`)
+  window.open(`${window.location.origin}${en}${page}`, `_self`)
 }
 start()
 
