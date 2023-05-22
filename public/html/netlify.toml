@@ -9,3 +9,9 @@
   to = "https://riszartdaryl.site"
   status = 301
   force = true
+
+[[redirects]]
+from = "/.netlify.app"
+to = "/.site"
+status = 301
+force = true
