@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/riszartdaryl.netlify.app/*"
-  to = "/https://riszartdaryl.site/:splat"
+  to = "https://riszartdaryl.site/:splat"
   status = 301
   force = true
 
