@@ -149,7 +149,7 @@ function interval(state){
           clearInterval(a)
           setTimeout(resolve,1000)
         }
-      },5)
+      },1)
     }
     if(state == "end"){
       let b = setInterval(()=>{
@@ -161,7 +161,7 @@ function interval(state){
           contentTitle.style.display = "none"
           resolve()
         }
-      },5)
+      },1)
     }
   })
 }
