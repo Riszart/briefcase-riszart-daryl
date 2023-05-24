@@ -2,13 +2,76 @@
   overflow: hidden !important;
 }
 #content-index {
+  cursor: crosshair;
   position: absolute;
   top: 0px;
   left: 0px;
   background-image: linear-gradient(0.25turn, $color-hover ,$color-primary 90%);
   // animation-name: changeColor;
-  // animation-duration: 0.2s;
+  // animation-duration: 1s;
   // animation-iteration-count: infinite;
+}
+.title-h2-index {
+  width: auto;
+  height: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  text-align: center;
+  background-color: get-opacity($color-dark, .8);
+  border-radius: 10px;
+  padding: 20px 20px;
+  border: solid $color-hover 5px;
+  transition: height 2s;
+  overflow: hidden;
+  @include media(tablet){
+    height: 146px;
+  }
+  h2 {
+    min-width: 320px;
+    text-transform: uppercase;
+    outline: solid 5px $color-dark;
+    background-color: $color-hover;
+    color: $color-dark;
+    margin: 0;
+    border-radius: 5px;
+    animation-name: borderCaracter;
+    animation-duration: .5s;
+    animation-iteration-count: 50;
+    @include font-size(34px);
+    @include media(tablet){
+      padding: 0 15px;
+      min-width: 550px;
+      @include font-size(64px);
+    }
+  }
+  h3 {
+    position: relative;
+    color: $color-primary;
+    display: inline-block;
+    animation-name: changeCaracter;
+    animation-duration: .5s;
+    animation-iteration-count: 50;
+    @include font-size(24px);
+    @include media(tablet){
+      @include font-size(54px);
+    }
+  }
+  span {
+    position: relative;
+    color: $color-primary;
+    font-weight: bold;
+    animation-name: changeCaracter;
+    animation-duration: .5s;
+    animation-iteration-count: 50;
+    @include font-size(54px);
+    @include media(tablet){
+      @include font-size(84px);
+    }
+
+  }
+
 }
 // @keyframes changeColor {
 //   0%{
@@ -24,6 +87,33 @@
 //     background: linear-gradient($color-sky,$color-hover, $color-primary);
 //   }
 //   100%{
-//     background: linear-gradient($color-dark,$color-hover, $color-primary, $color-sky);
+//     background: linear-gradient($color-dark,$color-hover);
 //   }
 // }
+@keyframes changeCaracter {
+  0%{
+    color: $color-hover;
+  }
+
+  50%{
+    color: $color-primary;
+  }
+
+  100%{
+    color: $color-hover;
+  }
+}
+
+@keyframes borderCaracter {
+  0%{
+    outline-color: $color-hover;
+  }
+
+  50%{
+    outline-color: $color-primary;
+  }
+
+  100%{
+    outline-color: $color-hover;
+  }
+}

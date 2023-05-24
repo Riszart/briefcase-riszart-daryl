@@ -125,121 +125,110 @@ animate()
 
 
 
+function interval(state){
+  return new Promise(resolve=>{
+    const contentTitle = document.querySelector('.title-h2-index')
 
+    let middleHeight = window.innerHeight/2
+    let middleWidth = window.innerWidth/2
 
+    let positionInitialY = contentTitle.clientHeight/2 *-1
+    let positionInitialX = middleWidth
+    if(state == "start"){
+      let a = setInterval(()=>{
+        positionInitialY++
+        contentTitle.style.top = `${positionInitialY}px`
 
+        if(middleHeight <= positionInitialY){
+          const propertyTitle = document.querySelector('.title-h2-index')
+          if(window.innerWidth < 768){
+            propertyTitle.style.height = "160px"
+          }else{
+            propertyTitle.style.height = "250px"
+          }
+          clearInterval(a)
+          setTimeout(resolve,1000)
+        }
+      },5)
+    }
+    if(state == "end"){
+      let b = setInterval(()=>{
+        positionInitialX++
+        contentTitle.style.left = `${positionInitialX}px`
+        console.log('fds')
+        if(positionInitialX > window.innerWidth + (contentTitle.getBoundingClientRect().width/2)){
+          clearInterval(b)
+          contentTitle.style.display = "none"
+          resolve()
+        }
+      },5)
+    }
+  })
+}
 
+function showMsm(stringText){
+  return new Promise((resolve)=>{
+    const textH3 = document.querySelector('.write-h3')
+    let text = stringText.split('')
+    let letter = addLetter(text)
+    let textWidth = text.length
+    let count = 0
 
+    let inter = setInterval(()=>{
+      count++
+      let letterSatate = letter.next().value
 
+      let textshow = document.createTextNode(letterSatate)
+      textH3.appendChild(textshow)
 
+      if(count == textWidth){
+        clearInterval(inter)
+        setTimeout(resolve,500)
+      }
+    },100)
+  })
+}
 
+function removeMsm(){
+  return new Promise((resolve)=>{
+    const textH3 = document.querySelector('.write-h3')
+    let inter = setInterval(()=>{
+      let text = textH3.innerText
+      let remove = text.length - 1
+      let removeLetter = text.substring(0,remove)
+      textH3.innerText = removeLetter
+      if(remove == 0){
+        clearInterval(inter)
+        resolve()
+      }
+    },100)
+  })
+}
 
+function* addLetter(letter){
+  for(let value of letter){
+    yield value
+  }
+}
 
+async function moveScreen(){
+  const textNode = {
+    1:"Javascript",
+    2:"CSS",
+    3:"SASS",
+    4:"HTML",
+    5:"PUG",
+    6:"TailwindCSS",
 
+  } 
+  await interval("start")
+  for(let element in textNode){
+    await showMsm(textNode[element])
+    await removeMsm()
+  }
+  await showMsm("Freelance")
+  await interval("end")
+}
 
+moveScreen()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function aaaaa(){
-//   const canvas = document.getElementById("content-index")
-//   const ctx = canvas.getContext('2d')
-//   canvas.width = innerWidth
-//   canvas.height = innerHeight
-//   const PolygonArray = []
-
-//   const mouse = {
-//     x: null,
-//     y: null,
-//     radius: 150
-//   }
-
-//   window.addEventListener('mousemove',(event)=>{
-//     mouse.x = event.x
-//     mouse.y = event.y
-//   })
-//   ctx.fillStyle = 'red'
-//   ctx.font = '30px Verdana'
-//   ctx.fillText('A',0,0)
-//   //ctx.fillRect(300,300,100,100)
-//   const data = ctx.getImageData(0,0,100,100)
-//   console.log(data)
-//   class Particle{
-//     constructor(x,y){
-//       this.x = x 
-//       this.y = y
-//       this.size = 3
-//       this.baseX = this.x
-//       this.baseY = this.y
-//       this.density = (Math.random() * 30)+1
-
-//     }
-//     draw(){
-//       ctx.fillStyle = 'red'
-//       ctx.beginPath()
-//       ctx.arc(this.x,this.y,this.size,0,Math.PI*2)
-//       ctx.closePath()
-//       ctx.fill()
-//     }
-//     update(){
-//       let dx = mouse.x - this.x
-//       let dy = mouse.y - this.y
-//       let distance = Math.sqrt(dx*dx+dy*dy)
-//       if (distance < 100){
-//         this.size = 10
-//       }else{
-//         this.size = 3
-//       }
-//     }
-//   }
-//   function init(){
-//     particleArray = []
-//     for(let i = 0; i< 500; i++){
-//       let x = Math.random()*canvas.width
-//       let y = Math.random()*canvas.height
-//       particleArray.push(new Particle(x,y))
-//     }
-//     // particleArray.push(new Particle(150,200))
-//     // particleArray.push(new Particle(50,50))
-//   }
-//   init()
-//   console.log(particleArray)
-//   function animate(){
-//     ctx.clearRect(0,0,canvas.width,canvas.height)
-//     for(let i = 0 ;i<particleArray.length;i++){
-//       particleArray[i].draw()
-//       particleArray[i].update()
-//     }
-//     requestAnimationFrame(animate)
-//   }
-//   animate()
-// }
-// aaaaa()

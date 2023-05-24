@@ -4,6 +4,9 @@ document.querySelector('.show-navbar').onclick = ()=>changeState()
 function changeState(){
   const changeState = navSelect.classList.toggle('modified')
   changeState ?showModied() :hideModied()
+  const show = document.querySelector('.click-element')
+  show.classList.toggle('clicked')
+
 }
 
 function showModied(){
@@ -19,3 +22,4 @@ function hideModied(){
   navSelect.style.padding = '20px 0px'
   navSelect.style.visibility = 'hidden'
 }  
+

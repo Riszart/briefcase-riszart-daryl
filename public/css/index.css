@@ -593,10 +593,7 @@ a {
     opacity: 0.7;
   }
 }
-.show-navbar input {
-  display: none;
-}
-.show-navbar div {
+.show-navbar .click-element {
   height: 3px;
   width: 40px;
   position: relative;
@@ -604,12 +601,12 @@ a {
   border-radius: 30%;
 }
 @media only screen and (min-width: 768px) {
-  .show-navbar div {
+  .show-navbar .click-element {
     width: 50px;
     background-color: #00ff75;
   }
 }
-.show-navbar div::after {
+.show-navbar .click-element::after {
   content: " ";
   bottom: 10px;
   height: 3px;
@@ -619,11 +616,11 @@ a {
   border-radius: 30%;
 }
 @media only screen and (min-width: 768px) {
-  .show-navbar div::after {
+  .show-navbar .click-element::after {
     width: 50px;
   }
 }
-.show-navbar div::before {
+.show-navbar .click-element::before {
   content: " ";
   height: 3px;
   width: 40px;
@@ -633,9 +630,24 @@ a {
   border-radius: 30%;
 }
 @media only screen and (min-width: 768px) {
-  .show-navbar div::before {
+  .show-navbar .click-element::before {
     width: 50px;
   }
+}
+.show-navbar .clicked {
+  background-color: transparent !important;
+}
+.show-navbar .clicked::after {
+  height: 5px;
+  top: 0;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+.show-navbar .clicked::before {
+  height: 5px;
+  border-radius: 5px;
+  top: 0;
+  transform: rotate(135deg);
 }
 @media only screen and (min-width: 768px) {
   .show-navbar:hover {
@@ -909,10 +921,115 @@ a {
 }
 
 #content-index {
+  cursor: crosshair;
   position: absolute;
   top: 0px;
   left: 0px;
   background-image: linear-gradient(0.25turn, #0080ff, #00ff75 90%);
+}
+
+.title-h2-index {
+  width: auto;
+  height: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(22, 22, 22, 0.8);
+  border-radius: 10px;
+  padding: 20px 20px;
+  border: solid #0080ff 5px;
+  transition: height 2s;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .title-h2-index {
+    height: 146px;
+  }
+}
+.title-h2-index h2 {
+  min-width: 320px;
+  text-transform: uppercase;
+  outline: solid 5px #161616;
+  background-color: #0080ff;
+  color: #161616;
+  margin: 0;
+  border-radius: 5px;
+  animation-name: borderCaracter;
+  animation-duration: 0.5s;
+  animation-iteration-count: 50;
+  font-size: 34px;
+  font-size: 2.125rem;
+  line-height: 3.1875rem;
+}
+@media only screen and (min-width: 768px) {
+  .title-h2-index h2 {
+    padding: 0 15px;
+    min-width: 550px;
+    font-size: 64px;
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+.title-h2-index h3 {
+  position: relative;
+  color: #00ff75;
+  display: inline-block;
+  animation-name: changeCaracter;
+  animation-duration: 0.5s;
+  animation-iteration-count: 50;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+@media only screen and (min-width: 768px) {
+  .title-h2-index h3 {
+    font-size: 54px;
+    font-size: 3.375rem;
+    line-height: 5.0625rem;
+  }
+}
+.title-h2-index span {
+  position: relative;
+  color: #00ff75;
+  font-weight: bold;
+  animation-name: changeCaracter;
+  animation-duration: 0.5s;
+  animation-iteration-count: 50;
+  font-size: 54px;
+  font-size: 3.375rem;
+  line-height: 5.0625rem;
+}
+@media only screen and (min-width: 768px) {
+  .title-h2-index span {
+    font-size: 84px;
+    font-size: 5.25rem;
+    line-height: 7.875rem;
+  }
+}
+
+@keyframes changeCaracter {
+  0% {
+    color: #0080ff;
+  }
+  50% {
+    color: #00ff75;
+  }
+  100% {
+    color: #0080ff;
+  }
+}
+@keyframes borderCaracter {
+  0% {
+    outline-color: #0080ff;
+  }
+  50% {
+    outline-color: #00ff75;
+  }
+  100% {
+    outline-color: #0080ff;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

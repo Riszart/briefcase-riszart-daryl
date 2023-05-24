@@ -4,7 +4,7 @@ html(lang="es")
 		include es/components/head.pug
 		title Riszart Daryl - Desarrolador Web
 		meta(name="description", content="Riszart Daryl es un desarrollador web con experiencia en la creación de sitios web funcionales y atractivos para empresas y particulares ¡Visita su sitio web ahora!")
-		//- link(rel="canonical", href="https://riszartdaryl.site/")
+		link(rel="canonical", href="https://riszartdaryl.site/index.html")
 		link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/index.css")
 	body.container-body__index
 		include es/components/temporalStart.pug
@@ -13,5 +13,11 @@ html(lang="es")
 		include es/components/header.pug
 		main
 			canvas#content-index()
+			div.title-h2-index 
+				h2 riszart daryl
+				div
+					span [
+					h3.write-h3
+					span ]
 		include es/components/scriptGeneral.pug
 		script(defer src="https://riszart.github.io/briefcase-riszart-daryl/public/js/index.js")
