@@ -262,6 +262,13 @@ body {
                 @include media(desktop-s){
                   @include font-size(22px);
                 }
+                span {
+                  a {
+                    display: block;
+                    color: $color-hover;
+                    @include font-size(14px)
+                  }
+                }
               }
               ul {
                 margin: 0;

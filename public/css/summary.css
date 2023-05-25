@@ -1436,6 +1436,13 @@ body {
     line-height: 2.0625rem;
   }
 }
+.container--summary .summary-main__grid .education--efect-content__top h5 span a, .container--summary .summary-main__grid .education--efect-content__middle h5 span a, .container--summary .summary-main__grid .education--efect-content__down h5 span a {
+  display: block;
+  color: #0080ff;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+}
 .container--summary .summary-main__grid .education--efect-content__top ul, .container--summary .summary-main__grid .education--efect-content__middle ul, .container--summary .summary-main__grid .education--efect-content__down ul {
   margin: 0;
   padding: 0 15px;

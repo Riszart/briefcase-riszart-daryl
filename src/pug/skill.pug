@@ -14,12 +14,26 @@ html(lang="es")
 		include es/components/header.pug
 		main.container-skill 
 			section.skill 
-				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/html-icon.svg", alt="lenguaje de programador web html")
-				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/css-icon.svg", alt="lenguaje de programador web css")
-				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/javascript-icon.svg", alt="lenguaje de programador web javascript")
-				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/pug-js.svg", alt="preprocesador de html, programador web pug")
-				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="preprocesador de css, programador web sass")
-				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/nodejs-icon.svg", alt="lenguaje de programador web nodejs")
-				div: img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="framework de css, programador web tailwind")
+				div(id="skill-html"): img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/html-icon.svg", alt="lenguaje de programador web html")
+				div(id="skill-css"): img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/css-icon.svg", alt="lenguaje de programador web css")
+				div(id="skill-js"): img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/javascript-icon.svg", alt="lenguaje de programador web javascript")
+				div(id="skill-pug"): img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/pug-js.svg", alt="preprocesador de html, programador web pug")
+				div(id="skill-sass"): img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="preprocesador de css, programador web sass")
+				div(id="skill-node"): img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/nodejs-icon.svg", alt="lenguaje de programador web nodejs")
+				div(id="skill-tailwind"): img(width="200px" height="200px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="framework de css, programador web tailwind")
+			h2 Cursos Aprovados
+				a(href="https://platzi.com/p/riszart/" target="_blank") << ir a pagina >>
+			section.courses-conteiner
+				//- article.course
+				//- 	div.course-image
+				//- 		figure
+				//- 			img(src="", alt="").img-course
+				//- 	div.course-description
+				//- 		div.course-name
+				//-				p.course-name_percentage
+				//- 			span 100%
+				//- 		div.course-extra 
+				//- 			span.course-name_rest
 		include es/components/footer.pug
 		include es/components/scriptGeneral.pug
+		script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/skill.js")
