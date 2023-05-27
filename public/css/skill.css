@@ -1,5 +1,6 @@
 /* Reboot Codes - Based on normalize.css v5.0.0
 **********************/
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -461,7 +462,6 @@ body {
   user-select: none;
   background-color: #161616;
   color: #00ff75;
-  font-family: "Play", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -638,15 +638,19 @@ a {
   background-color: transparent !important;
 }
 .show-navbar .clicked::after {
-  height: 5px;
+  height: 4px;
+  width: 40px;
+  right: 5px;
   top: 0;
   border-radius: 5px;
   transform: rotate(45deg);
 }
 .show-navbar .clicked::before {
-  height: 5px;
+  width: 40px;
+  height: 4px;
   border-radius: 5px;
-  top: 0;
+  top: 0px;
+  right: 5px;
   transform: rotate(135deg);
 }
 @media only screen and (min-width: 768px) {
@@ -732,7 +736,6 @@ a {
   font-size: 16px;
   transition: 0.5s;
   z-index: 1;
-  font-family: inherit;
   color: #0080ff;
 }
 .nav-principal .nav-container__list li::before {
@@ -766,9 +769,10 @@ a {
   width: 0;
 }
 .nav-principal .nav-container__list li p {
+  font-family: "Bangers", cursive;
   color: #ffffff;
   text-transform: capitalize;
-  font-weight: 500;
+  letter-spacing: 1px;
   margin-bottom: 0;
   font-size: 20px;
   font-size: 1.25rem;
@@ -812,6 +816,8 @@ a {
   width: 100%;
 }
 .nav-principal .nav-container__footernav p {
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
   font-size: 12px;
   text-align: center;
   margin-bottom: 0;
@@ -819,6 +825,7 @@ a {
 }
 
 .inicio-back__start {
+  font-family: "Montserrat", sans-serif;
   display: grid;
   place-content: center;
   width: 100vw;
@@ -852,6 +859,7 @@ a {
 }
 
 .inicio-back__end {
+  font-family: "Montserrat", sans-serif;
   width: 0;
   height: 100vh;
   position: fixed;
@@ -902,12 +910,14 @@ a {
   height: 50px;
 }
 .header-container .content-tittle-h1 {
+  font-family: "Bangers", cursive;
   display: block;
   position: absolute;
   bottom: -31px;
   margin: 0;
+  margin-bottom: 1px;
   right: 30px;
-  padding: 1px 10px;
+  padding: 0px 10px;
   color: #161616;
   text-transform: uppercase;
   background-color: #00ff75;
@@ -928,6 +938,7 @@ footer .footer-up {
   place-items: center;
 }
 footer .footer-up p {
+  font-family: "Montserrat", sans-serif;
   margin-top: 15px;
   color: #ffffff;
 }
@@ -971,6 +982,7 @@ footer .footer-down {
   border-top: solid rgba(0, 255, 117, 0.5) 3px;
 }
 footer .footer-down p {
+  font-family: "Bangers", cursive;
   color: #161616;
   margin: 0;
   font-weight: 700;
@@ -1012,40 +1024,84 @@ footer .footer-down p {
     width: 90%;
   }
 }
+.container-skill h2 {
+  text-transform: capitalize;
+}
 .container-skill .skill {
   margin-top: 20px;
   width: 100%;
-  display: grid;
   justify-content: center;
-  grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 15px;
 }
+.container-skill .skill ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  gap: 15px;
+}
+.container-skill .skill ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
 @media only screen and (min-width: 768px) {
-  .container-skill .skill {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
-    gap: 30px;
-    padding: 0;
-    margin-bottom: 50px;
+  .container-skill .skill ul li {
+    flex-direction: row;
   }
 }
-.container-skill .skill div {
-  height: 100%;
-  width: 100%;
+.container-skill .skill ul li .content-title-section {
+  display: block;
+  width: 250px;
+  margin: 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
 }
-.container-skill .skill div img {
+@media only screen and (min-width: 768px) {
+  .container-skill .skill ul li .content-title-section {
+    text-align: end;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.container-skill .skill ul li .contemt-div {
+  display: flex;
+  gap: 10px;
+}
+.container-skill .skill ul li .contemt-div div {
+  height: 50px;
+  width: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .container-skill .skill ul li .contemt-div div {
+    height: 80px;
+    width: 80px;
+  }
+}
+.container-skill .skill ul li .contemt-div div img {
+  border-radius: 5px;
   cursor: pointer;
   z-index: 9;
   position: relative;
   height: inherit;
   width: inherit;
 }
-.container-skill .skill div img:hover {
-  border: solid #0080ff 5px;
-  border-radius: 35px;
-  transform: scale(0.95);
+.container-skill .skill ul li .contemt-div div img:hover {
+  border: solid #ffffff 3px;
+  border-radius: 5px;
+  transform: scale(0.9);
 }
 .container-skill h2 {
+  font-family: "Bangers", cursive;
   text-align: center;
   font-size: 18px;
   font-size: 1.125rem;
@@ -1059,6 +1115,7 @@ footer .footer-down p {
   }
 }
 .container-skill h2 a {
+  font-family: "Montserrat", sans-serif;
   margin-left: 10px;
   color: #0080ff;
   font-size: 16px;
@@ -1069,7 +1126,7 @@ footer .footer-down p {
   width: auto;
   place-items: center;
   display: grid;
-  grid-template-columns: 300px;
+  grid-template-columns: auto;
   margin-bottom: 25px;
   align-content: center;
 }
@@ -1118,6 +1175,7 @@ footer .footer-down p {
   gap: 10px;
 }
 .container-skill .courses-conteiner .course .course-description .course-name_percentage {
+  font-family: "Montserrat", sans-serif;
   display: inline-block;
   margin: 0;
   color: #ffffff;
@@ -1136,6 +1194,8 @@ footer .footer-down p {
   }
 }
 .container-skill .courses-conteiner .course .course-description .course-name span {
+  padding-left: 5px;
+  font-family: "Montserrat", sans-serif;
   display: inline-block;
   font-size: 16px;
   font-size: 1rem;
@@ -1155,6 +1215,9 @@ footer .footer-down p {
     font-size: 0.875rem;
     line-height: 1.3125rem;
   }
+}
+.container-skill .courses-conteiner .course .course-description .course-extra span {
+  font-family: "Bangers", cursive;
 }
 
 /*# sourceMappingURL=skill.css.map */

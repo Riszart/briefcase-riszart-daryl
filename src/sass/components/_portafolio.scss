@@ -23,6 +23,8 @@ html {
     &__tittle {
       align-self: center;
       margin: 0;
+      font-family: $font-title;
+      text-transform: capitalize;
       @include font-size(24px);
       @include media(tablet){
         align-self: flex-end;
@@ -35,14 +37,27 @@ html {
       @include font-size(18px);
       @include media(tablet){
         align-self: flex-start;
-        @include font-size(28px);
       }
       p {
-        display: inline;
-        margin-bottom: 0;
-        color: $color-sky;
-        @include media(tablet){
+        &:first-child {
+          margin: 0;
+          text-align: justify;
+          font-family: $font-body;
+          color: $color-sky;
+          @include font-size(16px);
+          @include media(tablet){
+            @include font-size(20px)
+          }
+        }
+        &:last-child {
           display: block;
+          font-family: $font-title;
+          margin-top: 20px;
+          color: $color-primary;
+          @include font-size(20px);
+          @include media(tablet){
+            @include font-size(24px)
+          }
         }
       }
     }
@@ -78,6 +93,7 @@ html {
           text-align: justify;
           overflow: visible;
           color: $color-primary;
+          font-family: $font-title;
           @include font-size(14px);
           &::first-letter {
             text-transform: capitalize;
@@ -90,21 +106,16 @@ html {
         .content-project__item {
           list-style: none;
           width: inherit;
-          height: 400px;
+          height: 250px;
           position: relative;
           margin: 10px auto;
           border: solid 10px get-opacity($color-primary, 0.3);
           border-radius: 5px;
           overflow: hidden;
-          // box-shadow:
-          //   0px 0px 10px 0px $color-hover,
-          //   -0px -0px 10px 0px $color-primary;
           @include media(tablet){
+            height: 400px;
             width: 80%;
             margin: 50px auto;
-            // box-shadow:
-            // // 5px 5px 30px 0px $color-hover,
-            // // -5px -5px 30px 0px $color-primary;
             &:hover {
               border: solid 2px $color-hover;
               box-shadow:
@@ -139,9 +150,12 @@ html {
             margin: 0;
             text-transform: capitalize;
             font-weight: 800;
+            font-family: $font-body;
             color: $color-primary;
-            letter-spacing: 5px;
-            @include font-size(24px)
+            @include font-size(16px);
+            @include media(tablet){
+              @include font-size(24px);
+            }
           }
         }
       }
@@ -224,20 +238,23 @@ html {
       }
     }
     &__project-name {
+      font-family: $font-body;
       text-transform: capitalize;
       text-align: center;
       margin-bottom: 0;
       font-weight: 600;
-      @include font-size(18px);
+      @include font-size(16px);
       @include media(tablet){
         @include font-size(24px);
       }
     }
     &__project-description {
-      width: 98%;
+      margin: 0;
+      padding-left: 5px;
+      font-family: $font-body;
+      width: 67vw;
       text-transform: capitalize;
       text-align: justify;
-      margin-bottom: 0;
       color: white;
       @include font-size(14px);
       @include media(tablet){
@@ -247,6 +264,8 @@ html {
       }
     }
     &__project-programs {
+      width: 65vw;
+      font-family: $font-title;
       margin: 10px;
       display: block;
       text-align: center;
@@ -257,21 +276,26 @@ html {
       }
     }
     .go-to-page {
+      margin: 0 0 10px 10px;
+      width: 130px;
+      background-color: $color-hover;
+      font-weight: bold;
+      color: $color-dark;
       text-transform: capitalize;
-      margin: 0;
-      position: relative;
-      padding-right: 10px;
-      bottom: 0;
-      right: 0;
-      text-align: center;
+      padding: 5px 10px;
+      position: a;
+      text-align: start;
+      border-radius: 5px;
       @include font-size(16px);
       cursor: pointer;
       @include media(tablet){
-        position: absolute;
-        @include font-size(24px);
+        position: relative;
+        width: 150px;
+        @include font-size(20px);
       }
       &:hover {
-        color: $color-hover;
+        background-color: $color-dark;
+        color: $color-primary;
       }
     }
   }

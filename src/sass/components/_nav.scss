@@ -101,15 +101,19 @@
   .clicked {
     background-color: transparent !important;
     &::after {
-      height: 5px;
+      height: 4px;
+      width: 40px;
+      right: 5px;
       top: 0;
       border-radius: 5px;
       transform: rotate(45deg);
     }
     &::before {
-      height: 5px;
+      width: 40px;
+      height: 4px;
       border-radius: 5px;
-      top: 0;
+      top: 0px;
+      right: 5px;
       transform: rotate(135deg);
     }
   }
@@ -210,9 +214,10 @@
           width: 0;
         }
         p {
+          font-family: $font-title;
           color: $color-sky;
           text-transform: capitalize;
-          font-weight: 500;
+          letter-spacing: 1px;
           margin-bottom: 0;
           @include font-size(20px)
         }
@@ -246,6 +251,8 @@
     &__footernav {
       width: 100%;
       p {
+        font-family: $font-body;
+        text-transform: capitalize;
         font-size: 12px;
         text-align: center;
         margin-bottom: 0;

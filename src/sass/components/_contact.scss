@@ -1,3 +1,4 @@
+
 .container--contact {
   margin: auto;
   height: auto;
@@ -21,6 +22,7 @@
       padding: 100px 100px;
     }
     &-tittle {
+      font-family: $font-title;
       margin: 0;
       text-align: center;
       @include font-size(32px);
@@ -42,14 +44,20 @@
         }
       }
       p {
-        display: block;
-        height: auto;
-        width: 100%;
-        color: $color-sky;
-        @include font-size(22px);
+        @include font-size(18px);
+        &:first-child{
+          font-family: $font-body;
+          color: $color-sky;
+        }
+        &:last-child {
+          @include font-size(24px);
+          font-family: $font-title;
+          color: $color-primary;
+        }
       }
     }
     &-send {
+      font-family: $font-title;
       width: 250px;
       padding: 15px 0;
       margin: auto;
@@ -57,7 +65,7 @@
       display: flex;
       justify-content: center;
       cursor: pointer;
-      @include font-size(28px);
+      @include font-size(24px);
       @include media(tablet){
         padding: 15px 0;
         margin-top: 50px;
@@ -90,14 +98,15 @@
         flex-direction: column;
         @include reset;
         li {
+          font-family: $font-title;
           padding: 15px 0;
           cursor: pointer;
           font-weight: 600;
           transition: 0.6s;
           @include font-size(22px);
           &:hover {
-            transition: 0.8s;
-            transition-timing-function: ease-in-out;
+            transition: 0.2s;
+            transition-timing-function: ease-in;
             color: $color-hover;
           }
         }
@@ -186,6 +195,7 @@
       }
       &-contact {
         p {
+          font-family: $font-title;
           padding-top: 15px;
           margin: 0;
           font-weight: 600;
@@ -196,6 +206,7 @@
         }
       }
       label {
+        font-family: $font-title;
         margin-top: 10px;
         margin-bottom: 10px;
         font-weight: 100;
@@ -203,6 +214,7 @@
         text-transform: uppercase;
       }
       .formulario-input__center input {
+        font-family: $font-body;
         display: flex;
         height: 40px;
         width: 250px;
@@ -233,6 +245,7 @@
           }
         }
         input {
+          font-family: $font-body;
           height: 40px;
           width: 250px;
           border-radius: 5px;
@@ -281,6 +294,7 @@
             margin-top: 15px;
           }
           p {
+            font-family: $font-title;
             font-weight: 900;
             display: block;
             margin: 0;

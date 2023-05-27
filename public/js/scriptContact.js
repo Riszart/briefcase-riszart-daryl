@@ -2,8 +2,7 @@ document.querySelector('.contact-send').onclick = ()=>changeStateContact()
 document.querySelector('.formulario-close').onclick = ()=>changeStateContact()
 const navBarContact = document.querySelector('.show-navbar')
 const formContact = document.querySelector('.content-formulario')
-document.body.addEventListener("keydown", (event)=>{if(event.code === "Escape")changeStateContact()})
-
+document.body.addEventListener("keydown", event=>{if(event.code === "Escape")changeStateContact()})
 
 function changeStateContact(){
   const changeProperty = navSelect.classList.toggle('modified')

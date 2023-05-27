@@ -8,6 +8,7 @@ footer {
     display: grid;
     place-items: center;
     p {
+      font-family: $font-body;
       margin-top: 15px;
       color: $color-sky;
     }
@@ -42,6 +43,7 @@ footer {
     bottom: 0;
     border-top: solid get-opacity($color-primary, .5) 3px;
     p {
+      font-family: $font-title;
       color: get-opacity($color-dark, 1);
       margin: 0;
       font-weight: 700;

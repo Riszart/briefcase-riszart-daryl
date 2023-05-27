@@ -1,5 +1,5 @@
 const contentCourses = document.querySelector('.courses-conteiner')
-API_REST = 'https://gist.githubusercontent.com/Riszart/ff8ec2bd9f5f7e8e61483a6d049246c3/raw/9934b50c2d19e58cacb731ca8dfaf00dcedbe999/database-course.json'
+URL_DATA_COURSE = 'https://gist.githubusercontent.com/Riszart/ff8ec2bd9f5f7e8e61483a6d049246c3/raw/ea168fecb09c5da8fc485066dd5fda161b171206/database-course.json'
 
 document.querySelector('#skill-html').onclick = ()=>loadData('html')
 document.querySelector('#skill-css').onclick = ()=>loadData('css')
@@ -11,15 +11,16 @@ document.querySelector('#skill-tailwind').onclick = ()=>loadData('tailwind')
 
 function loadData(name){
   contentCourses.innerText = ""
-  fetch(API_REST)
+  fetch(URL_DATA_COURSE)
     .then(response=>{
       return response.json()
     })
     .then(dataCurses=>{
+      console.log(dataCurses)
+      const positionH2Ttop  = document.querySelector('.title-h2__select').offsetTop
       dataCurses.forEach(course => {
         let value = course.courses.find(element=>element === name)
         if(value){
-          console.log(course.courses[name])
           const contentArticle = document.createElement('article')
           contentArticle.classList.add('course')
           contentArticle.innerHTML = `
@@ -40,10 +41,11 @@ function loadData(name){
           `
           contentCourses.append(contentArticle)
         }
-      });
+      })
+      window.scroll({top: positionH2Ttop - 80,behavior: 'smooth'});
+      
     })
     .catch(error=>{
     console.log('Error:', error)
     });
 }
-loadData('javascript')

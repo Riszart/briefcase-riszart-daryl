@@ -3,7 +3,10 @@ $color-sky: #ffffff;
 $color-primary: #00ff75;
 $color-hover:  #0080ff;
 $side-box: 40px;
+$font-title:'Bangers', cursive;
+$font-body:'Montserrat', sans-serif;
 
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat&display=swap');
 
 @mixin border{
 	position: relative;
@@ -14,7 +17,6 @@ $side-box: 40px;
 	font-size: 16px;
 	transition: .5s;
 	z-index: 1;
-	font-family: inherit;
 	color: $color-hover;
 	&::before {
 		content: '';
@@ -100,7 +102,6 @@ body {
   user-select: none;
   background-color: $color-dark;
 	color: $color-primary;
-	font-family: 'Play', sans-serif;
 }
 body::-webkit-scrollbar {
 	background-color: $color-dark;

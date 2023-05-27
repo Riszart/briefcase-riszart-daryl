@@ -1,3 +1,13 @@
+const URL_DATA_PROJECTS = 'https://gist.githubusercontent.com/Riszart/b981c4925c007f6a25c29e88b0ca1466/raw/030f4021df563aff821c13c3a4c76c4ca75331d1/projects-portfolio.json'
+
+fetch(URL_DATA_PROJECTS)
+  .then(response=>response.json())
+  .then(projectsData=>{
+    projectsData.forEach(project =>new Project(project).createElement())
+  })
+  .catch(error=>{console.log(error)})
+
+  
 class Project{
   constructor({
     img,
@@ -28,14 +38,13 @@ class Project{
     const div = document.createElement("div")
     div.addEventListener("click", ()=>{
       this.showItem()
-      window.scroll({
-        top: 50,
-      });
+      window.scroll({top: 50});
     })
     const img = document.createElement("img")
     img.setAttribute("alt", this.alt)
     img.setAttribute("width", "617px")
     div.appendChild(img)
+    console.log(this.img)
     img.src = this.img.sm
     const p = document.createElement("p")
     p.classList.add("project-name")
@@ -52,7 +61,7 @@ class Project{
     document.querySelector(".content-tittle-h1").style.filter = "blur(4px)"
 
     document.querySelector(".box-float").style.visibility = "visible"
-    document.querySelector(".box-float").style.width = "70%"
+    document.querySelector(".box-float").style.width = "70vw"
     document.querySelector(".box-float").style.height = "auto"
     document.querySelector(".box-float").style.borderWidth = "2px"
 
@@ -91,138 +100,3 @@ class Project{
     window.open(this.url, "_blank")
   }
 }
-
-const item9 = {
-  img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-HH/lg/main-lg.webp",
-    sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-HH/sm/main-sm.png"
-  },
-  alt: "landing page de HH",
-  url: "https://riszart.github.io/landing-HH/",
-  name: "desarrollo web de landing page del programa de youtube HH",
-  description: "landing page realizado con tailwindcss, poniendo en práctica lo aprendido en los cursos de tailwindcss. y en el comsumo de API y con las clases de js sobre promesa try catch, async and await",
-  programs: "TailwindCSS JavaScript",
-  classIten: "landing-page-h-h"
-}
-const obj9=  new Project(item9)
-obj9.createElement()
-
-const item8 = {
-  img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-tourism/lg/main-lg.webp",
-    sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-tourism/sm/main-sm.png"
-  },
-  alt: "landing page turismo Peru",
-  url: "https://riszart.github.io/landing-page-tourism/",
-  name: "desarrollo web de landing page turismo Peru",
-  description: "landing page realizado con tailwindcss, poniendo en práctica lo aprendido en los cursos de tailwindcss. Diseño con modo oscuro y claro, direccionando a la página de Wikipedia, correspondiendo a cada opción de lugares turísticos",
-  programs: "TailwindCSS JavaScript",
-  classIten: "landing-page-turismo-peru"
-}
-const obj8=  new Project(item8)
-obj8.createElement()
-
-const item7 = {
-  img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food/lg/main-lg.webp",
-    sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-landing-page-food/sm/main-sm.png"
-  },
-  alt: "desarrollo web de landing page comida del Peru",
-  url: "https://riszart.github.io/landing-page-food/",
-  name: "landing page comida del Peru",
-  description: "landing page realisado con tailwindcss, práctica en la estructuración así como en la parte de construcción con mobile first, agregando funcionalidades con JavaScript, reto del curso de tailwindcss",
-  programs: "TailwindCSS JavaScript",
-  classIten: "landing-page-comida-del-peru"
-}
-const obj7=  new Project(item7)
-obj7.createElement()
-
-const item6 = {
-  img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-api-rest_practice/lg/index.webp",
-    sm: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-api-rest_practice/sm/main-sm.png"
-  },
-  alt: "desarrollo web de agregar y eliminar gatos o perros",
-  url: "https://riszart.github.io/api-rest_practice/",
-  name: "API-rest con Fetch",
-  description: "Uso de API-rest con método fetch, traer, agregar a favoritos, eliminar de favoritos y agregar una nueva imagen de gato o perro al backend con el uso de FECTH",
-  programs: "JavaScript HTML CSS",
-  classIten: "api-rest-con-fetch"
-}
-const obj6=  new Project(item6)
-obj6.createElement()
-
-const item5 = {
-  img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-ATM-practice/lg/atm-index.webp",
-    sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-ATM-practice/sm/main-sm.png"
-  },
-  alt: "desarrollo web de cajero automatica",
-  url: "https://riszart.github.io/ATM-practice/",
-  name: "RISZBANK",
-  description: "Página realizada, donde practico lo aprendido con iteración de funciones y Promise así como avanzando en como comprender para evitar repetir código en JS, avanzando en el entendimiento de preprocesadores: PUG y SASS",
-  programs: "HTML CSS PUG SASS JavaScript",
-  classIten: "riszbank"
-}
-const obj5=  new Project(item5)
-obj5.createElement()
-
-const item4 = {
-  img: {
-    lg: "https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-processors-practice-project/lg/main-lg.webp",
-    sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-processors-practice-project/sm/main-sm.png"
-  },
-  alt: "desarrollo web de pagina del grupo blackpink",
-  url: "https://riszart.github.io/processors-practice-project/",
-  name: "page BLACKPINK",
-  description: "Página realizada con preprocesadores, HTML por PUG y CSS por SASS, donde pongo a prueba lo aprendido para el mejor entendimiento de curso, así como independientemente realizándolo solo con consola, comprendiendo mejor su funcionamiento.",
-  programs: "HTML CSS PUG SASS JavaScript",
-  classIten: "page-blackpink"
-}
-const obj4=  new Project(item4)
-obj4.createElement()
-
-const item3 = {
-  img: {
-    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-proyecto-game/lg/main-lg.webp",
-    sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-proyecto-game/sm/main-sm.png"
-  },
-  alt: "desarrollo web de un juego riszgame",
-  url: "https://riszart.github.io/proyecto-game/",
-  name: "riszgame",
-  description: "Proyecto juego, donde se ve el uso de canvas y las diferentes formas de mejorarlo con transiciones y la corrupción con imágenes i/o emojis para mejora la interfaz así como el funcionamiento del juego",
-  programs: "HTML CSS PUG SASS JavaScript",
-  classIten: "riszgame"
-}
-const obj3=  new Project(item3)
-obj3.createElement()
-
-const item2 = {
-  img: {
-    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-frontend-developer-js-practico/lg/main-lg.webp",
-    sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-frontend-developer-js-practico/sm/main-sm.png"
-  },
-  alt: "desarrollo web tienda en linea como practica",
-  url: "https://riszart.github.io/frontend-developer-js-practico/",
-  name: "proyecto de tienda online basico",
-  description: "desarrollo de un e-commerce y el funcionamiento (...), - proyecto mejorado, aplicando el paradigma de objetos, modificándolo y agregándole el uso de preprocesadores como PUG para HTML y SASS para CSS, en caso de JavaScript cambie la lógica para que funcione con objetos. y se agregó la función de agregar nuevos productos",
-  programs: "HTML CSS PUG SASS JavaScript",
-  classIten: "shop"
-}
-const obj2=  new Project(item2)
-obj2.createElement()
-
-const item1 = {
-  img: {
-    lg:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-estadistica-math/lg/main-lg.webp",
-    sm:"https://riszart.github.io/briefcase-riszart-daryl/public/img/projects/riszart-github-io-estadistica-math/sm/main-sm.png"
-  },
-  alt: "desarrollo web de estadistica de reduccion de ingresos",
-  url: "https://riszart.github.io/estadistica-math/",
-  name: "proyecto de estadistica",
-  description: "Proyecto realizado para la comprensión de funcionamiento de objetos y arrays así como introducción a canvas, aplicando matemática para funciones lógicas quedaran resultados y poder mostrarlo en estadística, así como el uso de objetos para reutilizar funciones de otros archivos JavaScript. ",
-  programs: "html, css, javascript",
-  classIten: "proyecto-de-estadistica"
-}
-const obj1=  new Project(item1)
-obj1.createElement()

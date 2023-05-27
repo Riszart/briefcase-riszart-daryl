@@ -1,5 +1,6 @@
 /* Reboot Codes - Based on normalize.css v5.0.0
 **********************/
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -461,7 +462,6 @@ body {
   user-select: none;
   background-color: #161616;
   color: #00ff75;
-  font-family: "Play", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -638,15 +638,19 @@ a {
   background-color: transparent !important;
 }
 .show-navbar .clicked::after {
-  height: 5px;
+  height: 4px;
+  width: 40px;
+  right: 5px;
   top: 0;
   border-radius: 5px;
   transform: rotate(45deg);
 }
 .show-navbar .clicked::before {
-  height: 5px;
+  width: 40px;
+  height: 4px;
   border-radius: 5px;
-  top: 0;
+  top: 0px;
+  right: 5px;
   transform: rotate(135deg);
 }
 @media only screen and (min-width: 768px) {
@@ -732,7 +736,6 @@ a {
   font-size: 16px;
   transition: 0.5s;
   z-index: 1;
-  font-family: inherit;
   color: #0080ff;
 }
 .nav-principal .nav-container__list li::before {
@@ -766,9 +769,10 @@ a {
   width: 0;
 }
 .nav-principal .nav-container__list li p {
+  font-family: "Bangers", cursive;
   color: #ffffff;
   text-transform: capitalize;
-  font-weight: 500;
+  letter-spacing: 1px;
   margin-bottom: 0;
   font-size: 20px;
   font-size: 1.25rem;
@@ -812,6 +816,8 @@ a {
   width: 100%;
 }
 .nav-principal .nav-container__footernav p {
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
   font-size: 12px;
   text-align: center;
   margin-bottom: 0;
@@ -819,6 +825,7 @@ a {
 }
 
 .inicio-back__start {
+  font-family: "Montserrat", sans-serif;
   display: grid;
   place-content: center;
   width: 100vw;
@@ -852,6 +859,7 @@ a {
 }
 
 .inicio-back__end {
+  font-family: "Montserrat", sans-serif;
   width: 0;
   height: 100vh;
   position: fixed;
@@ -902,12 +910,14 @@ a {
   height: 50px;
 }
 .header-container .content-tittle-h1 {
+  font-family: "Bangers", cursive;
   display: block;
   position: absolute;
   bottom: -31px;
   margin: 0;
+  margin-bottom: 1px;
   right: 30px;
-  padding: 1px 10px;
+  padding: 0px 10px;
   color: #161616;
   text-transform: uppercase;
   background-color: #00ff75;
@@ -928,6 +938,7 @@ footer .footer-up {
   place-items: center;
 }
 footer .footer-up p {
+  font-family: "Montserrat", sans-serif;
   margin-top: 15px;
   color: #ffffff;
 }
@@ -971,6 +982,7 @@ footer .footer-down {
   border-top: solid rgba(0, 255, 117, 0.5) 3px;
 }
 footer .footer-down p {
+  font-family: "Bangers", cursive;
   color: #161616;
   margin: 0;
   font-weight: 700;
@@ -992,6 +1004,7 @@ html {
 
 body {
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container--summary {
@@ -1040,6 +1053,7 @@ body {
   top: 0;
 }
 .container--summary .summary-main__inicio-up h2 {
+  font-family: "Bangers", cursive;
   font-weight: 900;
   font-size: 40px;
   font-size: 2.5rem;

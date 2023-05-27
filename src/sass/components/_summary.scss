@@ -3,6 +3,7 @@ html {
 }
 body {
   overflow-x: hidden;
+  font-family: $font-body;
 }
 .container--summary {
   width: 100%;
@@ -38,6 +39,7 @@ body {
           top: 0;
         }
         h2 {
+          font-family: $font-title;
           font-weight: 900;
           @include font-size(40px);
           @include reset;

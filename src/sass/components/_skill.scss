@@ -22,47 +22,84 @@
   }
   @include media(desktop-m){
   }
+  h2 {
+    text-transform: capitalize;
+  }
   .skill {
     margin-top: 20px;
     width: 100%;
-    display: grid;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 15px;
-    @include media(tablet){
-      grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
-      gap: 30px;
+    ul {
+      margin: 0;
       padding: 0;
-      margin-bottom: 50px;
-    }
-    div {
-      height: 100%;
       width: 100%;
-      img {
-        cursor: pointer;
-        z-index: 9;
-        position: relative;
-        height: inherit;
-        width: inherit;
+      display: grid;
+      place-content: center;
+      gap: 15px;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
         @include media(tablet){
-          // z-index: 10;
+          flex-direction: row;
         }
-        &:hover {
-          border: solid $color-hover 5px;
-          border-radius: 35px;
-          transform: scale(.95);
+        .content-title-section {
+          display: block;
+          width: 250px;
+          margin: 0;
+          text-align: center;
+          font-family: $font-body;
+          text-transform: uppercase;
+          color: $color-sky;
+          @include font-size(12px);
+          @include media(tablet){
+            text-align: end;
+            @include font-size(16px);
+          }
+        }
+        .contemt-div {
+          display: flex;
+          gap: 10px;
+          div {
+            height: 50px;
+            width: 50px;
+            @include media(tablet){
+              height: 80px;
+              width: 80px;
+            }
+            img {
+              border-radius: 5px;
+              cursor: pointer;
+              z-index: 9;
+              position: relative;
+              height: inherit;
+              width: inherit;
+              @include media(tablet){
+                // z-index: 10;
+              }
+              &:hover {
+                border: solid $color-sky 3px;
+                border-radius: 5px;
+                transform: scale(.9);
+              }
+            }
+          }
         }
       }
     }
   }
   h2 {
+    font-family: $font-title;
     text-align: center;
     @include font-size(18px);
     @include media(tablet){
       @include font-size(26px);
     }
     a {
+      font-family: $font-body;
       margin-left: 10px;
       color: $color-hover;
       @include font-size(16px);
@@ -72,7 +109,7 @@
     width: auto;
     place-items: center;
     display: grid;
-    grid-template-columns: 300px;
+    grid-template-columns: auto;
     margin-bottom: 25px;
     align-content: center;
     @include media(tablet){
@@ -113,6 +150,7 @@
         .course-name {
           gap: 10px;
           &_percentage {
+            font-family: $font-body;
             display: inline-block;
             margin: 0;
             color: $color-sky;
@@ -125,6 +163,8 @@
             }
           }
           span {
+            padding-left: 5px;
+            font-family: $font-body;
             display: inline-block;
             @include font-size(16px);
             color: $color-primary;
@@ -136,6 +176,9 @@
           @include font-size(12px);
           @include media(tablet){
             @include font-size(14px);
+          }
+          span {
+            font-family: $font-title;
           }
         }
       }
