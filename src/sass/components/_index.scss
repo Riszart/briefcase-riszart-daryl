@@ -74,23 +74,6 @@
   }
 
 }
-// @keyframes changeColor {
-//   0%{
-//     background: linear-gradient($color-dark,$color-hover);
-//   }
-//   25% {
-//     background: linear-gradient($color-hover, $color-primary,);
-//   }
-//   50% {
-//     background: linear-gradient($color-primary,$color-hover);
-//   }
-//   75%{
-//     background: linear-gradient($color-sky,$color-hover, $color-primary);
-//   }
-//   100%{
-//     background: linear-gradient($color-dark,$color-hover);
-//   }
-// }
 @keyframes changeCaracter {
   0%{
     color: $color-hover;

@@ -108,8 +108,7 @@ function init(radio){
     }
   }
 }
-init(radioGeneral)
-
+window.addEventListener('DOMContentLoaded', ()=>init(radioGeneral))
 
 function animate(){
   ctx.clearRect(0,0,canvas.width,canvas.height)
@@ -120,10 +119,7 @@ function animate(){
   }
   requestAnimationFrame(animate)
 }
-
-animate()
-
-
+window.addEventListener("load", animate)
 
 function interval(state){
   return new Promise(resolve=>{
@@ -155,7 +151,6 @@ function interval(state){
       let b = setInterval(()=>{
         positionInitialX++
         contentTitle.style.left = `${positionInitialX}px`
-        console.log('fds')
         if(positionInitialX > window.innerWidth + (contentTitle.getBoundingClientRect().width/2)){
           clearInterval(b)
           contentTitle.style.display = "none"
@@ -229,6 +224,4 @@ async function moveScreen(){
   await showMsm("Freelance")
   await interval("end")
 }
-
-moveScreen()
-
+window.addEventListener("load", moveScreen)

@@ -92,7 +92,6 @@
         grid-row: 1/2;
       }
       img {
-        // border: solid $color-primary 2px;
         border-radius: 10px;
         width: inherit;
         height: inherit;
@@ -131,27 +130,11 @@
             @include font-size(16px);
           }
         }
-
         &:nth-child(10){
           margin-top: 10px;
           @include font-size(16px)
         }
       }
-      // ul {
-      //   li {
-      //     list-style: inside;
-      //     margin: 0;
-      //     @include font-size(14px);
-      //     color: $color-sky;
-      //     padding-left: 2px;
-      //     display: inline-block;
-      //   }
-      //   span {
-      //     margin-left: 5px;
-      //     color: $color-primary;
-      //     @include font-size(12px)
-      //   }
-      // }
     }
   }
 }

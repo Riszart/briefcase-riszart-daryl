@@ -164,28 +164,9 @@
       @include media(tablet){
         gap: 10px;
       }
-      // .name {
-      //   width: 100%;
-      // }
-      // .photo {
-      //   border-radius: 5%;
-      //   width: 180px;
-      //   border: solid 1px $color-sky;
-      //   // box-shadow:
-      //   // 0px 0px 8px $color-hover,
-      //   // -0px -0px 8px $color-hover;
-      //   @include media(tablet){
-      //     width: 120px;
-      //   }
-      //   @include media(desktop-m){
-      //     margin-bottom: 10px;
-      //     margin-top: 50px;
-      //   }
-      // }
       .logo {
         cursor: pointer;
         border: solid $color-primary 1px;
-
         margin-top: 30px;
         border-radius: 5px;
         @include media(tablet){
@@ -201,19 +182,17 @@
         width: 100%;
         height: 55px;
         border-top: solid get-opacity($color-primary, .5) 1px;
-        display: grid;
-        place-content: center;
         cursor: pointer;
         @include border;
         @include media(tablet){
           height: 50px;
         }
-        a{
-          visibility: hidden;
-          height: 0;
-          width: 0;
-        }
-        p {
+        a {
+          position: relative;
+          display: grid;
+          place-content: center;
+          width: inherit;
+          height: inherit;
           font-family: $font-title;
           color: $color-sky;
           text-transform: capitalize;

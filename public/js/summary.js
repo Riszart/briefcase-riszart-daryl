@@ -39,17 +39,21 @@ let global = 0
 let val = 0
 let block = true
 
-for(let i=0; i<10; i++){
-  circleArray.push(new Canvas({
-    xCenter,
-    yCenter,
-    radius: 50 + val,
-    startAngle: numberRandom(),
-    endAngle: numberRandom(),
-    clockwise: false
-  }))
-  val = val + 10
+function initGrafic(){
+  for(let i=0; i<10; i++){
+    circleArray.push(new Canvas({
+      xCenter,
+      yCenter,
+      radius: 50 + val,
+      startAngle: numberRandom(),
+      endAngle: numberRandom(),
+      clockwise: false
+    }))
+    val = val + 10
+  }
 }
+
+
 function numberRandom(){
   return Number((Math.random()*5 + 1).toFixed(2))
 }

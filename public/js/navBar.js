@@ -6,14 +6,12 @@ function changeState(){
   changeState ?showModied() :hideModied()
   const show = document.querySelector('.click-element')
   show.classList.toggle('clicked')
-
 }
 
 function showModied(){
   window.screen.width > 786
     ?navSelect.style.width = '200px'
     :navSelect.style.width = '100vw'
-
   navSelect.style.padding = '20px 20px'
   navSelect.style.visibility = 'visible' 
 }
