@@ -1,18 +1,18 @@
 {
   "name": "Portafolio",
   "short_name": "Portafolio",
-  "start_url": "http://127.0.0.1:5501/public/html/",
+  "start_url": "https://riszart.github.io/briefcase-riszart-daryl/public/html/",
   "display": "standalone",
   "background_color": "#161616",
   "theme_color": "#00ff75",
   "icons": [
     {
-      "src": "public/img/web/r-lg.webp",
+      "src": "https://riszart.github.io/briefcase-riszart-daryl/public/img/web/r-lg.webp",
       "sizes": "500x500",
       "type": "image/webp"
     },
     {
-      "src": "public/img/web/ris-black.png",
+      "src": "https://riszart.github.io/briefcase-riszart-daryl/public/img/web/ris-black.png",
       "sizes": "1320x1320",
       "type": "image/png",
       "purpose": "any maskable"
