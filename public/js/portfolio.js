@@ -1,13 +1,9 @@
-const URL_DATA_PROJECTS = 'https://gist.githubusercontent.com/Riszart/b981c4925c007f6a25c29e88b0ca1466/raw/030f4021df563aff821c13c3a4c76c4ca75331d1/projects-portfolio.json'
+const URL_DATA_PROJECTS = 'https://gist.githubusercontent.com/Riszart/b981c4925c007f6a25c29e88b0ca1466/raw/3903316187d4e9580deb62e1c4eab9dcb0935385/projects-portfolio.json'
 
-// function loadProject(){
-  fetch(URL_DATA_PROJECTS)
+fetch(URL_DATA_PROJECTS)
   .then(response=>response.json())
-  .then(projectsData=>{
-    projectsData.forEach(project =>new Project(project).createElement())
-  })
+  .then(projectsData=>{projectsData.forEach(project =>new Project(project).createElement())})
   .catch(error=>{console.log(error)})
-// }
 
 class Project{
   constructor({
@@ -44,6 +40,7 @@ class Project{
     const img = document.createElement("img")
     img.setAttribute("alt", this.alt)
     img.setAttribute("width", "617px")
+    img.setAttribute("height", "210px")
     div.appendChild(img)
     img.src = this.img.sm
     const p = document.createElement("p")
@@ -100,6 +97,3 @@ class Project{
     window.open(this.url, "_blank")
   }
 }
-
-// window.addEventListener('load', loadProject)
-// loadProject()
