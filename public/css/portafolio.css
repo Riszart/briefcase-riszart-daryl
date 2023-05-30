@@ -573,7 +573,6 @@ output {
 }
 .header-container img {
   cursor: pointer;
-  height: 50px;
 }
 .header-container .content-tittle-h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -765,6 +764,7 @@ html {
 .container--portafolio .portafolio__content-li article .content-project__item div img {
   filter: blur(0);
   width: 100%;
+  height: auto;
 }
 @media only screen and (min-width: 768px) {
   .container--portafolio .portafolio__content-li article .content-project__item div img {

@@ -6,6 +6,8 @@ html(lang="es")
     meta(name="description", content="Riszart Daryl es un desarrollador web especializado en crear sitios web atractivos y funcionales. Contacta con él para mejorar tu presencia en línea.")
     link(rel="canonical", href="https://riszartdaryl.site/portafolio.html")
     link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/portafolio.css" defer)
+    link(rel="preconnect" href="https://gist.githubusercontent.com")
+    link(rel="dns-prefetch" href="https://gist.githubusercontent.com")
   body.container-body__index
     include es/components/temporalStart.pug
     include es/components/temporalEnd.pug
@@ -23,7 +25,7 @@ html(lang="es")
         div.box-float__close
           span.box-float__close-item
         div.box-float__img-project
-          img.img-project(width="910px" src="", alt="muestra de la imagen")
+          img.img-project(width="910px" height="0px" src="", alt="muestra de la imagen")
         p.box-float__project-name 
         p.box-float__project-description
         div.box-float__project-programs
@@ -32,4 +34,4 @@ html(lang="es")
         p.go-to-page
     include es/components/footer.pug
     include es/components/scriptGeneral.pug
-    script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/portfolio.js" defer) 
+    script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/portfolio.js" async) 

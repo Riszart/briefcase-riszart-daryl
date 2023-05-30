@@ -1,13 +1,9 @@
 const URL_DATA_PROJECTS = 'https://gist.githubusercontent.com/Riszart/b981c4925c007f6a25c29e88b0ca1466/raw/3903316187d4e9580deb62e1c4eab9dcb0935385/projects-portfolio.json'
 
-// function loadProject(){
-  fetch(URL_DATA_PROJECTS)
+fetch(URL_DATA_PROJECTS)
   .then(response=>response.json())
-  .then(projectsData=>{
-    projectsData.forEach(project =>new Project(project).createElement())
-  })
+  .then(projectsData=>{projectsData.forEach(project =>new Project(project).createElement())})
   .catch(error=>{console.log(error)})
-// }
 
 class Project{
   constructor({
@@ -105,6 +101,3 @@ class Project{
     window.open(this.url, "_blank")
   }
 }
-
-// window.addEventListener('load', loadProject)
-// loadProject()
