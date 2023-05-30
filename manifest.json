@@ -1,7 +1,7 @@
 {
   "name": "Portafolio",
   "short_name": "Portafolio",
-  "start_url": "/",
+  "start_url": "https://riszartdaryl.site/",
   "display": "standalone",
   "background_color": "#161616",
   "theme_color": "#00ff75",
