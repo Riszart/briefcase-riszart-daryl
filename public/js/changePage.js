@@ -1,4 +1,4 @@
-document.querySelector('click', ()=>{
+document.querySelector('.go-inicio').addEventListener('click', ()=>{
 	if(window.location.pathname !== "/"){
 		window.open(window.location.origin, "_self")
 	}
@@ -11,9 +11,12 @@ window.addEventListener('popstate', ()=>{
 function changePage(event){
 	event.preventDefault()
 	const url = this.getAttribute('href')
-	this.style.backgroundColor = `#0080ff`
+	// this.style.backgroundColor = `#0080ff`
 	// en la funcion flecha this no tiene su propio valor entonces toma el valor del ambito esterior por lo tanto tomo al ambito global
 	// por eso usamos function(event)
+	if(url === window.location.pathname){
+		return
+	}
 	FunctionExport.closeWindow()
 	setTimeout(()=>{
 		window.location.href = url
