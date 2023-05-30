@@ -1,7 +1,7 @@
 {
   "name": "Portafolio",
   "short_name": "Portafolio",
-  "start_url": "https://riszart.github.io/briefcase-riszart-daryl/public/html/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#161616",
   "theme_color": "#00ff75",
