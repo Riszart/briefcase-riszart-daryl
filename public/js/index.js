@@ -225,3 +225,6 @@ async function moveScreen(){
   await interval("end")
 }
 window.addEventListener("load", moveScreen)
+navSelect.classList.add('modified')
+document.querySelector('.click-element').classList.add('clicked')
+showModied()
