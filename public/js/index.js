@@ -225,3 +225,8 @@ async function moveScreen(){
   await interval("end")
 }
 window.addEventListener("load", moveScreen)
+if(window.innerWidth > 775){
+  navSelect.classList.add('modified')
+  document.querySelector('.click-element').classList.add('clicked')
+  showModied()
+}
