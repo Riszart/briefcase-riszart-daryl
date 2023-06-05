@@ -562,7 +562,7 @@ a {
 
 .header-container {
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 70px;
   position: fixed;
   background-color: #161616;
@@ -592,7 +592,9 @@ a {
   line-height: 1.6875rem;
 }
 
-.container-body__index {
+main {
+  height: 100vh;
+  width: 100vw;
   overflow: hidden !important;
 }
 
@@ -609,7 +611,7 @@ a {
   width: auto;
   height: 100px;
   position: fixed;
-  top: 50%;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -617,12 +619,13 @@ a {
   border-radius: 10px;
   padding: 20px 20px;
   border: solid #0080ff 5px;
-  transition: height 2s;
+  transition: height 0.5s;
   overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .title-h2-index {
     height: 146px;
+    transition: ease-in top 1s 0.5s, ease-out left 3s, height 0.5s, transform 2s;
   }
 }
 .title-h2-index h2 {

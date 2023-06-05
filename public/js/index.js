@@ -8,16 +8,16 @@ const radioGeneral = 40
 
 let count = 10
 
-  const mouse = {
-    x: null,
-    y: null,
-    radius: 150
-  }
+const mouse = {
+  x: null,
+  y: null,
+  radius: 150
+}
 
-  window.addEventListener('mousemove',(event)=>{
-    mouse.x = event.x
-    mouse.y = event.y
-  })
+window.addEventListener('mousemove',(event)=>{
+  mouse.x = event.x
+  mouse.y = event.y
+})
 
 class Polygon{
   constructor(radio,x,y,apothem,color){
@@ -124,41 +124,20 @@ window.addEventListener("load", animate)
 function interval(state){
   return new Promise(resolve=>{
     const contentTitle = document.querySelector('.title-h2-index')
-
-    let middleHeight = window.innerHeight/2
-    let middleWidth = window.innerWidth/2
-
-    let positionInitialY = contentTitle.clientHeight/2 *-1
-    let positionInitialX = middleWidth
-    if(state == "start"){
-      let a = setInterval(()=>{
-        positionInitialY++
-        contentTitle.style.top = `${positionInitialY}px`
-
-        if(middleHeight <= positionInitialY){
-          const propertyTitle = document.querySelector('.title-h2-index')
-          if(window.innerWidth < 768){
-            propertyTitle.style.height = "160px"
-          }else{
-            propertyTitle.style.height = "250px"
-          }
-          clearInterval(a)
-          setTimeout(resolve,1000)
-        }
-      },1)
+    contentTitle.style.top = '400px'
+    if(state === "start"){
+      setTimeout(()=>{
+        window.innerWidth < 768
+          ?contentTitle.style.height = "160px"
+          :contentTitle.style.height = "250px"
+        setTimeout(resolve,500)
+      },1500)
+    } 
+    if(state === "end"){
+      contentTitle.style.left = `-${(contentTitle.clientWidth/2+5)}px`
+      setTimeout(resolve,3000)
     }
-    if(state == "end"){
-      let b = setInterval(()=>{
-        positionInitialX++
-        contentTitle.style.left = `${positionInitialX}px`
-        if(positionInitialX > window.innerWidth + (contentTitle.getBoundingClientRect().width/2)){
-          clearInterval(b)
-          contentTitle.style.display = "none"
-          resolve()
-        }
-      },1)
-    }
-  })
+  })  
 }
 
 function showMsm(stringText){
@@ -168,19 +147,16 @@ function showMsm(stringText){
     let letter = addLetter(text)
     let textWidth = text.length
     let count = 0
-
     let inter = setInterval(()=>{
       count++
       let letterSatate = letter.next().value
-
       let textshow = document.createTextNode(letterSatate)
       textH3.appendChild(textshow)
-
       if(count == textWidth){
         clearInterval(inter)
-        setTimeout(resolve,500)
+        setTimeout(resolve,350)
       }
-    },100)
+    },50)
   })
 }
 
@@ -196,7 +172,7 @@ function removeMsm(){
         clearInterval(inter)
         resolve()
       }
-    },100)
+    },50)
   })
 }
 
@@ -214,7 +190,6 @@ async function moveScreen(){
     4:"HTML",
     5:"PUG",
     6:"TailwindCSS",
-
   } 
   await interval("start")
   for(let element in textNode){
@@ -223,10 +198,7 @@ async function moveScreen(){
   }
   await showMsm("Freelance")
   await interval("end")
+  document.querySelector('.title-h2-index').style.display = 'none'
+  if(window.innerWidth > 775)navSelect.classList.add('modified');showModied()
 }
 window.addEventListener("load", moveScreen)
-if(window.innerWidth > 775){
-  navSelect.classList.add('modified')
-  document.querySelector('.click-element').classList.add('clicked')
-  showModied()
-}

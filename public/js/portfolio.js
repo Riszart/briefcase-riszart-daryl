@@ -1,8 +1,8 @@
-const URL_DATA_PROJECTS = 'https://gist.githubusercontent.com/Riszart/b981c4925c007f6a25c29e88b0ca1466/raw/cd3ea0582de263db0409bb08295084cb8942ef40/projects-portfolio.json'
+const URL_DATA_PROJECTS = 'https://gist.githubusercontent.com/Riszart/b981c4925c007f6a25c29e88b0ca1466/raw/adf286c536ec1c7761e9e0be5581c16352389c04/projects-portfolio.json'
 
 fetch(URL_DATA_PROJECTS)
   .then(response=>response.json())
-  .then(projectsData=>{projectsData.forEach(project =>new Project(project).createElement())})
+  .then(projectsData=>{projectsData.forEach(project =>new Project(project).initCreate())})
   .catch(error=>{console.log(error)})
 
 class Project{
@@ -13,7 +13,9 @@ class Project{
     name,
     description,
     programs,
-    classIten
+    classIten,
+    device,
+    status
   }){
     this.img = img
     this.alt = alt
@@ -22,8 +24,14 @@ class Project{
     this.description = description
     this.programs = programs
     this.classIten = classIten
+    this.device = device
+    this.status = status
+  }
+  initCreate(){
+    if(this.status === 'show')this.createElement()
   }
   createElement(){
+    // console.log(this.device)
     const content = document.querySelector(".portafolio__content-li")
     const article = document.createElement("article")
     const divConatiner = document.createElement("div")
@@ -39,6 +47,9 @@ class Project{
     })
     const img = document.createElement("img")
     img.setAttribute("alt", this.alt)
+    this.device === "mobile"
+      ?img.classList.add('mobile')
+      :img.classList.add('desktop')
     img.setAttribute("width", "617px")
     img.setAttribute("height", "210px")
     div.appendChild(img)
@@ -57,17 +68,24 @@ class Project{
     document.querySelector(".header-container").style.filter = "blur(4px)"
     document.querySelector(".content-tittle-h1").style.filter = "blur(4px)"
 
-    document.querySelector(".box-float").style.visibility = "visible"
-    document.querySelector(".box-float").style.width = "70vw"
-    document.querySelector(".box-float").style.height = "auto"
-    document.querySelector(".box-float").style.borderWidth = "2px"
+    const boxFloat = document.querySelector(".box-float")
+    boxFloat.style.visibility = "visible"
+    this.device === "mobile"
+    ? boxFloat.style.width = "360px"
+    : boxFloat.style.width = "70vw"
+    boxFloat.style.height = "auto"
+    boxFloat.style.borderWidth = "2px"
 
     document.querySelector(".portafolio").style.filter = "blur(15px)"
     const img = document.querySelector(".img-project")
     img.src = this.img.lg
     img.height = ""
+    
     document.querySelector(".box-float__project-name ").innerText = this.name
-    document.querySelector(".box-float__project-description").innerText = this.description
+
+    const projectDescription = document.querySelector(".box-float__project-description")
+    projectDescription.innerText = this.description
+
     document.querySelector(".box-float__project-programs").innerText = this.programs
     document.querySelector(".box-float__close").onclick = ()=>{this.closeItem()}
     document.body.addEventListener("keydown", (event)=>{if(event.code === "Escape")this.closeItem()})

@@ -18,7 +18,7 @@ function loadData(name){
       return response.json()
     })
     .then(dataCurses=>{
-      console.log(dataCurses)
+      // console.log(dataCurses)
       const positionH2Ttop  = document.querySelector('.title-h2__select').offsetTop
       dataCurses.forEach(course => {
         let value = course.courses.find(element=>element === name)

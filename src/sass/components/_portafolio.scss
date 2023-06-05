@@ -1,3 +1,12 @@
+.mobile{
+  width: 320px;
+  position: absolute;
+  left: 50%;
+  transform: translate(calc(-50% - 10px), 0);
+}
+.desktop {
+  width: 100%;
+}
 html {
   scroll-behavior: initial;
 }
@@ -123,6 +132,11 @@ html {
               -15px -15px 50px 0px $color-hover;
             }
           }
+          &:hover {
+            img{
+              filter: blur(0);
+            }
+          }
           div {
             width: calc(100% + 20px);
             height: inherit;
@@ -132,14 +146,11 @@ html {
             // overflow-y: scroll;
             img {
               filter: blur(0);
-              width: 100%;
               height: auto;
               @include media(tablet){
                 filter: blur(2px);
               }
-              &:hover {
-                filter: blur(0);
-              }
+              
             }
           }
           .project-name {
@@ -253,14 +264,13 @@ html {
       margin: 0;
       padding-left: 5px;
       font-family: $font-body;
-      width: 67vw;
       text-transform: capitalize;
       text-align: justify;
       color: white;
+      padding-right: 10px;
       @include font-size(14px);
       @include media(tablet){
         padding-left: 10px;
-        padding-right: 0px;
         @include font-size(16px);
       }
     }

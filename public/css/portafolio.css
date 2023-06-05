@@ -561,7 +561,7 @@ output {
 **********************/
 .header-container {
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 70px;
   position: fixed;
   background-color: #161616;
@@ -589,6 +589,17 @@ output {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6875rem;
+}
+
+.mobile {
+  width: 320px;
+  position: absolute;
+  left: 50%;
+  transform: translate(calc(-50% - 10px), 0);
+}
+
+.desktop {
+  width: 100%;
 }
 
 html {
@@ -754,6 +765,9 @@ html {
     box-shadow: 15px 15px 50px 0px #0080ff, -15px -15px 50px 0px #0080ff;
   }
 }
+.container--portafolio .portafolio__content-li article .content-project__item:hover img {
+  filter: blur(0);
+}
 .container--portafolio .portafolio__content-li article .content-project__item div {
   width: calc(100% + 20px);
   height: inherit;
@@ -763,16 +777,12 @@ html {
 }
 .container--portafolio .portafolio__content-li article .content-project__item div img {
   filter: blur(0);
-  width: 100%;
   height: auto;
 }
 @media only screen and (min-width: 768px) {
   .container--portafolio .portafolio__content-li article .content-project__item div img {
     filter: blur(2px);
   }
-}
-.container--portafolio .portafolio__content-li article .content-project__item div img:hover {
-  filter: blur(0);
 }
 .container--portafolio .portafolio__content-li article .content-project__item .project-name {
   background-color: rgba(0, 0, 0, 0.8);
@@ -893,10 +903,10 @@ html {
   margin: 0;
   padding-left: 5px;
   font-family: Arial, Helvetica, sans-serif;
-  width: 67vw;
   text-transform: capitalize;
   text-align: justify;
   color: white;
+  padding-right: 10px;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.3125rem;
@@ -904,7 +914,6 @@ html {
 @media only screen and (min-width: 768px) {
   .container--portafolio .box-float__project-description {
     padding-left: 10px;
-    padding-right: 0px;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5rem;

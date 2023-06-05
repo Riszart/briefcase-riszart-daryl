@@ -1,4 +1,6 @@
-.container-body__index {
+main {
+  height: 100vh;
+  width: 100vw;
   overflow: hidden !important;
 }
 #content-index {
@@ -16,7 +18,7 @@
   width: auto;
   height: 100px;
   position: fixed;
-  top: 50%;
+  top: 0;
   left: 50%;
   transform: translate(-50% , -50%);
   text-align: center;
@@ -24,10 +26,11 @@
   border-radius: 10px;
   padding: 20px 20px;
   border: solid $color-hover 5px;
-  transition: height 2s;
+  transition: height .5s;
   overflow: hidden;
   @include media(tablet){
     height: 146px;
+    transition: ease-in top 1s .5s, ease-out left 3s, height 0.5s, transform 2s;
   }
   h2 {
     min-width: 320px;

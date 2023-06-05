@@ -4,7 +4,7 @@ html(lang="es")
     include es/components/head.pug
     title Riszart Daryl - Contactame (Freelancer)
     meta(name="description", content="Riszart Daryl es un desarrollador web especializado en crear sitios web atractivos y funcionales. Contacta con él para mejorar tu presencia en línea.")
-    link(rel="canonical", href="https://riszartdaryl.site/contact.html")
+    //- link(rel="canonical", href="https://riszartdaryl.site/contact.html")
     link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/contact.css" defer)
   body.container-body__index
     include es/components/temporalStart.pug
@@ -34,16 +34,16 @@ html(lang="es")
             p contactame 
           div.formulario-input
             div.formulario-input__left
-              label(for="name-subject") (*)nombre:
-              input(type="text" name="name" id="name-subject" placeholder="ejemplo" required)
+              label(for="name-subject") <span>(*)</span>nombre:
+              input(type="text" name="name" id="name-subject" placeholder="Nombre" required)
             div.formulario-input__right
-              label(for="email-subject") (*)email:
-              input(type="email" name="email" id="email-subject" placeholder="ejemplo@gmail.com" required)
+              label(for="email-subject") <span>(*)</span>email:
+              input(type="email" name="email" id="email-subject" placeholder="email@gmail.com" required)
           div.formulario-input__center
             label(for="number-subject") N° celular:
-            input(type="number" name="number" id="number-subject" placeholder="+51 987654321")
+            input(type="number" name="number" id="number-subject" placeholder="(+51) 987 654 321")
           div.formulario-message 
-            label(for="content-subject") (*)mensaje:
+            label(for="content-subject") <span>(*)</span>mensaje:
             textarea(name="message", cols="30", rows="10" id="content-subject" placeholder="Detalle su pregunta o consulta" required)
           div.formulario-buttons
             button(type="submit").formulario-buttons__send

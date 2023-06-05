@@ -32,7 +32,6 @@ window.addEventListener('load', ()=>{
 	for (let i = 0; i < links.length; i++){
 		links[i].addEventListener('click', changePage)
 	}
-
 	let en
 	let language = localStorage.getItem('language')
 	language === "en" ?en = '/en' :en = ''

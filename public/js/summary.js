@@ -32,7 +32,7 @@ class Canvas{
       global--
       if(global == -2000)block = false
     }
-    console.log(global)
+    // console.log(global)
   }
 }
 let global = 0

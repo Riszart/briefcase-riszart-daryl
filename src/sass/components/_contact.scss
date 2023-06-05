@@ -64,6 +64,7 @@
       border: solid 2px $color-primary;
       display: flex;
       justify-content: center;
+      border-radius: 5px;
       cursor: pointer;
       @include font-size(24px);
       @include media(tablet){
@@ -87,6 +88,7 @@
       margin: auto;
       margin-top: 10px;
       border: solid 2px $color-primary;
+      border-radius: 5px;
       @include media(tablet){
         margin-left: 50px;
         margin-top: 0px;
@@ -124,7 +126,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
     background-color: $color-dark;
     background-position: center;
     background-repeat: no-repeat;
@@ -152,7 +154,9 @@
       padding: 0 50px;
       margin: auto;
       margin-top: 10px;
+      border-radius: 5px;
       transition: height 1s ease-out;
+      overflow: hidden;
       @include media(tablet){
         margin: 0px;
         height: 600px;
@@ -168,6 +172,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        border-radius: 3px;
         cursor: pointer;
         background-color: get-opacity(red, 0.5);
         &:hover {
@@ -212,6 +217,9 @@
         font-weight: 100;
         color: $color-primary;
         text-transform: uppercase;
+        span {
+          color: rgb(255, 123, 0);
+        }
       }
       .formulario-input__center input {
         font-family: $font-body;
@@ -222,9 +230,16 @@
         background-color: transparent;
         border: solid 1px $color-primary;
         color: $color-sky;
+        padding-left: 10px;
         cursor: text;
-        &:hover {
-          size: 15;
+        &:focus{
+          outline: solid $color-hover 1px;
+          border-color: $color-hover;
+          color: $color-hover;
+        }
+        &:active {
+          outline: solid $color-hover 1px;
+          border-color: $color-hover;
         }
       }
       &-input {
@@ -252,9 +267,16 @@
           background-color: transparent;
           border: solid 1px $color-primary;
           color: $color-sky;
+          padding-left: 10px;
           cursor: text;
-          &:hover {
-            size: 15;
+          &:focus{
+            outline: solid $color-hover 1px;
+            border-color: $color-hover;
+            color: $color-hover;
+          }
+          &:active {
+            outline: solid $color-hover 1px;
+            border-color: $color-hover;
           }
         }
       }
@@ -273,6 +295,15 @@
           cursor: text;
           resize:none;
           margin-top: 15px;
+          &:focus{
+            outline: solid $color-hover 1px;
+            border-color: $color-hover;
+            color: $color-hover;
+          }
+          &:active {
+            outline: solid $color-hover 1px;
+            border-color: $color-hover;
+          }
         }
       }
       &-buttons {
