@@ -17,14 +17,14 @@ function changePage(event){
 	if(url === window.location.pathname){
 		return
 	}
-	FunctionExport.closeWindow()
+	closeWindow()
 	setTimeout(()=>{
 		window.location.href = url
 	},1000)
 }
 
 setTimeout(()=>{
-	FunctionExport.openWindow()
+	openWindow()
 },500)
 
 window.addEventListener('load', ()=>{
