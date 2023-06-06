@@ -5,7 +5,10 @@ document.querySelector('.go-inicio').addEventListener('click', ()=>{
 })
 
 window.addEventListener('popstate', ()=>{
-	FunctionExport.openWindow()
+	let b = document.querySelector(".inicio-back__end")
+  b.style.width = "0vw"
+  b.style.transition = "width 0.3s ease-in"
+	openWindow()
 })
 
 function changePage(event){
