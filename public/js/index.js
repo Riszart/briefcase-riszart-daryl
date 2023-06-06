@@ -3,9 +3,7 @@ const ctx = canvas.getContext('2d')
 canvas.width = innerWidth
 canvas.height = innerHeight
 const polygonArray = []
-
 const radioGeneral = 40
-
 let count = 10
 
 const mouse = {
@@ -14,10 +12,6 @@ const mouse = {
   radius: 150
 }
 
-window.addEventListener('mousemove',(event)=>{
-  mouse.x = event.x
-  mouse.y = event.y
-})
 
 class Polygon{
   constructor(radio,x,y,apothem,color){
@@ -63,11 +57,6 @@ class Polygon{
     this.color = '#0080ff'
   }
 }
-
-function caclApothem(radio){
-  return Number(Math.sqrt((radio*radio - (radio/2)*(radio/2))).toFixed(2))
-}
-
 function init(radio){
   let indice = 0
   let apothem = caclApothem(radio)
@@ -108,7 +97,10 @@ function init(radio){
     }
   }
 }
-window.addEventListener('DOMContentLoaded', ()=>init(radioGeneral))
+
+function caclApothem(radio){
+  return Number(Math.sqrt((radio*radio - (radio/2)*(radio/2))).toFixed(2))
+}
 
 function animate(){
   ctx.clearRect(0,0,canvas.width,canvas.height)
@@ -119,7 +111,16 @@ function animate(){
   }
   requestAnimationFrame(animate)
 }
-window.addEventListener("load", animate)
+
+window.addEventListener('DOMContentLoaded', ()=>{
+  if(window.innerWidth < 720)return
+  window.addEventListener('mousemove',(event)=>{
+    mouse.x = event.x
+    mouse.y = event.y
+  })
+  init(radioGeneral)
+  window.addEventListener("load",animate)
+})
 
 function interval(state){
   return new Promise(resolve=>{
@@ -199,6 +200,9 @@ async function moveScreen(){
   await showMsm("Freelance")
   await interval("end")
   document.querySelector('.title-h2-index').style.display = 'none'
-  if(window.innerWidth > 775)navSelect.classList.add('modified');showModied()
+  if(window.innerWidth > 775){
+    navSelect.classList.add('modified')
+    showModied()
+  }
 }
 window.addEventListener("load", moveScreen)
