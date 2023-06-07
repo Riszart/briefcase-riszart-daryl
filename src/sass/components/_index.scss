@@ -1,14 +1,13 @@
-main {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden !important;
-}
 #content-index {
+  width: 100vw;
   cursor: crosshair;
   position: absolute;
   top: 0px;
   left: 0px;
   background-image: linear-gradient(0.25turn, $color-hover ,$color-primary 90%);
+  margin: 0;
+  padding: 0;
+  border: none;
   // animation-name: changeColor;
   // animation-duration: 1s;
   // animation-iteration-count: infinite;

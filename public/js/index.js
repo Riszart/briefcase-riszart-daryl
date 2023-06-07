@@ -12,7 +12,6 @@ const mouse = {
   radius: 150
 }
 
-
 class Polygon{
   constructor(radio,x,y,apothem,color){
     this.x = x
