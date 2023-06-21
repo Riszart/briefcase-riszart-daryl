@@ -13,9 +13,13 @@ document.querySelector('.go-inicio').addEventListener('click', ()=>{
 })
 
 window.addEventListener('popstate', ()=>{
+<<<<<<< HEAD
 	document.body.style.overflowY = "auto"
 	loadPage.style.width = "0vw"
 	loadPage.style.transition = "width 0.3s ease-out"
+=======
+	FunctionExport.openWindow()
+>>>>>>> parent of 6984ccd (change start end)
 })
 
 function changePage(event){
