@@ -1,7 +1,7 @@
 doctype html
 html(lang="es")
   head 
-    include es/components/head.pug
+    include components/head.pug
     title Riszart Daryl - Proyectos Realizados
     meta(name="description", content="Riszart Daryl es un desarrollador web especializado en crear sitios web atractivos y funcionales. Contacta con él para mejorar tu presencia en línea.")
     //- link(rel="canonical", href="https://riszartdaryl.site/portafolio.html")
@@ -9,9 +9,9 @@ html(lang="es")
     link(rel="preconnect" href="https://gist.githubusercontent.com")
     link(rel="dns-prefetch" href="https://gist.githubusercontent.com")
   body.container-body__index
-    include es/components/pageLoad.pug
-    include es/components/nav.pug
-    include es/components/header.pug
+    include components/pageLoad.pug
+    include components/nav.pug
+    include components/header.pug
     main.container--portafolio
       section.portafolio
         h2.portafolio__tittle front-end developer
@@ -31,6 +31,6 @@ html(lang="es")
           p
           div
         p.go-to-page
-    include es/components/footer.pug
-    include es/components/scriptGeneral.pug
+    include components/footer.pug
+    include components/scriptGeneral.pug
     script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/portfolio.js" async) 

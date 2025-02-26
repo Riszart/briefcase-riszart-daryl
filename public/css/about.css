@@ -890,9 +890,9 @@ footer .footer-down p {
 }
 
 .show-navbar {
+  display: none;
   height: 50px;
   width: 50px;
-  display: grid;
   place-content: center;
   position: relative;
   z-index: 1100;
@@ -984,16 +984,14 @@ footer .footer-down p {
 
 .nav-principal {
   display: block;
-  width: 0;
+  width: auto;
   height: 100vh;
   position: fixed;
-  padding: 20px 0;
+  padding: 20px;
   top: 0;
   background-color: #161616;
   z-index: 1000;
   transition-duration: 0.5s;
-  visibility: hidden;
-  overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .nav-principal {
