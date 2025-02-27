@@ -1,8 +1,11 @@
 .header-container {
   position: fixed;
   display: grid;
-  grid-template-columns: 200px calc(100vw - 200px);
+  grid-template-columns: 100vw;
   z-index: 100;
+  @include media(tablet){
+    grid-template-columns: 200px calc(100vw - 200px);
+  }
   .right-content {
     display: flex; //flex
     width: 100%;

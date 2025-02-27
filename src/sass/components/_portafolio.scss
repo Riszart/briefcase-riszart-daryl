@@ -13,12 +13,13 @@ html {
 .container--portafolio {
   height: auto;
   display: grid;
-  grid-template-columns: 200px calc(100vw - 200px);
+  grid-template-columns: 100vw;
   @include media(sm){
     width: 90%;
   }
   @include media(tablet){
     width: 90%;
+    grid-template-columns: 200px calc(100vw - 200px);
   }
   @include media(desktop-s){
     width: 80%;

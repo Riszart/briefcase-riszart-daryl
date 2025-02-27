@@ -23,17 +23,33 @@ self.addEventListener('install', event => {
 });
 
 // Interceptar las solicitudes y servir desde la caché
+// self.addEventListener('fetch', event => {
+//   event.respondWith(
+//     caches.match(event.request)
+//       .then(response => {
+//         // Si el archivo está en caché, lo devuelve
+//         if (response) {
+//           return response;
+//         }
+//         // Si no está en caché, lo solicita a la red
+//         return fetch(event.request);
+//       })
+//   );
+// });
+
+// actualisara el contenido de la cache
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        // Si el archivo está en caché, lo devuelve
-        if (response) {
-          return response;
-        }
-        // Si no está en caché, lo solicita a la red
-        return fetch(event.request);
-      })
+    caches.open(CACHE_NAME).then(cache => {
+      return fetch(event.request).then(response => {
+        // Guarda la versión más reciente en caché
+        cache.put(event.request, response.clone());
+        return response;
+      }).catch(() => {
+        // Si falla la red, usa la versión en caché
+        return caches.match(event.request);
+      });
+    })
   );
 });
 

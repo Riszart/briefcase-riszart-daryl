@@ -533,8 +533,13 @@ output {
 .header-container {
   position: fixed;
   display: grid;
-  grid-template-columns: 200px calc(100vw - 200px);
+  grid-template-columns: 100vw;
   z-index: 100;
+}
+@media only screen and (min-width: 768px) {
+  .header-container {
+    grid-template-columns: 200px calc(100vw - 200px);
+  }
 }
 .header-container .right-content {
   display: flex;
@@ -586,7 +591,7 @@ html {
 .container--portafolio {
   height: auto;
   display: grid;
-  grid-template-columns: 200px calc(100vw - 200px);
+  grid-template-columns: 100vw;
 }
 @media only screen and (min-width: 640px) {
   .container--portafolio {
@@ -596,6 +601,7 @@ html {
 @media only screen and (min-width: 768px) {
   .container--portafolio {
     width: 90%;
+    grid-template-columns: 200px calc(100vw - 200px);
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -948,7 +954,12 @@ html {
 
 footer {
   display: grid;
-  grid-template-columns: 200px calc(100vw - 200px);
+  grid-template-columns: 100vw;
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    grid-template-columns: 200px calc(100vw - 200px);
+  }
 }
 footer .right-content {
   background-color: rgba(255, 255, 255, 0.1);
@@ -1103,19 +1114,22 @@ footer .right-content .footer-down p {
 
 .show-navbar {
   display: none;
+  position: fixed;
+  right: 5px;
   height: 50px;
   width: 50px;
   place-content: center;
-  position: relative;
   z-index: 1100;
   cursor: pointer;
   border-radius: 5px;
   opacity: 1;
   margin-top: 9px;
   background-color: #161616;
+  overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .show-navbar {
+    display: none;
     width: 70px;
     border: solid 2px #00ff75;
     position: relative;
@@ -1196,7 +1210,7 @@ footer .right-content .footer-down p {
 
 .nav-principal {
   display: block;
-  width: auto;
+  width: 100vw;
   height: 100vh;
   position: fixed;
   padding: 20px;
@@ -1204,9 +1218,11 @@ footer .right-content .footer-down p {
   background-color: #161616;
   z-index: 1000;
   transition-duration: 0.5s;
+  overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .nav-principal {
+    width: auto;
     position: relative;
     display: block;
     height: 100vh;
