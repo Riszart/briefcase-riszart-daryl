@@ -7,335 +7,339 @@ body {
 }
 .container--summary {
   width: 100%;
-  height: auto;
-  .summary-main {
-    margin: auto;
-    @include media(sm){
-      width: 100%;
-    }
-    @include media(desktop-m){
-      max-width: 1200px;
-    }
-    &__inicio {
-      width: 100%;
-      height: 400px;
-      @include media(desktop-s){
-        height: 700px;
-      }
-      &-up {
-        height: 90%;
-        display: flex;
-        flex-direction: column; 
-        justify-content: center;
-        margin: 0 10px 10px;
-        text-align: center;
-        @include media(desktop-s){
-          margin: 0 70px;
-          text-align: start;
-        }
-        .canvas-summary {
-          position: absolute;
-          left: 0;
-          top: 0;
-        }
-        h2 {
-          font-family: $font-title;
-          font-weight: 900;
-          @include font-size(40px);
-          @include reset;
-          z-index: 5;
-          @include media(desktop-s){
-            @include font-size(68px);
-          }
-        }
-        h3{
-          color: get-opacity($color-primary, .8);
-          font-weight: 700;
-          @include font-size(22px);
-          z-index: 5;
-          @include reset;
-          @include media(desktop-s){
-            @include font-size(32px);
-          }
-        }
-        p{
-          font-weight: 400;
-          color: get-opacity($color-sky, .5);
-          @include font-size(14px);
-          @include reset;
-          z-index: 5;
-          @include media(desktop-s){
-            @include font-size(18px);
-          }
-        }
-      }
-      &-down {
+  .content-main{
+    display: grid;
+    grid-template-columns: 200px calc(100vw - 200px);
+    .summary-main {
+      margin: auto;
+      @include media(sm){
         width: 100%;
-        height: 10%;
-        background-color: $color-primary;
+      }
+      @include media(desktop-m){
+        max-width: 1200px;
+      }
+      &__inicio {
+        width: 100%;
+        height: 400px;
         @include media(desktop-s){
+          height: 700px;
+        }
+        &-up {
+          height: 90%;
+          display: flex;
+          flex-direction: column; 
+          justify-content: center;
+          margin: 0 10px 10px;
+          text-align: center;
+          border-bottom: double $color-primary 10px; 
+          @include media(desktop-s){
+            margin: 0 70px;
+            text-align: start;
+          }
+          // .canvas-summary {
+          //   // position: absolute;
+          //   // left: 0;
+          //   // top: 0;
+          // }
+          h2 {
+            font-family: $font-title;
+            font-weight: 900;
+            @include font-size(40px);
+            @include reset;
+            z-index: 5;
+            @include media(desktop-s){
+              @include font-size(68px);
+            }
+          }
+          h3{
+            color: get-opacity($color-primary, .8);
+            font-weight: 700;
+            @include font-size(22px);
+            z-index: 5;
+            @include reset;
+            @include media(desktop-s){
+              @include font-size(32px);
+            }
+          }
+          p{
+            font-weight: 400;
+            color: get-opacity($color-sky, .5);
+            @include font-size(14px);
+            @include reset;
+            z-index: 5;
+            @include media(desktop-s){
+              @include font-size(18px);
+            }
+          }
+        }
+        &-down {
+          width: 100%;
           height: 10%;
-        }
-      }
-    }
-    &__line{
-      position: relative;
-      width: 100%;
-      height: 60px;
-      div {
-        position: absolute;
-        width: 100vw;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: $color-primary;
-        @include media(desktop-m){
-          left: calc(-50vw - 1px + 50% - 1px);
-        }
-      }
-    }
-    &__grid {
-      display: grid;
-      margin: 0;
-      grid-template-columns: auto;
-      grid-template-rows: repeat(auto-fill, auto);
-      @include media(desktop-s){
-        margin: 0 50px;
-        margin-top: 50px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(11, 150px);
-      }
-      .grid-img {
-        margin: 40px;
-        border-radius: 5px;
-        @include contend-efect1;
-        @include media(desktop-s){
-          grid-column: 2/3;
-          grid-row: 1/2;
-          margin: 0 0 $side-box $side-box;
-        }
-        div {
-          background-image: url('https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart-logo-white.webp');
-          @include background-propiedad;
-          @include item-efect1;
-          padding: 40px;
+          background-color: $color-primary;
           @include media(desktop-s){
-            @include box;
+            height: 10%;
           }
         }
       }
-      .profile {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        border-top: solid 3px $color-primary;
-        padding-top: $side-box;
-        padding-right: 0;
-        padding-bottom: 0;
+      // &__line{
+      //   position: relative;
+      //   width: 100%;
+      //   height: 60px;
+      //   div {
+      //     position: absolute;
+      //     width: 100%;
+      //     height: 100%;
+      //     margin: 0;
+      //     padding: 0;
+      //     background-color: $color-primary;
+      //     @include media(desktop-m){
+      //       // left: calc(-50vw - 1px + 50% - 1px);
+      //     }
+      //   }
+      // }
+      &__grid {
+        display: grid;
+        margin: 0;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(auto-fill, auto);
         @include media(desktop-s){
-          grid-column: 1/2;
-          grid-row: 1/6;
-          padding-right: $side-box;
-          border-right: solid 3px $color-primary;
-          padding-bottom: $side-box;
+          margin: 0 50px;
+          margin-top: 50px;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: repeat(12, 150px);
         }
-        h4 {
-          @include h4;
-        }
-        &--efect {
-          height: inherit;
-          width:inherit;
+        .grid-img {
+          margin: 40px;
+          border-radius: 5px;
           @include contend-efect1;
-          &-content {
+          @include media(desktop-s){
+            grid-column: 2/3;
+            grid-row: 1/2;
+            margin: 0 0 $side-box $side-box;
+          }
+          div {
+            background-image: url('https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart-logo-white.webp');
+            @include background-propiedad;
+            @include item-efect1;
+            padding: 40px;
+            @include media(desktop-s){
+              @include box;
+            }
+          }
+        }
+        .profile {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          border-top: solid 3px $color-primary;
+          padding-top: $side-box;
+          padding-right: 0;
+          padding-bottom: 0;
+          @include media(desktop-s){
+            grid-column: 1/2;
+            grid-row: 1/6;
+            padding-right: $side-box;
+            border-right: solid 3px $color-primary;
+            padding-bottom: $side-box;
+          }
+          h4 {
+            @include h4;
+          }
+          &--efect {
             height: inherit;
             width:inherit;
-            @include item-efect1;
-            @include box;
-            &__up {
-              display: flex;
-              gap: 20px;
-              img {
-                border-radius: 50%;
-                border: solid 2px $color-sky;
-              }
-              div {
-                h5 {
-                  @include font-size(22px);
-                  @include reset
+            @include contend-efect1;
+            &-content {
+              height: inherit;
+              width:inherit;
+              @include item-efect1;
+              @include box;
+              &__up {
+                display: flex;
+                gap: 20px;
+                img {
+                  border-radius: 50%;
+                  border: solid 2px $color-sky;
                 }
-                span {
+                div {
+                  h5 {
+                    @include font-size(22px);
+                    @include reset
+                  }
+                  span {
+                    color: $color-sky;
+                    font-weight: 600;
+                    @include font-size(16px);
+                    @include reset
+                  }
+                }
+              }
+              &__down {
+                margin-top: 30px;
+                p {
                   color: $color-sky;
-                  font-weight: 600;
-                  @include font-size(16px);
-                  @include reset
-                }
-              }
-            }
-            &__down {
-              margin-top: 30px;
-              p {
-                color: $color-sky;
-                text-align: justify;
-              }
-            }
-          }
-        }
-      }
-      .experience {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        border-top: solid 3px $color-primary;
-        
-        padding-top: $side-box;
-        padding-right: 0;
-        padding-bottom: $side-box;
-        @include media(desktop-s){
-          grid-column: 1/2;
-          grid-row: 6/12;
-          padding-right: $side-box;
-          border-right: solid 3px $color-primary;
-        }
-        h4 {
-          @include h4;
-        }
-        &--efect {
-          height: inherit;
-          width:inherit;
-          @include contend-efect1;
-          &-content {
-            height: inherit;
-            width:inherit;
-            @include item-efect1;
-            @include box;
-            h5 {
-              color: $color-primary;
-              p {
-                text-transform: capitalize;
-                color: $color-sky;
-                font-weight: 600;
-              }
-              ul {
-                margin-left: -20px;
-                li {
-                  margin-left: 15px;
-                  color: rgba(255, 255, 255, 0.5);
-                  list-style: circle;
-                  font-weight: 400;
+                  text-align: justify;
                 }
               }
             }
           }
         }
-      }
-      .education {
-        height: 100%;
-        width:100%;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        position: relative;
-        border-top: solid 3px $color-primary;
-        padding-top: $side-box;
-        padding-left: 0;
-        padding-bottom: $side-box;
-        @include media(desktop-s){
-          grid-column: 2/3;
-          grid-row: 2/9;
-          padding-left: $side-box;
-        }
-        h4 {
-          @include h4;
-        }
-        &--efect {
-          height: inherit;
-          width:inherit;
-          @include contend-efect1;
-          &-content {
+        .experience {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          border-top: solid 3px $color-primary;
+          
+          padding-top: $side-box;
+          padding-right: 0;
+          padding-bottom: $side-box;
+          @include media(desktop-s){
+            grid-column: 1/2;
+            grid-row: 6/13;
+            padding-right: $side-box;
+            border-right: solid 3px $color-primary;
+          }
+          h4 {
+            @include h4;
+          }
+          &--efect {
             height: inherit;
             width:inherit;
-            @include item-efect1;
-            @include box;
-            &__top, &__middle, &__down {
+            @include contend-efect1;
+            &-content {
+              height: inherit;
+              width:inherit;
+              @include item-efect1;
+              @include box;
               h5 {
                 color: $color-primary;
-                @include font-size(16px);
-                @include reset;
-                @include media(desktop-s){
-                  @include font-size(22px);
+                p {
+                  text-transform: capitalize;
+                  color: $color-sky;
+                  font-weight: 600;
+                }
+                ul {
+                  margin-left: -20px;
+                  li {
+                    margin-left: 15px;
+                    color: rgba(255, 255, 255, 0.5);
+                    list-style: circle;
+                    font-weight: 400;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .education {
+          height: 100%;
+          width:100%;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          position: relative;
+          border-top: solid 3px $color-primary;
+          padding-top: $side-box;
+          padding-left: 0;
+          padding-bottom: $side-box;
+          @include media(desktop-s){
+            grid-column: 2/3;
+            grid-row: 2/9;
+            padding-left: $side-box;
+          }
+          h4 {
+            @include h4;
+          }
+          &--efect {
+            height: inherit;
+            width:inherit;
+            @include contend-efect1;
+            &-content {
+              height: inherit;
+              width:inherit;
+              @include item-efect1;
+              @include box;
+              &__top, &__middle, &__down {
+                h5 {
+                  color: $color-primary;
+                  @include font-size(16px);
+                  @include reset;
+                  @include media(desktop-s){
+                    @include font-size(22px);
+                  }
+                  span {
+                    a {
+                      display: block;
+                      color: $color-hover;
+                      @include font-size(14px)
+                    }
+                  }
+                }
+                ul {
+                  margin: 0;
+                  padding: 0 15px;
+                  li {
+                    list-style: circle;
+                    color: $color-sky;
+                    @include font-size(12px);
+                    @include media(desktop-s){
+                      @include font-size(16px);
+                    }
+                    &:last-child {
+                      margin-bottom: 20px;
+                    }
+                    
+                  }
                 }
                 span {
-                  a {
-                    display: block;
-                    color: $color-hover;
-                    @include font-size(14px)
-                  }
+                  color: rgba(255, 255, 255, 0.5);
+                  font-weight: 500;
+                  @include reset
                 }
-              }
-              ul {
-                margin: 0;
-                padding: 0 15px;
-                li {
-                  list-style: circle;
-                  color: $color-sky;
-                  @include font-size(12px);
-                  @include media(desktop-s){
-                    @include font-size(16px);
-                  }
-                  &:last-child {
-                    margin-bottom: 20px;
-                  }
-                  
-                }
-              }
-              span {
-                color: rgba(255, 255, 255, 0.5);
-                font-weight: 500;
-                @include reset
-              }
-            } 
+              } 
+            }
+          }
+        }
+        .technologies {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          position: relative;
+          border-top: solid 3px $color-primary;
+          padding-top: $side-box;
+          padding-left: 0;
+          padding-bottom: $side-box;
+          @include media(desktop-s){
+            grid-column: 2/3;
+            grid-row: 9/13;
+            padding-left: $side-box;
+          }
+          h4 {
+            @include h4;
+          }
+          &--efect {
+            height: inherit;
+            width:inherit;
+            @include contend-efect1;
+            &-content {
+              @include item-efect1;
+              @include box;
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
           }
         }
       }
-      .technologies {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        position: relative;
-        border-top: solid 3px $color-primary;
-        padding-top: $side-box;
-        padding-left: 0;
-        padding-bottom: $side-box;
-        @include media(desktop-s){
-          grid-column: 2/3;
-          grid-row: 9/12;
-          padding-left: $side-box;
-        }
-        h4 {
-          @include h4;
-        }
-        &--efect {
-          height: inherit;
-          width:inherit;
-          @include contend-efect1;
-          &-content {
-            @include item-efect1;
-            @include box;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-          }
-        }
+      &__coments {
+        display: none;
+        width: 80%;
+        height: 150px;
+        margin: 0 auto;
+        border: solid 3px $color-primary;
+        border-bottom: none;
       }
-    }
-    &__coments {
-      display: none;
-      width: 80%;
-      height: 150px;
-      margin: 0 auto;
-      border: solid 3px $color-primary;
-      border-bottom: none;
     }
   }
 }

@@ -5,48 +5,51 @@ html(lang="es")
     title Riszart Daryl - Contactame (Freelancer)
     meta(name="description", content="Riszart Daryl es un desarrollador web especializado en crear sitios web atractivos y funcionales. Contacta con él para mejorar tu presencia en línea.")
     //- link(rel="canonical", href="https://riszartdaryl.site/contact.html")
+    //- link(rel="stylesheet", href="/public/css/contact.css" defer)
     link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/contact.css" defer)
   body.container-body__index
     include components/pageLoad.pug
     include components/nav.pug
     include components/header.pug
     main.container--contact
-      section.contact
-        h1.contact-tittle Hagamos un gran trabajo.
-        div.contact-text 
-          p ¡Hola! Si tienes alguna pregunta sobre el desarrollo de un proyecto o si estás interesado en que trabajemos juntos, no dudes en contactarme. Soy una persona comprometida con lo que hago y apasionada por la tecnología. Estoy aquí para ayudarte en lo que necesites.
-          p ¡Espero poder colaborar contigo pronto!.
-        div.contact-send
-          p Envíame un correo
-        div.contact-social
-          ul 
-            li linkedin
-            li Twitter
-            li Facebook
-            li Instagram
-      section.content-formulario
-        div.back-formulario
-        form(name="contact-es" method="POST" netlify).formulario
-          div.formulario-close
-            span
-          div.formulario-contact
-            p contactame 
-          div.formulario-input
-            div.formulario-input__left
-              label(for="name-subject") <span>(*)</span>nombre:
-              input(type="text" name="name" id="name-subject" placeholder="Nombre" required)
-            div.formulario-input__right
-              label(for="email-subject") <span>(*)</span>email:
-              input(type="email" name="email" id="email-subject" placeholder="email@gmail.com" required)
-          div.formulario-input__center
-            label(for="number-subject") N° celular:
-            input(type="number" name="number" id="number-subject" placeholder="(+51) 987 654 321")
-          div.formulario-message 
-            label(for="content-subject") <span>(*)</span>mensaje:
-            textarea(name="message", cols="30", rows="10" id="content-subject" placeholder="Detalle su pregunta o consulta" required)
-          div.formulario-buttons
-            button(type="submit").formulario-buttons__send
-              p enviar mensaje
+      section.left
+      section.right 
+        section.contact
+          h1.contact-tittle Hagamos un gran trabajo.
+          div.contact-text 
+            p ¡Hola! Si tienes alguna pregunta sobre el desarrollo de un proyecto o estás interesado en que trabajemos juntos, contactarme. Soy un apasionado por la tecnología. Estoy aquí para solucionar problemas.
+            p ¡Espero poder colaborar contigo!.
+          div.contact-send
+            p Envíame un correo
+          div.contact-social
+            ul 
+              li linkedin
+              li Twitter
+              li Facebook
+              li Instagram
+        section.content-formulario
+          div.back-formulario
+          form(name="contact-es" method="POST" netlify).formulario
+            div.formulario-close
+              span
+            div.formulario-contact
+              p contactame 
+            div.formulario-input
+              div.formulario-input__left
+                label(for="name-subject") <span>(*)</span>nombre:
+                input(type="text" name="name" id="name-subject" placeholder="Nombre" required)
+              div.formulario-input__right
+                label(for="email-subject") <span>(*)</span>email:
+                input(type="email" name="email" id="email-subject" placeholder="email@gmail.com" required)
+            div.formulario-input__center
+              label(for="number-subject") N° celular:
+              input(type="number" name="number" id="number-subject" placeholder="(+51) 987 654 321")
+            div.formulario-message 
+              label(for="content-subject") <span>(*)</span>mensaje:
+              textarea(name="message", cols="30", rows="10" id="content-subject" placeholder="Detalle su pregunta o consulta" required)
+            div.formulario-buttons
+              button(type="submit").formulario-buttons__send
+                p enviar mensaje
     include components/footer.pug
     include components/scriptGeneral.pug
     script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/scriptContact.js" defer)

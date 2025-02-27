@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   user-select: none;
   background-color: #161616;
@@ -527,10 +531,15 @@ output {
 /* Media Queries Mixin
 **********************/
 .header-container {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 200px calc(100vw - 200px);
+  z-index: 100;
+}
+.header-container .right-content {
   display: flex;
   width: 100%;
   height: 70px;
-  position: fixed;
   top: 0;
   background-color: #161616;
   z-index: 10;
@@ -539,10 +548,10 @@ output {
   align-items: center;
   padding-left: 15px;
 }
-.header-container img {
+.header-container .right-content img {
   cursor: pointer;
 }
-.header-container .content-tittle-h1 {
+.header-container .right-content .content-tittle-h1 {
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   position: absolute;
@@ -575,9 +584,9 @@ html {
 }
 
 .container--portafolio {
-  margin: auto;
-  padding: 100px 15px 0;
   height: auto;
+  display: grid;
+  grid-template-columns: 200px calc(100vw - 200px);
 }
 @media only screen and (min-width: 640px) {
   .container--portafolio {
@@ -594,13 +603,15 @@ html {
     width: 80%;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 500px) {
   .container--portafolio {
-    width: 1000px;
+    width: 100%;
   }
 }
 .container--portafolio .portafolio {
   display: flex;
+  padding: 100px 15px 0;
+  margin: 0 10%;
   flex-direction: column;
 }
 .container--portafolio .portafolio__tittle {
@@ -936,51 +947,55 @@ html {
 }
 
 footer {
+  display: grid;
+  grid-template-columns: 200px calc(100vw - 200px);
+}
+footer .right-content {
   background-color: rgba(255, 255, 255, 0.1);
   height: 200px;
   width: 100%;
   border-top: solid #00ff75 1px;
   position: relative;
 }
-footer .footer-up {
+footer .right-content .footer-up {
   display: grid;
   place-items: center;
 }
-footer .footer-up p {
+footer .right-content .footer-up p {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 15px;
   color: #ffffff;
 }
-footer .footer-up div {
+footer .right-content .footer-up div {
   transition: 1s;
   display: flex;
   gap: 15px;
   margin-bottom: 10px;
 }
-footer .footer-up div .icon-clase {
+footer .right-content .footer-up div .icon-clase {
   height: 50px;
   width: 50px;
 }
-footer .footer-up div img {
+footer .right-content .footer-up div img {
   height: 50px;
   width: 50px;
   transform: scale(1);
   transition: 1s ease-out;
   cursor: pointer;
 }
-footer .footer-up div img:hover {
+footer .right-content .footer-up div img:hover {
   transition: 0.4s ease-in;
   transform: scale(0.9);
   outline: solid 2px #0080ff;
   border-radius: 20px;
 }
 @media only screen and (min-width: 768px) {
-  footer .footer-up div img {
+  footer .right-content .footer-up div img {
     height: 50px;
     width: 50px;
   }
 }
-footer .footer-down {
+footer .right-content .footer-down {
   background-color: #00ff75;
   width: 100%;
   height: 30px;
@@ -990,7 +1005,7 @@ footer .footer-down {
   bottom: 0;
   border-top: solid rgba(0, 255, 117, 0.5) 3px;
 }
-footer .footer-down p {
+footer .right-content .footer-down p {
   font-family: Arial, Helvetica, sans-serif;
   color: #161616;
   margin: 0;
@@ -1000,7 +1015,7 @@ footer .footer-down p {
   line-height: 1.125rem;
 }
 @media only screen and (min-width: 640px) {
-  footer .footer-down p {
+  footer .right-content .footer-down p {
     font-size: 18px;
     font-size: 1.125rem;
     line-height: 1.6875rem;

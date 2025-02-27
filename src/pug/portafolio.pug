@@ -6,20 +6,21 @@ html(lang="es")
     meta(name="description", content="Riszart Daryl es un desarrollador web especializado en crear sitios web atractivos y funcionales. Contacta con él para mejorar tu presencia en línea.")
     //- link(rel="canonical", href="https://riszartdaryl.site/portafolio.html")
     link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/portafolio.css" defer)
+    //- link(rel="stylesheet", href="/public/css/portafolio.css" defer)
     link(rel="preconnect" href="https://gist.githubusercontent.com")
     link(rel="dns-prefetch" href="https://gist.githubusercontent.com")
   body.container-body__index
     include components/pageLoad.pug
-    include components/nav.pug
     include components/header.pug
     main.container--portafolio
+      include components/nav.pug
+      section.relleno
       section.portafolio
         h2.portafolio__tittle front-end developer
         div.portafolio__text
-          P Durante mi trayectoria como desarrollador web, he tenido la oportunidad de aplicar y fortalecer mis conocimientos a través de la creación de diversos proyectos, como juegos interactivos, páginas web y aplicaciones. Estos proyectos no solo han sido prácticas, sino también una forma de poner en práctica lo que he aprendido y mejorar mis habilidades en el campo del desarrollo web.
-          //- p ¡Han sido una excelente manera de consolidar mi aprendizaje!.
+          P En mi trayectoria como desarrollador web, he tenido la oportunidad de aplicar y fortalecer mis conocimientos a través de la creación de diversos proyectos.
           p Aquí te presento algunos de los que he llevado a cabo:
-        div.portafolio__content-li
+        div.portafolio__content-li 
       div.box-float
         div.box-float__close
           span.box-float__close-item

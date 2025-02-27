@@ -11,9 +11,9 @@ html {
   scroll-behavior: initial;
 }
 .container--portafolio {
-  margin: auto;
-  padding: 100px 15px 0;
   height: auto;
+  display: grid;
+  grid-template-columns: 200px calc(100vw - 200px);
   @include media(sm){
     width: 90%;
   }
@@ -24,10 +24,12 @@ html {
     width: 80%;
   }
   @include media(desktop-m){
-    width: 1000px;
+    width:100%;
   }
   .portafolio {
     display: flex;
+    padding: 100px 15px 0;
+    margin: 0 10%;
     flex-direction: column;
     &__tittle {
       align-self: center;
