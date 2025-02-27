@@ -457,6 +457,10 @@ output {
 
 /* Media Queries Mixin
 **********************/
+html {
+  overflow-x: hidden;
+}
+
 body {
   user-select: none;
   background-color: #161616;
@@ -562,10 +566,15 @@ a {
 }
 
 .header-container {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 200px calc(100vw - 200px);
+  z-index: 100;
+}
+.header-container .right-content {
   display: flex;
   width: 100%;
   height: 70px;
-  position: fixed;
   top: 0;
   background-color: #161616;
   z-index: 10;
@@ -574,10 +583,10 @@ a {
   align-items: center;
   padding-left: 15px;
 }
-.header-container img {
+.header-container .right-content img {
   cursor: pointer;
 }
-.header-container .content-tittle-h1 {
+.header-container .right-content .content-tittle-h1 {
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   position: absolute;
@@ -606,50 +615,40 @@ a {
   }
 }
 .container-skill {
+  display: grid;
+  grid-template-columns: 200px calc(100vw - 200px);
+}
+.container-skill .right h2 {
   padding-top: 90px;
-  margin: auto;
-  min-height: calc(100vh - 200px);
-}
-@media only screen and (min-width: 640px) {
-  .container-skill {
-    width: 90%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .container-skill {
-    width: 90%;
-  }
-}
-.container-skill h2 {
   text-transform: capitalize;
 }
-.container-skill .skill {
+.container-skill .right .skill {
   margin-top: 20px;
   width: 100%;
   justify-content: center;
   gap: 20px;
   padding: 15px;
 }
-.container-skill .skill ul {
+.container-skill .right .skill ul {
   margin: 0;
   padding: 0;
   width: 100%;
   display: grid;
   place-content: center;
-  gap: 15px;
+  gap: 30px;
 }
-.container-skill .skill ul li {
+.container-skill .right .skill ul li {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
-  .container-skill .skill ul li {
+  .container-skill .right .skill ul li {
     flex-direction: row;
   }
 }
-.container-skill .skill ul li .content-title-section {
+.container-skill .right .skill ul li .content-title-section {
   display: block;
   width: 250px;
   margin: 0;
@@ -662,28 +661,39 @@ a {
   line-height: 1.125rem;
 }
 @media only screen and (min-width: 768px) {
-  .container-skill .skill ul li .content-title-section {
+  .container-skill .right .skill ul li .content-title-section {
     text-align: end;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
-.container-skill .skill ul li .contemt-div {
+.container-skill .right .skill ul li .contemt-div {
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
-.container-skill .skill ul li .contemt-div div {
+.container-skill .right .skill ul li .contemt-div div {
+  position: relative;
   height: 50px;
   width: 50px;
 }
 @media only screen and (min-width: 768px) {
-  .container-skill .skill ul li .contemt-div div {
+  .container-skill .right .skill ul li .contemt-div div {
     height: 80px;
     width: 80px;
   }
 }
-.container-skill .skill ul li .contemt-div div img {
+.container-skill .right .skill ul li .contemt-div div .text-sub {
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+.container-skill .right .skill ul li .contemt-div div img {
   border-radius: 5px;
   cursor: pointer;
   z-index: 9;
@@ -691,12 +701,12 @@ a {
   height: inherit;
   width: inherit;
 }
-.container-skill .skill ul li .contemt-div div img:hover {
+.container-skill .right .skill ul li .contemt-div div img:hover {
   border: solid #ffffff 3px;
   border-radius: 5px;
   transform: scale(0.9);
 }
-.container-skill h2 {
+.container-skill .right h2 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 18px;
@@ -704,13 +714,13 @@ a {
   line-height: 1.6875rem;
 }
 @media only screen and (min-width: 768px) {
-  .container-skill h2 {
+  .container-skill .right h2 {
     font-size: 26px;
     font-size: 1.625rem;
     line-height: 2.4375rem;
   }
 }
-.container-skill h2 a {
+.container-skill .right h2 a {
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 10px;
   color: #0080ff;
@@ -718,7 +728,7 @@ a {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-.container-skill .courses-conteiner {
+.container-skill .right .courses-conteiner {
   width: auto;
   place-items: center;
   display: grid;
@@ -727,27 +737,27 @@ a {
   align-content: center;
 }
 @media only screen and (min-width: 768px) {
-  .container-skill .courses-conteiner {
+  .container-skill .right .courses-conteiner {
     grid-template-columns: 1fr 1fr;
     min-height: 200px;
   }
 }
-.container-skill .courses-conteiner .course {
+.container-skill .right .courses-conteiner .course {
   display: flex;
   width: 100%;
   height: 80px;
 }
 @media only screen and (min-width: 768px) {
-  .container-skill .courses-conteiner .course {
+  .container-skill .right .courses-conteiner .course {
     height: 100px;
   }
 }
-.container-skill .courses-conteiner .course-image {
+.container-skill .right .courses-conteiner .course-image {
   height: 100%;
   width: 100px;
   position: relative;
 }
-.container-skill .courses-conteiner .course-image figure {
+.container-skill .right .courses-conteiner .course-image figure {
   padding: 0;
   margin: 0;
   position: absolute;
@@ -757,20 +767,20 @@ a {
   width: 50px;
   height: 50px;
 }
-.container-skill .courses-conteiner .course-image figure img {
+.container-skill .right .courses-conteiner .course-image figure img {
   width: 100%;
   height: 100%;
 }
-.container-skill .courses-conteiner .course .course-description {
+.container-skill .right .courses-conteiner .course .course-description {
   height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.container-skill .courses-conteiner .course .course-description .course-name {
+.container-skill .right .courses-conteiner .course .course-description .course-name {
   gap: 10px;
 }
-.container-skill .courses-conteiner .course .course-description .course-name_percentage {
+.container-skill .right .courses-conteiner .course .course-description .course-name_percentage {
   font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
   margin: 0;
@@ -781,7 +791,7 @@ a {
   line-height: 1.3125rem;
 }
 @media only screen and (min-width: 768px) {
-  .container-skill .courses-conteiner .course .course-description .course-name_percentage {
+  .container-skill .right .courses-conteiner .course .course-description .course-name_percentage {
     color: #ffffff;
     width: auto;
     font-size: 16px;
@@ -789,7 +799,7 @@ a {
     line-height: 1.5rem;
   }
 }
-.container-skill .courses-conteiner .course .course-description .course-name span {
+.container-skill .right .courses-conteiner .course .course-description .course-name span {
   padding-left: 5px;
   font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
@@ -799,69 +809,73 @@ a {
   color: #00ff75;
   font-weight: bold;
 }
-.container-skill .courses-conteiner .course .course-description .course-extra {
+.container-skill .right .courses-conteiner .course .course-description .course-extra {
   color: #0080ff;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1.125rem;
 }
 @media only screen and (min-width: 768px) {
-  .container-skill .courses-conteiner .course .course-description .course-extra {
+  .container-skill .right .courses-conteiner .course .course-description .course-extra {
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.3125rem;
   }
 }
-.container-skill .courses-conteiner .course .course-description .course-extra span {
+.container-skill .right .courses-conteiner .course .course-description .course-extra span {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {
+  display: grid;
+  grid-template-columns: 200px calc(100vw - 200px);
+}
+footer .right-content {
   background-color: rgba(255, 255, 255, 0.1);
   height: 200px;
   width: 100%;
   border-top: solid #00ff75 1px;
   position: relative;
 }
-footer .footer-up {
+footer .right-content .footer-up {
   display: grid;
   place-items: center;
 }
-footer .footer-up p {
+footer .right-content .footer-up p {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 15px;
   color: #ffffff;
 }
-footer .footer-up div {
+footer .right-content .footer-up div {
   transition: 1s;
   display: flex;
   gap: 15px;
   margin-bottom: 10px;
 }
-footer .footer-up div .icon-clase {
+footer .right-content .footer-up div .icon-clase {
   height: 50px;
   width: 50px;
 }
-footer .footer-up div img {
+footer .right-content .footer-up div img {
   height: 50px;
   width: 50px;
   transform: scale(1);
   transition: 1s ease-out;
   cursor: pointer;
 }
-footer .footer-up div img:hover {
+footer .right-content .footer-up div img:hover {
   transition: 0.4s ease-in;
   transform: scale(0.9);
   outline: solid 2px #0080ff;
   border-radius: 20px;
 }
 @media only screen and (min-width: 768px) {
-  footer .footer-up div img {
+  footer .right-content .footer-up div img {
     height: 50px;
     width: 50px;
   }
 }
-footer .footer-down {
+footer .right-content .footer-down {
   background-color: #00ff75;
   width: 100%;
   height: 30px;
@@ -871,7 +885,7 @@ footer .footer-down {
   bottom: 0;
   border-top: solid rgba(0, 255, 117, 0.5) 3px;
 }
-footer .footer-down p {
+footer .right-content .footer-down p {
   font-family: Arial, Helvetica, sans-serif;
   color: #161616;
   margin: 0;
@@ -881,7 +895,7 @@ footer .footer-down p {
   line-height: 1.125rem;
 }
 @media only screen and (min-width: 640px) {
-  footer .footer-down p {
+  footer .right-content .footer-down p {
     font-size: 18px;
     font-size: 1.125rem;
     line-height: 1.6875rem;
@@ -933,9 +947,9 @@ footer .footer-down p {
 }
 
 .show-navbar {
+  display: none;
   height: 50px;
   width: 50px;
-  display: grid;
   place-content: center;
   position: relative;
   z-index: 1100;
@@ -1027,16 +1041,14 @@ footer .footer-down p {
 
 .nav-principal {
   display: block;
-  width: 0;
+  width: auto;
   height: 100vh;
   position: fixed;
-  padding: 20px 0;
+  padding: 20px;
   top: 0;
   background-color: #161616;
   z-index: 1000;
   transition-duration: 0.5s;
-  visibility: hidden;
-  overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .nav-principal {
