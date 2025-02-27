@@ -1,15 +1,16 @@
 doctype html
 html(lang="es")
   head 
-    include es/components/head.pug
+    include components/head.pug
     title Riszart Daryl - Sobre Mi (freelancer)
     meta(name="description", content="Riszart Daryl es un desarrollador web con experiencia en la creación de sitios web funcionales y atractivos para empresas y particulares. ¡Visita su sitio web ahora!")
     //- link(rel="canonical", href="https://riszartdaryl.site/about.html")
+    //- link(rel="stylesheet", href="/public/css/about.css" defer)
     link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/about.css" defer)
   body.container-body__index
-    include es/components/pageLoad.pug
-    include es/components/nav.pug
-    include es/components/header.pug
+    include components/pageLoad.pug
+    include components/nav.pug
+    include components/header.pug
     main.container--about 
       section.about
         div.about__content
@@ -40,5 +41,5 @@ html(lang="es")
           p Estoy emocionado por seguir creciendo y perfeccionando mis habilidades mientras exploramos nuevas tecnologías y enfoques en el mundo del desarrollo web.
           p ¡Gracias por tu atención!...
 
-    include es/components/footer.pug
-    include es/components/scriptGeneral.pug
+    include components/footer.pug
+    include components/scriptGeneral.pug

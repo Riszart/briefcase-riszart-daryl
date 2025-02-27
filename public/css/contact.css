@@ -457,10 +457,6 @@ output {
 
 /* Media Queries Mixin
 **********************/
-html {
-  overflow-x: hidden;
-}
-
 body {
   user-select: none;
   background-color: #161616;
@@ -566,15 +562,10 @@ a {
 }
 
 .header-container {
-  position: fixed;
-  display: grid;
-  grid-template-columns: 200px calc(100vw - 200px);
-  z-index: 100;
-}
-.header-container .right-content {
   display: flex;
   width: 100%;
   height: 70px;
+  position: fixed;
   top: 0;
   background-color: #161616;
   z-index: 10;
@@ -583,10 +574,10 @@ a {
   align-items: center;
   padding-left: 15px;
 }
-.header-container .right-content img {
+.header-container img {
   cursor: pointer;
 }
-.header-container .right-content .content-tittle-h1 {
+.header-container .content-tittle-h1 {
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   position: absolute;
@@ -604,9 +595,8 @@ a {
 }
 
 .container--contact {
+  margin: auto;
   height: auto;
-  display: grid;
-  grid-template-columns: 200px calc(100vw - 200px);
 }
 @media only screen and (min-width: 640px) {
   .container--contact {
@@ -623,23 +613,22 @@ a {
     width: 80%;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 500px) {
   .container--contact {
     width: 1000px;
   }
 }
-.container--contact .right .contact {
+.container--contact .contact {
   padding: 100px 10px 20px;
   display: flex;
   flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .contact {
+  .container--contact .contact {
     padding: 100px 100px;
   }
 }
-.container--contact .right .contact-tittle {
-  box-sizing: border-box;
+.container--contact .contact-tittle {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   text-align: center;
@@ -648,51 +637,51 @@ a {
   line-height: 3rem;
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .contact-tittle {
+  .container--contact .contact-tittle {
     font-size: 58px;
     font-size: 3.625rem;
     line-height: 5.4375rem;
   }
 }
-.container--contact .right .contact-text {
+.container--contact .contact-text {
   margin: 5px 10px;
   text-align: justify;
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .contact-text {
+  .container--contact .contact-text {
     margin-top: 50px;
     margin-left: 50px;
   }
 }
-.container--contact .right .contact-text h3 {
+.container--contact .contact-text h3 {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 2.25rem;
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .contact-text h3 {
+  .container--contact .contact-text h3 {
     font-size: 32px;
     font-size: 2rem;
     line-height: 3rem;
   }
 }
-.container--contact .right .contact-text p {
+.container--contact .contact-text p {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
-.container--contact .right .contact-text p:first-child {
+.container--contact .contact-text p:first-child {
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
 }
-.container--contact .right .contact-text p:last-child {
+.container--contact .contact-text p:last-child {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 2.25rem;
   font-family: Arial, Helvetica, sans-serif;
   color: #00ff75;
 }
-.container--contact .right .contact-send {
+.container--contact .contact-send {
   font-family: Arial, Helvetica, sans-serif;
   width: 250px;
   padding: 15px 0;
@@ -707,21 +696,21 @@ a {
   line-height: 2.25rem;
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .contact-send {
+  .container--contact .contact-send {
     padding: 15px 0;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 50px;
     margin-bottom: 50px;
   }
 }
-.container--contact .right .contact-send p {
+.container--contact .contact-send p {
   margin: 0;
 }
-.container--contact .right .contact-send:hover {
+.container--contact .contact-send:hover {
   border: solid 2px #0080ff;
   color: #0080ff;
 }
-.container--contact .right .contact-social {
+.container--contact .contact-social {
   height: auto;
   width: 150px;
   margin: auto;
@@ -730,12 +719,12 @@ a {
   border-radius: 5px;
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .contact-social {
+  .container--contact .contact-social {
     margin-left: 50px;
     margin-top: 0px;
   }
 }
-.container--contact .right .contact-social ul {
+.container--contact .contact-social ul {
   width: 100%;
   display: flex;
   align-items: center;
@@ -743,7 +732,7 @@ a {
   margin: 0;
   padding: 0;
 }
-.container--contact .right .contact-social ul li {
+.container--contact .contact-social ul li {
   font-family: Arial, Helvetica, sans-serif;
   padding: 15px 0;
   cursor: pointer;
@@ -753,15 +742,15 @@ a {
   font-size: 1.375rem;
   line-height: 2.0625rem;
 }
-.container--contact .right .contact-social ul li:hover {
+.container--contact .contact-social ul li:hover {
   transition: 0.2s;
   transition-timing-function: ease-in;
   color: #0080ff;
 }
-.container--contact .right .contact-social:hover {
+.container--contact .contact-social:hover {
   border: solid 2px #0080ff;
 }
-.container--contact .right .content-formulario {
+.container--contact .content-formulario {
   display: block;
   width: 100%;
   height: 0;
@@ -776,7 +765,7 @@ a {
   background-size: cover;
   transition: height 1s ease-in;
 }
-.container--contact .right .content-formulario .back-formulario {
+.container--contact .content-formulario .back-formulario {
   width: 95%;
   position: absolute;
   top: 50%;
@@ -784,12 +773,12 @@ a {
   transform: translate(-50%, -50%);
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .content-formulario .back-formulario {
+  .container--contact .content-formulario .back-formulario {
     height: 600px;
     width: 700px;
   }
 }
-.container--contact .right .content-formulario .formulario {
+.container--contact .content-formulario .formulario {
   border: solid #00ff75 2px;
   width: 95%;
   padding: 0 50px;
@@ -800,7 +789,7 @@ a {
   overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .content-formulario .formulario {
+  .container--contact .content-formulario .formulario {
     margin: 0px;
     height: 600px;
     width: 700px;
@@ -810,7 +799,7 @@ a {
     transform: translate(-50%, -50%);
   }
 }
-.container--contact .right .content-formulario .formulario-close {
+.container--contact .content-formulario .formulario-close {
   height: 40px;
   width: 40px;
   position: absolute;
@@ -820,10 +809,10 @@ a {
   cursor: pointer;
   background-color: rgba(255, 0, 0, 0.5);
 }
-.container--contact .right .content-formulario .formulario-close:hover {
+.container--contact .content-formulario .formulario-close:hover {
   background-color: red;
 }
-.container--contact .right .content-formulario .formulario-close span {
+.container--contact .content-formulario .formulario-close span {
   display: block;
   width: 40px;
   height: 4px;
@@ -833,7 +822,7 @@ a {
   border-radius: 5px;
   background-color: #ffffff;
 }
-.container--contact .right .content-formulario .formulario-close span::before {
+.container--contact .content-formulario .formulario-close span::before {
   content: "";
   display: block;
   width: 40px;
@@ -842,7 +831,7 @@ a {
   transform: rotate(90deg);
   background-color: #ffffff;
 }
-.container--contact .right .content-formulario .formulario-contact p {
+.container--contact .content-formulario .formulario-contact p {
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 15px;
   margin: 0;
@@ -854,7 +843,7 @@ a {
   font-size: 1.75rem;
   line-height: 2.625rem;
 }
-.container--contact .right .content-formulario .formulario label {
+.container--contact .content-formulario .formulario label {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -862,10 +851,10 @@ a {
   color: #00ff75;
   text-transform: uppercase;
 }
-.container--contact .right .content-formulario .formulario label span {
+.container--contact .content-formulario .formulario label span {
   color: rgb(255, 123, 0);
 }
-.container--contact .right .content-formulario .formulario .formulario-input__center input {
+.container--contact .content-formulario .formulario .formulario-input__center input {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   height: 40px;
@@ -877,38 +866,38 @@ a {
   padding-left: 10px;
   cursor: text;
 }
-.container--contact .right .content-formulario .formulario .formulario-input__center input:focus {
+.container--contact .content-formulario .formulario .formulario-input__center input:focus {
   outline: solid #0080ff 1px;
   border-color: #0080ff;
   color: #0080ff;
 }
-.container--contact .right .content-formulario .formulario .formulario-input__center input:active {
+.container--contact .content-formulario .formulario .formulario-input__center input:active {
   outline: solid #0080ff 1px;
   border-color: #0080ff;
 }
-.container--contact .right .content-formulario .formulario-input {
+.container--contact .content-formulario .formulario-input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 5px;
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .content-formulario .formulario-input {
+  .container--contact .content-formulario .formulario-input {
     flex-direction: row;
     margin-bottom: 10px;
   }
 }
-.container--contact .right .content-formulario .formulario-input__left, .container--contact .right .content-formulario .formulario-input__right {
+.container--contact .content-formulario .formulario-input__left, .container--contact .content-formulario .formulario-input__right {
   margin-top: 5px;
   display: flex;
   flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .content-formulario .formulario-input__left, .container--contact .right .content-formulario .formulario-input__right {
+  .container--contact .content-formulario .formulario-input__left, .container--contact .content-formulario .formulario-input__right {
     margin-top: 20px;
   }
 }
-.container--contact .right .content-formulario .formulario-input input {
+.container--contact .content-formulario .formulario-input input {
   font-family: Arial, Helvetica, sans-serif;
   height: 40px;
   width: 250px;
@@ -919,21 +908,21 @@ a {
   padding-left: 10px;
   cursor: text;
 }
-.container--contact .right .content-formulario .formulario-input input:focus {
+.container--contact .content-formulario .formulario-input input:focus {
   outline: solid #0080ff 1px;
   border-color: #0080ff;
   color: #0080ff;
 }
-.container--contact .right .content-formulario .formulario-input input:active {
+.container--contact .content-formulario .formulario-input input:active {
   outline: solid #0080ff 1px;
   border-color: #0080ff;
 }
-.container--contact .right .content-formulario .formulario-message {
+.container--contact .content-formulario .formulario-message {
   margin-top: 5px;
   display: flex;
   flex-direction: column;
 }
-.container--contact .right .content-formulario .formulario-message textarea {
+.container--contact .content-formulario .formulario-message textarea {
   height: 200px;
   width: 100%;
   padding: 10px;
@@ -945,20 +934,20 @@ a {
   resize: none;
   margin-top: 15px;
 }
-.container--contact .right .content-formulario .formulario-message textarea:focus {
+.container--contact .content-formulario .formulario-message textarea:focus {
   outline: solid #0080ff 1px;
   border-color: #0080ff;
   color: #0080ff;
 }
-.container--contact .right .content-formulario .formulario-message textarea:active {
+.container--contact .content-formulario .formulario-message textarea:active {
   outline: solid #0080ff 1px;
   border-color: #0080ff;
 }
-.container--contact .right .content-formulario .formulario-buttons {
+.container--contact .content-formulario .formulario-buttons {
   display: flex;
   gap: 15px;
 }
-.container--contact .right .content-formulario .formulario-buttons__send {
+.container--contact .content-formulario .formulario-buttons__send {
   height: 40px;
   width: 100%;
   display: flex;
@@ -972,11 +961,11 @@ a {
   cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
-  .container--contact .right .content-formulario .formulario-buttons__send {
+  .container--contact .content-formulario .formulario-buttons__send {
     margin-top: 15px;
   }
 }
-.container--contact .right .content-formulario .formulario-buttons__send p {
+.container--contact .content-formulario .formulario-buttons__send p {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
   display: block;
@@ -985,76 +974,72 @@ a {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
-.container--contact .right .content-formulario .formulario-buttons__send:hover {
+.container--contact .content-formulario .formulario-buttons__send:hover {
   background-color: #00ff75;
 }
-.container--contact .right .content-formulario .formulario-icons {
+.container--contact .content-formulario .formulario-icons {
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin-top: 25px;
 }
-.container--contact .right .content-formulario .formulario-icons img {
+.container--contact .content-formulario .formulario-icons img {
   height: 35px;
   width: 35px;
   background-color: transparent;
   border-radius: 50%;
   border: solid 1px #ffffff;
 }
-.container--contact .right .content-formulario .formulario-icons img:hover {
+.container--contact .content-formulario .formulario-icons img:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 footer {
-  display: grid;
-  grid-template-columns: 200px calc(100vw - 200px);
-}
-footer .right-content {
   background-color: rgba(255, 255, 255, 0.1);
   height: 200px;
   width: 100%;
   border-top: solid #00ff75 1px;
   position: relative;
 }
-footer .right-content .footer-up {
+footer .footer-up {
   display: grid;
   place-items: center;
 }
-footer .right-content .footer-up p {
+footer .footer-up p {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 15px;
   color: #ffffff;
 }
-footer .right-content .footer-up div {
+footer .footer-up div {
   transition: 1s;
   display: flex;
   gap: 15px;
   margin-bottom: 10px;
 }
-footer .right-content .footer-up div .icon-clase {
+footer .footer-up div .icon-clase {
   height: 50px;
   width: 50px;
 }
-footer .right-content .footer-up div img {
+footer .footer-up div img {
   height: 50px;
   width: 50px;
   transform: scale(1);
   transition: 1s ease-out;
   cursor: pointer;
 }
-footer .right-content .footer-up div img:hover {
+footer .footer-up div img:hover {
   transition: 0.4s ease-in;
   transform: scale(0.9);
   outline: solid 2px #0080ff;
   border-radius: 20px;
 }
 @media only screen and (min-width: 768px) {
-  footer .right-content .footer-up div img {
+  footer .footer-up div img {
     height: 50px;
     width: 50px;
   }
 }
-footer .right-content .footer-down {
+footer .footer-down {
   background-color: #00ff75;
   width: 100%;
   height: 30px;
@@ -1064,7 +1049,7 @@ footer .right-content .footer-down {
   bottom: 0;
   border-top: solid rgba(0, 255, 117, 0.5) 3px;
 }
-footer .right-content .footer-down p {
+footer .footer-down p {
   font-family: Arial, Helvetica, sans-serif;
   color: #161616;
   margin: 0;
@@ -1074,7 +1059,7 @@ footer .right-content .footer-down p {
   line-height: 1.125rem;
 }
 @media only screen and (min-width: 640px) {
-  footer .right-content .footer-down p {
+  footer .footer-down p {
     font-size: 18px;
     font-size: 1.125rem;
     line-height: 1.6875rem;
@@ -1126,9 +1111,9 @@ footer .right-content .footer-down p {
 }
 
 .show-navbar {
-  display: none;
   height: 50px;
   width: 50px;
+  display: grid;
   place-content: center;
   position: relative;
   z-index: 1100;
@@ -1220,14 +1205,16 @@ footer .right-content .footer-down p {
 
 .nav-principal {
   display: block;
-  width: auto;
+  width: 0;
   height: 100vh;
   position: fixed;
-  padding: 20px;
+  padding: 20px 0;
   top: 0;
   background-color: #161616;
   z-index: 1000;
   transition-duration: 0.5s;
+  visibility: hidden;
+  overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .nav-principal {

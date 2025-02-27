@@ -6,6 +6,10 @@ $side-box: 40px;
 $font-title: Arial, Helvetica, sans-serif;
 $font-body: Arial, Helvetica, sans-serif;
 
+html{
+  overflow-x: hidden;
+}
+
 @mixin border{
 	position: relative;
 	overflow: hidden;

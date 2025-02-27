@@ -1,4 +1,6 @@
 const navSelect = document.querySelector('.nav-principal')
+const mainBody = document.querySelector('.portafolio')
+// mainBody.style.width = `${window.innerWidth - 200}px`
 document.querySelector('.show-navbar').onclick = ()=>changeState()
 function changeState(){
   const changeState = navSelect.classList.toggle('modified')

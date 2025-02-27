@@ -9,176 +9,190 @@
   }
 }
 .container-skill {
-  padding-top: 90px;
-  margin: auto;
-  min-height: calc(100vh - 200px);
-  @include media(sm){
-    width: 90%;
-  }
-  @include media(tablet){
-    width: 90%;
-  }
-  @include media(desktop-s){
-  }
-  @include media(desktop-m){
-  }
-  h2 {
-    text-transform: capitalize;
-  }
-  .skill {
-    margin-top: 20px;
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    ul {
-      margin: 0;
-      padding: 0;
+  // min-height: calc(100vh - 200px);
+  display: grid;
+  grid-template-columns:200px calc(100vw - 200px);
+  // @include media(sm){
+  //   width: 90%;
+  // }
+  // @include media(tablet){
+  //   width: 90%;
+  // }
+  // @include media(desktop-s){
+  // }
+  // @include media(desktop-m){
+  // }
+  .right{
+    h2 {
+      padding-top: 90px;
+      text-transform: capitalize;
+    }
+    .skill {
+      margin-top: 20px;
       width: 100%;
-      display: grid;
-      place-content: center;
-      gap: 15px;
-      li {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-direction: column;
-        @include media(tablet){
-          flex-direction: row;
-        }
-        .content-title-section {
-          display: block;
-          width: 250px;
-          margin: 0;
-          text-align: center;
-          font-family: $font-body;
-          text-transform: uppercase;
-          color: $color-sky;
-          @include font-size(12px);
-          @include media(tablet){
-            text-align: end;
-            @include font-size(16px);
-          }
-        }
-        .contemt-div {
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        place-content: center;
+        gap: 30px;
+        li {
           display: flex;
+          align-items: center;
           gap: 10px;
-          div {
-            height: 50px;
-            width: 50px;
-            @include media(tablet){
-              height: 80px;
-              width: 80px;
-            }
-            img {
-              border-radius: 5px;
-              cursor: pointer;
-              z-index: 9;
-              position: relative;
-              height: inherit;
-              width: inherit;
-              @include media(tablet){
-                // z-index: 10;
-              }
-              &:hover {
-                border: solid $color-sky 3px;
-                border-radius: 5px;
-                transform: scale(.9);
-              }
-            }
+          flex-direction: column;
+          @include media(tablet){
+            flex-direction: row;
           }
-        }
-      }
-    }
-  }
-  h2 {
-    font-family: $font-title;
-    text-align: center;
-    @include font-size(18px);
-    @include media(tablet){
-      @include font-size(26px);
-    }
-    a {
-      font-family: $font-body;
-      margin-left: 10px;
-      color: $color-hover;
-      @include font-size(16px);
-    }
-  }
-  .courses-conteiner {
-    width: auto;
-    place-items: center;
-    display: grid;
-    grid-template-columns: auto;
-    margin-bottom: 25px;
-    align-content: center;
-    @include media(tablet){
-      grid-template-columns: 1fr 1fr;
-      min-height: 200px;
-    }
-    .course {
-      display: flex;
-      width: 100%;
-      height: 80px;
-      @include media(tablet){
-        height: 100px;
-      }
-      &-image {
-        height: 100%;
-        width: 100px;
-        position: relative;
-        figure {
-          padding: 0;
-          margin: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50% , -50%);
-          width: 50px;
-          height: 50px;
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-      .course-description {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        .course-name {
-          gap: 10px;
-          &_percentage {
-            font-family: $font-body;
-            display: inline-block;
+          .content-title-section {
+            display: block;
+            width: 250px;
             margin: 0;
+            text-align: center;
+            font-family: $font-body;
+            text-transform: uppercase;
             color: $color-sky;
-            width: 200px;
-            @include font-size(14px);
+            @include font-size(12px);
             @include media(tablet){
-              color: $color-sky;
-              width: auto;
+              text-align: end;
               @include font-size(16px);
             }
           }
-          span {
-            padding-left: 5px;
-            font-family: $font-body;
-            display: inline-block;
-            @include font-size(16px);
-            color: $color-primary;
-            font-weight: bold;
+          .contemt-div {
+            display: flex;
+            gap: 30px;
+            div {
+              position: relative;
+              height: 50px;
+              width: 50px;
+              @include media(tablet){
+                height: 80px;
+                width: 80px;
+              }
+              .text-sub{
+                width: 100%;
+                display: block;
+                position: absolute;
+                bottom: -24px;
+                left: 0;
+                margin: 0;
+                text-align: center;
+                text-transform: capitalize;
+              }
+              img {
+                border-radius: 5px;
+                cursor: pointer;
+                z-index: 9;
+                position: relative;
+                height: inherit;
+                width: inherit;
+                @include media(tablet){
+                  // z-index: 10;
+                }
+                &:hover {
+                  border: solid $color-sky 3px;
+                  border-radius: 5px;
+                  transform: scale(.9);
+                }
+              }
+            }
           }
         }
-        .course-extra  {
-          color: $color-hover;
-          @include font-size(12px);
-          @include media(tablet){
-            @include font-size(14px);
+      }
+    }
+    h2 {
+      font-family: $font-title;
+      text-align: center;
+      @include font-size(18px);
+      @include media(tablet){
+        @include font-size(26px);
+      }
+      a {
+        font-family: $font-body;
+        margin-left: 10px;
+        color: $color-hover;
+        @include font-size(16px);
+      }
+    }
+    .courses-conteiner {
+      width: auto;
+      place-items: center;
+      display: grid;
+      grid-template-columns: auto;
+      margin-bottom: 25px;
+      align-content: center;
+      @include media(tablet){
+        grid-template-columns: 1fr 1fr;
+        min-height: 200px;
+      }
+      .course {
+        display: flex;
+        width: 100%;
+        height: 80px;
+        @include media(tablet){
+          height: 100px;
+        }
+        &-image {
+          height: 100%;
+          width: 100px;
+          position: relative;
+          figure {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            width: 50px;
+            height: 50px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
           }
-          span {
-            font-family: $font-title;
+        }
+        .course-description {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .course-name {
+            gap: 10px;
+            &_percentage {
+              font-family: $font-body;
+              display: inline-block;
+              margin: 0;
+              color: $color-sky;
+              width: 200px;
+              @include font-size(14px);
+              @include media(tablet){
+                color: $color-sky;
+                width: auto;
+                @include font-size(16px);
+              }
+            }
+            span {
+              padding-left: 5px;
+              font-family: $font-body;
+              display: inline-block;
+              @include font-size(16px);
+              color: $color-primary;
+              font-weight: bold;
+            }
+          }
+          .course-extra  {
+            color: $color-hover;
+            @include font-size(12px);
+            @include media(tablet){
+              @include font-size(14px);
+            }
+            span {
+              font-family: $font-title;
+            }
           }
         }
       }

@@ -1,7 +1,8 @@
 
 .container--contact {
-  margin: auto;
   height: auto;
+  display: grid;
+  grid-template-columns: 200px calc(100vw - 200px);
   @include media(sm){
     width: 90%;
   }
@@ -14,253 +15,217 @@
   @include media(desktop-m){
     width: 1000px;
   }
-  .contact {
-    padding: 100px 10px 20px;
-    display: flex;
-    flex-direction: column;
-    @include media(tablet){
-      padding: 100px 100px;
-    }
-    &-tittle {
-      font-family: $font-title;
-      margin: 0;
-      text-align: center;
-      @include font-size(32px);
-      @include media(tablet){
-        @include font-size(58px);
-      }
-    }
-    &-text {
-      margin: 5px 10px;
-      text-align: justify;
-      @include media(tablet){
-        margin-top: 50px;
-        margin-left: 50px;
-      }
-      h3 {
-        @include font-size(24px);
-        @include media(tablet){
-          @include font-size(32px);
-        }
-      }
-      p {
-        @include font-size(18px);
-        &:first-child{
-          font-family: $font-body;
-          color: $color-sky;
-        }
-        &:last-child {
-          @include font-size(24px);
-          font-family: $font-title;
-          color: $color-primary;
-        }
-      }
-    }
-    &-send {
-      font-family: $font-title;
-      width: 250px;
-      padding: 15px 0;
-      margin: auto;
-      border: solid 2px $color-primary;
+  .right{
+    .contact {
+      padding: 100px 10px 20px;
       display: flex;
-      justify-content: center;
-      border-radius: 5px;
-      cursor: pointer;
-      @include font-size(24px);
+      flex-direction: column;
       @include media(tablet){
-        padding: 15px 0;
-        margin-top: 50px;
-        margin-left: 50px;
-        margin-bottom: 50px;
+        padding: 100px 100px;
       }
-      p {
+      &-tittle {box-sizing: border-box;
+        font-family: $font-title;
         margin: 0;
+        text-align: center;
+        @include font-size(32px);
+        @include media(tablet){
+          @include font-size(58px);
+        }
       }
-      &:hover {
-        border: solid 2px $color-hover;
-        color: $color-hover;
-
-      }
-    }
-    &-social {
-      height: auto;
-      width: 150px;
-      margin: auto;
-      margin-top: 10px;
-      border: solid 2px $color-primary;
-      border-radius: 5px;
-      @include media(tablet){
-        margin-left: 50px;
-        margin-top: 0px;
-      }
-      ul {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        @include reset;
-        li {
-          font-family: $font-title;
-          padding: 15px 0;
-          cursor: pointer;
-          font-weight: 600;
-          transition: 0.6s;
-          @include font-size(22px);
-          &:hover {
-            transition: 0.2s;
-            transition-timing-function: ease-in;
-            color: $color-hover;
+      &-text {
+        margin: 5px 10px;
+        text-align: justify;
+        @include media(tablet){
+          margin-top: 50px;
+          margin-left: 50px;
+        }
+        h3 {
+          @include font-size(24px);
+          @include media(tablet){
+            @include font-size(32px);
+          }
+        }
+        p {
+          @include font-size(18px);
+          &:first-child{
+            font-family: $font-body;
+            color: $color-sky;
+          }
+          &:last-child {
+            @include font-size(24px);
+            font-family: $font-title;
+            color: $color-primary;
           }
         }
       }
-      &:hover {
-        border: solid 2px $color-hover;
+      &-send {
+        font-family: $font-title;
+        width: 250px;
+        padding: 15px 0;
+        margin: auto;
+        border: solid 2px $color-primary;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+        @include font-size(24px);
+        @include media(tablet){
+          padding: 15px 0;
+          margin-top: 20px;
+          margin-left: 50px;
+          margin-bottom: 50px;
+        }
+        p {
+          margin: 0;
+        }
+        &:hover {
+          border: solid 2px $color-hover;
+          color: $color-hover;
+  
+        }
+      }
+      &-social {
+        height: auto;
+        width: 150px;
+        margin: auto;
+        margin-top: 10px;
+        border: solid 2px $color-primary;
+        border-radius: 5px;
+        @include media(tablet){
+          margin-left: 50px;
+          margin-top: 0px;
+        }
+        ul {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          @include reset;
+          li {
+            font-family: $font-title;
+            padding: 15px 0;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.6s;
+            @include font-size(22px);
+            &:hover {
+              transition: 0.2s;
+              transition-timing-function: ease-in;
+              color: $color-hover;
+            }
+          }
+        }
+        &:hover {
+          border: solid 2px $color-hover;
+        }
       }
     }
-  }
-  .content-formulario {
-    display: block;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: $color-dark;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: height 1s ease-in;
-    // box-shadow:  
-    //   0px 0px 10px 0px $color-primary inset,
-    //   -0px -0px 10px 0px $color-primary inset;
-    .back-formulario {
-      width: 95%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50% , -50%);
-      // background-color: get-opacity($color-dark, 0.1);
-      @include media(tablet){
-        height: 600px;
-        width: 700px;
-      }
-    }
-    .formulario {
-      // background-color: $color-primary;
-      border: solid $color-primary 2px;
-      width: 95%;
-      padding: 0 50px;
-      margin: auto;
-      margin-top: 10px;
-      border-radius: 5px;
-      transition: height 1s ease-out;
+    .content-formulario {
+      display: block;
+      width: 100%;
+      height: 0;
       overflow: hidden;
-      @include media(tablet){
-        margin: 0px;
-        height: 600px;
-        width: 700px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background-color: $color-dark;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: height 1s ease-in;
+      // box-shadow:  
+      //   0px 0px 10px 0px $color-primary inset,
+      //   -0px -0px 10px 0px $color-primary inset;
+      .back-formulario {
+        width: 95%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50% , -50%);
-      }
-      &-close {
-        height: 40px;
-        width: 40px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-radius: 3px;
-        cursor: pointer;
-        background-color: get-opacity(red, 0.5);
-        &:hover {
-          background-color: get-opacity(red, 1);
+        // background-color: get-opacity($color-dark, 0.1);
+        @include media(tablet){
+          height: 600px;
+          width: 700px;
         }
-        span {
-          display: block;
-          width: 40px;
-          height: 4px;
+      }
+      .formulario {
+        // background-color: $color-primary;
+        border: solid $color-primary 2px;
+        width: 95%;
+        padding: 0 50px;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 5px;
+        transition: height 1s ease-out;
+        overflow: hidden;
+        @include media(tablet){
+          margin: 0px;
+          height: 600px;
+          width: 700px;
           position: absolute;
-          top: 18px;
-          transform: rotate(45deg);
-          border-radius: 5px;
-          background-color: $color-sky;
-          &::before {
-            content: "";
+          top: 50%;
+          left: 50%;
+          transform: translate(-50% , -50%);
+        }
+        &-close {
+          height: 40px;
+          width: 40px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: 3px;
+          cursor: pointer;
+          background-color: get-opacity(red, 0.5);
+          &:hover {
+            background-color: get-opacity(red, 1);
+          }
+          span {
             display: block;
             width: 40px;
             height: 4px;
+            position: absolute;
+            top: 18px;
+            transform: rotate(45deg);
             border-radius: 5px;
-            transform: rotate(90deg);
             background-color: $color-sky;
+            &::before {
+              content: "";
+              display: block;
+              width: 40px;
+              height: 4px;
+              border-radius: 5px;
+              transform: rotate(90deg);
+              background-color: $color-sky;
+            }
           }
         }
-      }
-      &-contact {
-        p {
+        &-contact {
+          p {
+            font-family: $font-title;
+            padding-top: 15px;
+            margin: 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $color-primary;
+            border-bottom: solid 1px $color-primary;
+            @include font-size(28px)
+          }
+        }
+        label {
           font-family: $font-title;
-          padding-top: 15px;
-          margin: 0;
-          font-weight: 600;
-          text-transform: uppercase;
-          color: $color-primary;
-          border-bottom: solid 1px $color-primary;
-          @include font-size(28px)
-        }
-      }
-      label {
-        font-family: $font-title;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-weight: 100;
-        color: $color-primary;
-        text-transform: uppercase;
-        span {
-          color: rgb(255, 123, 0);
-        }
-      }
-      .formulario-input__center input {
-        font-family: $font-body;
-        display: flex;
-        height: 40px;
-        width: 250px;
-        border-radius: 5px;
-        background-color: transparent;
-        border: solid 1px $color-primary;
-        color: $color-sky;
-        padding-left: 10px;
-        cursor: text;
-        &:focus{
-          outline: solid $color-hover 1px;
-          border-color: $color-hover;
-          color: $color-hover;
-        }
-        &:active {
-          outline: solid $color-hover 1px;
-          border-color: $color-hover;
-        }
-      }
-      &-input {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-bottom: 5px;
-        @include media(tablet){
-          flex-direction: row;
+          margin-top: 10px;
           margin-bottom: 10px;
-        }
-        &__left, &__right {
-          margin-top: 5px;
-          display: flex;
-          flex-direction: column;
-          @include media(tablet){
-            margin-top: 20px;
+          font-weight: 100;
+          color: $color-primary;
+          text-transform: uppercase;
+          span {
+            color: rgb(255, 123, 0);
           }
         }
-        input {
+        .formulario-input__center input {
           font-family: $font-body;
+          display: flex;
           height: 40px;
           width: 250px;
           border-radius: 5px;
@@ -279,83 +244,121 @@
             border-color: $color-hover;
           }
         }
-      }
-      &-message {
-        margin-top: 5px;
-        display: flex;
-        flex-direction: column;
-        textarea{
-          height: 200px;
-          width: 100%;
-          padding: 10px;
-          border-radius: 5px;
-          background-color: transparent;
-          border: solid 1px $color-primary;
-          color: $color-sky;
-          cursor: text;
-          resize:none;
-          margin-top: 15px;
-          &:focus{
-            outline: solid $color-hover 1px;
-            border-color: $color-hover;
-            color: $color-hover;
-          }
-          &:active {
-            outline: solid $color-hover 1px;
-            border-color: $color-hover;
-          }
-        }
-      }
-      &-buttons {
-        display: flex;
-        gap: 15px;
-        &__send{
-          height: 40px;
-          width: 100%;
+        &-input {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-top: 5px;
+          flex-direction: column;
+          justify-content: space-between;
           margin-bottom: 5px;
-          background-color: $color-hover;
-          border-radius: 5px;
-          border: solid $color-primary 2px;
-          cursor: pointer;
           @include media(tablet){
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+          &__left, &__right {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+            @include media(tablet){
+              margin-top: 20px;
+            }
+          }
+          input {
+            font-family: $font-body;
+            height: 40px;
+            width: 250px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: solid 1px $color-primary;
+            color: $color-sky;
+            padding-left: 10px;
+            cursor: text;
+            &:focus{
+              outline: solid $color-hover 1px;
+              border-color: $color-hover;
+              color: $color-hover;
+            }
+            &:active {
+              outline: solid $color-hover 1px;
+              border-color: $color-hover;
+            }
+          }
+        }
+        &-message {
+          margin-top: 5px;
+          display: flex;
+          flex-direction: column;
+          textarea{
+            height: 200px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: solid 1px $color-primary;
+            color: $color-sky;
+            cursor: text;
+            resize:none;
             margin-top: 15px;
-          }
-          p {
-            font-family: $font-title;
-            font-weight: 900;
-            display: block;
-            margin: 0;
-            color: black;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-          }
-          &:hover {
-            background-color: $color-primary;
+            &:focus{
+              outline: solid $color-hover 1px;
+              border-color: $color-hover;
+              color: $color-hover;
+            }
+            &:active {
+              outline: solid $color-hover 1px;
+              border-color: $color-hover;
+            }
           }
         }
-      }
-      &-icons {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        margin-top: 25px;
-        img {
-          height: 35px;
-          width: 35px;
-          background-color: transparent;
-          border-radius: 50%;
-          border: solid 1px $color-sky;
-          &:hover {
-            background-color: get-opacity($color-sky, 0.2);
+        &-buttons {
+          display: flex;
+          gap: 15px;
+          &__send{
+            height: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            background-color: $color-hover;
+            border-radius: 5px;
+            border: solid $color-primary 2px;
+            cursor: pointer;
+            @include media(tablet){
+              margin-top: 15px;
+            }
+            p {
+              font-family: $font-title;
+              font-weight: 900;
+              display: block;
+              margin: 0;
+              color: black;
+              text-transform: uppercase;
+              letter-spacing: 3px;
+            }
+            &:hover {
+              background-color: $color-primary;
+            }
           }
         }
-        
+        &-icons {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          margin-top: 25px;
+          img {
+            height: 35px;
+            width: 35px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: solid 1px $color-sky;
+            &:hover {
+              background-color: get-opacity($color-sky, 0.2);
+            }
+          }
+          
+        }
+  
       }
-
     }
   }
 }

@@ -457,10 +457,6 @@ output {
 
 /* Media Queries Mixin
 **********************/
-html {
-  overflow-x: hidden;
-}
-
 body {
   user-select: none;
   background-color: #161616;
@@ -566,15 +562,10 @@ a {
 }
 
 .header-container {
-  position: fixed;
-  display: grid;
-  grid-template-columns: 200px calc(100vw - 200px);
-  z-index: 100;
-}
-.header-container .right-content {
   display: flex;
   width: 100%;
   height: 70px;
+  position: fixed;
   top: 0;
   background-color: #161616;
   z-index: 10;
@@ -583,10 +574,10 @@ a {
   align-items: center;
   padding-left: 15px;
 }
-.header-container .right-content img {
+.header-container img {
   cursor: pointer;
 }
-.header-container .right-content .content-tittle-h1 {
+.header-container .content-tittle-h1 {
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   position: absolute;
@@ -765,9 +756,9 @@ a {
 }
 
 .show-navbar {
-  display: none;
   height: 50px;
   width: 50px;
+  display: grid;
   place-content: center;
   position: relative;
   z-index: 1100;
@@ -859,14 +850,16 @@ a {
 
 .nav-principal {
   display: block;
-  width: auto;
+  width: 0;
   height: 100vh;
   position: fixed;
-  padding: 20px;
+  padding: 20px 0;
   top: 0;
   background-color: #161616;
   z-index: 1000;
   transition-duration: 0.5s;
+  visibility: hidden;
+  overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
   .nav-principal {

@@ -1,127 +1,140 @@
 doctype html
 html(lang="es")
 	head
-		include es/components/head.pug
+		include components/head.pug
 		title Riszart Daryl - Curriculum Vitae
 		meta(name="description", content="Riszart Daryl es un desarrollador web con experiencia en la creación de sitios web funcionales y atractivos para empresas y particulares. ¡Visita su sitio web ahora!")
 		//- link(rel="canonical", href="https://riszartdaryl.site/summary.html")
 		link(rel="stylesheet", href="https://riszart.github.io/briefcase-riszart-daryl/public/css/summary.css" defer)
 	body.container--summary
-		include es/components/pageLoad.pug
-		include es/components/nav.pug
-		include es/components/header.pug
-		main.summary-main
-			section.summary-main__inicio
-				div.summary-main__inicio-up
-					canvas.canvas-summary
-					h2 RISZART DARYL
-					h3 DESARROLLADOR WEB
-					p Desarrollador web con aproximadamente un año y medio de experiencia, realizando
-					p y estudiando proyectos web.
-			section.summary-main__line: div
-			section.summary-main__grid
-				div.grid-img.card
-					div.card2
-				div.profile#profile
-					h4 Perfil profesional
-					div.profile--efect 
-						div.profile--efect-content
-							section.profile--efect-content__up 
-								img(width="70px" height="70px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart.webp", alt="photo de riszart")
-								div
-									h5 Riszart Daryl
-									span Desarrollador Web
-							section.profile--efect-content__down 
-								p ¡Hola!
-								p Soy un desarrollador web con alrededor de un año y medio de experiencia. Durante este tiempo, he tenido la oportunidad de trabajar en una variedad de proyectos interesantes y desafiantes. Algunos de ellos incluyen el desarrollo de juegos utilizando la tecnología de canvas, la creación de estadísticas gráficas visualmente atractivas, la implementación de landing pages efectivas y la participación en la simulación de un ATM.
-								p Mi pasión por la tecnología impulsa mi compromiso en cada proyecto en el que me involucro. Disfruto de los desafíos que enfrento en el desarrollo web y siempre estoy buscando oportunidades para aprender y crecer en esta área.
-								p ¡Gracias por tu atención!
-				div.education#education
-					h4 Educación
-					div.education--efect
-						div.education--efect-content
-							section.education--efect-content__top 
-								h5 Plataforma de Platzi
-									span 
-										a(href="https://platzi.com/p/riszart/" target="_blank") << Ver Cursos Aprobados >>
-								h5 Cursos Profesionales en Línea 
-								ul
-									li Programación orientada a objetos, (OOP) con js
-									li Cierres y Alcance en js
-									li Matemáticas y Estadística con js
-									li Taller de creación del primer videojuego con js
-									li Programación en Git y GitHub
-									li Transformación y Transición en css
-									li Animaciones con CSS
-									li Diseño Web con css Grid y Flexbox
-									li Responsive Design: diseño móvil y de escritorio
-									li Diseño Web con HTML y CSS
-									li Programación del curso de Desarrollador Frontend con js
-							section.education--efect-content__middle 
-								h5 Instituto
-								span (Técnico en Mecatrónica Industrial)
-								ul
-									li Electrónica industrial
-									li Mecanica Industrial
-									li Diseño en Solidwork
-									li Ingles tecnico
-									li Programación en C++
-									li programación de PLC
-									li Programación de procesadores con MAPLA
-									li Neumática y Electroneumática
-									li Robótica Industrial
-							section.education--efect-content__down
-								h5 Preparación en academia
-								span (Aproximadamente 1 año de estudios)
-							section.education--efect-content__down
-								h5 Escuela secundaria
-								span (Estudios elementales realizados en la adolescencia en un colegio público)
-				div.experience#experience
-					h4 Experiencia laboral
-					div.experience--efect
-						div.experience--efect-content
-							h5 2021/08 - actualidad:
-								p freelancer front-end developer
-								ul 
-									li desarrollo de páginas web
-							h5 2021 - 2018:
-								p independiente
-								ul 
-									li Carpintería (ensamblado de muebles)
-									li Tapicería (restauración de asientos de automóviles)
-									li construcción (ayudante en construcción de viviendas)
-									li Electricista (instalaciones eléctricas en hogares)
-									li Electrónica (reparación de electrodomésticos)
-									li computación (mantenimiento de computadoras)
-									li Mecánica automotriz (cableado - planchado de autos)
-							h5 2017/07 - 2018/06:
-								p Instalación de ascensores
-								ul 
-									li ensamblado de ascensores en edificios
-							h5 2017/04 - 2017/01
-								p metalmecánica
-								ul 
-									li fabricación de caja de luz
-									li instalación de medidores en caja de luz
-							h5 2015/12 - 2016/04
-								p Museo de robótica y tecnología de Perú
-								ul 
-									li mantenimiento de los proyectos del museo 
-									li Desarrollo de nuevos proyectos robóticos para el museo
-									li Enseñanza de robótica básica
-				div.technologies#technologies
-					h4 tecnologías
-					div.technologies--efect
-						div.technologies--efect-content
-							img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/html-icon.svg", alt="lenguaje de programador web html")
-							img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/css-icon.svg", alt="lenguaje de programador web css")
-							img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="preprocesador de css, programador web sass")
-							img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/javascript-icon.svg", alt="lenguaje de programador web javascript")
-							img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/github-icon.svg", alt="repositorio para el almacenamiento de los proyectos")
-							img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/nodejs-icon.svg", alt="lenguaje de programador web nodejs")
-							img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/pug-js.svg", alt="preprocesador de html, programador web pug")
-							img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="freenwork de css, programador web tailwind")
-			section.summary-main__coments
-		include es/components/footer.pug
+		include components/pageLoad.pug
+		include components/header.pug
+		main.content-main
+			include components/nav.pug
+			div.left
+			div.summary-main
+				section.summary-main__inicio
+					div.summary-main__inicio-up
+						//- canvas.canvas-summary
+						h2 RISZART DARYL
+						h3 DESARROLLADOR WEB
+						p Desarrollador web con un año y medio de experiencia, desarrollando
+						p y estudiando proyectos web.
+				section.summary-main__line: div
+				section.summary-main__grid
+					div.grid-img.card
+						div.card2
+					div.profile#profile
+						h4 Perfil profesional
+						div.profile--efect 
+							div.profile--efect-content
+								section.profile--efect-content__up 
+									img(width="70px" height="70px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/web/riszart.webp", alt="photo de riszart")
+									div
+										h5 Riszart Daryl
+										span Desarrollador Web
+								section.profile--efect-content__down 
+									p ¡Hola!
+									p Soy desarrollador web con alrededor de un año y medio de experiencia. Durante este tiempo, he tenido la oportunidad de trabajar en una variedad de proyectos interesantes y desafiantes. Algunos de ellos incluyen el desarrollo de juegos utilizando la tecnología de canvas, la creación de estadísticas gráficas visualmente atractivas, la implementación de landing pages y la participación en la simulación de un ATM.
+									p Mi pasión por la tecnología impulsa mi compromiso en cada proyecto en el que me involucro. Disfruto de los desafíos que enfrento en el desarrollo web y siempre estoy buscando oportunidades para aprender y crecer en esta área.
+									p ¡Gracias por tu atención!
+					div.education#education
+						h4 Educación
+						div.education--efect
+							div.education--efect-content
+								section.education--efect-content__top 
+									h5 Plataforma de Platzi
+										span 
+											a(href="https://platzi.com/p/riszart/" target="_blank") << Ver Cursos Aprobados >>
+									h5 Cursos Profesionales en Línea 
+									ul
+										li Arquitectura de frontend
+										li Base de datos SQL
+										li Usos de APIs con js, (fetch y axios)
+										li Programación orientada a objetos, (OOP) con js
+										li Cierres y Alcance en js
+										li Matemáticas y Estadística con js
+										li Taller de creación del primer videojuego con js
+										li Programación en Git y GitHub
+										li Transformación y Transición en css
+										li Animaciones con CSS
+										li Diseño Web con css Grid y Flexbox
+										li Responsive Design: diseño móvil y de escritorio
+										li Diseño Web con HTML y CSS
+										li Programación del curso de Desarrollador Frontend con js
+								section.education--efect-content__middle 
+									h5 Instituto
+									span (Técnico en Mecatrónica Industrial)
+									ul
+										li Programación en C++
+										li programación de PLC
+										li Ingles tecnico
+										li Programación de procesadores con MAPLA
+										li Electrónica industrial
+										li Mecanica Industrial
+										li Diseño en Solidwork
+										li Neumática y Electroneumática
+										li Robótica Industrial
+								section.education--efect-content__down
+									h5 Preparación en academia
+									span (Aproximadamente 1 año de estudios)
+								section.education--efect-content__down
+									h5 Escuela secundaria
+									span (Estudios elementales realizados en la adolescencia en un colegio público)
+					div.experience#experience
+						h4 Experiencia laboral
+						div.experience--efect
+							div.experience--efect-content
+								h5 2021/08 - actualidad:
+									p freelancer front-end developer
+									ul 
+										li desarrollo tienda web z3dgina
+										li desarrollo de pagina web Riszshop
+										li desarrollo de pagina web Riszmovie
+										li desarrollo de landing page HH
+										li desarrollo de landing page de turismo
+										li desarrollo de landing page de comida peruana
+										li desarrollo de riszbank 
+										li desarrollo de riszgame
+										li desarrollo proyecto de estadistica
+								h5 2021 - 2018:
+									p independiente
+									ul 
+										li Carpintería (ensamblado de muebles)
+										li Tapicería (restauración de asientos de automóviles)
+										li construcción (ayudante en construcción de viviendas)
+										li Electricista (instalaciones eléctricas en hogares)
+										li Electrónica (reparación de electrodomésticos)
+										li computación (mantenimiento de computadoras)
+										li Mecánica automotriz (cableado - planchado de autos)
+								h5 2017/07 - 2018/06:
+									p Instalación de ascensores
+									ul 
+										li ensamblado de ascensores en edificios
+								h5 2017/04 - 2017/01
+									p metalmecánica
+									ul 
+										li fabricación de caja de luz
+										li instalación de medidores en caja de luz
+								h5 2015/12 - 2016/04
+									p Museo de robótica y tecnología de Perú
+									ul 
+										li mantenimiento de los proyectos del museo 
+										li Desarrollo de nuevos proyectos robóticos para el museo
+										li Enseñanza de robótica básica
+					div.technologies#technologies
+						h4 tecnologías
+						div.technologies--efect
+							div.technologies--efect-content
+								img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/html-icon.svg", alt="lenguaje de programador web html")
+								img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/css-icon.svg", alt="lenguaje de programador web css")
+								img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/sass-icon.svg", alt="preprocesador de css, programador web sass")
+								img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/javascript-icon.svg", alt="lenguaje de programador web javascript")
+								img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/github-icon.svg", alt="repositorio para el almacenamiento de los proyectos")
+								img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/nodejs-icon.svg", alt="lenguaje de programador web nodejs")
+								img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/pug-js.svg", alt="preprocesador de html, programador web pug")
+								img(width="100px" height="100px" src="https://riszart.github.io/briefcase-riszart-daryl/public/img/svg/tailwindcss-text.svg", alt="freenwork de css, programador web tailwind")
+				section.summary-main__coments
+		include components/footer.pug
 		script(src="https://riszart.github.io/briefcase-riszart-daryl/public/js/summary.js" defer)
-		include es/components/scriptGeneral.pug 
+		include components/scriptGeneral.pug 
