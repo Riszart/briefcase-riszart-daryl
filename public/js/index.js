@@ -189,19 +189,30 @@ async function moveScreen(){
     3:"SASS",
     4:"HTML",
     5:"PUG",
-    6:"TailwindCSS",
+    // 6:"TailwindCSS",
   } 
   await interval("start")
   for(let element in textNode){
     await showMsm(textNode[element])
     await removeMsm()
   }
-  await showMsm("Freelance")
+  await showMsm("TailwindCSS")
+  await checkEvent()
   await interval("end")
-  document.querySelector('.title-h2-index').style.display = 'none'
-  if(window.innerWidth > 775){
-    navSelect.classList.add('modified')
-    showModied()
-  }
 }
 window.addEventListener("load", moveScreen)
+
+//---------------------
+
+async function checkEvent(){
+  if(window.innerWidth > 768)return
+  const navPrincipal = document.querySelector('.nav-principal ')
+  const showNav = document.querySelector('.click-element')
+  navPrincipal.classList.add('modified')
+  showNav.classList.add('clicked')
+  const navSelect = document.querySelector('.nav-principal')
+  navSelect.style.width = '100vw'
+  navSelect.style.padding = '20px 20px'
+  navSelect.style.visibility = 'visible' 
+}
+

@@ -2,19 +2,20 @@
 .container--contact {
   height: auto;
   display: grid;
-  grid-template-columns: 200px calc(100vw - 200px);
+  grid-template-columns: 100vw;
   @include media(sm){
     width: 90%;
   }
   @include media(tablet){
-    width: 90%;
+    grid-template-columns: 15vw 85vw;
+    // width: 90%;
   }
-  @include media(desktop-s){
-    width: 80%;
-  }
-  @include media(desktop-m){
-    width: 1000px;
-  }
+  // @include media(desktop-s){
+  //   width: 80%;
+  // }
+  // @include media(desktop-m){
+  //   width: 1000px;
+  // }
   .right{
     .contact {
       padding: 100px 10px 20px;

@@ -9,7 +9,10 @@ body {
   width: 100%;
   .content-main{
     display: grid;
-    grid-template-columns: 200px calc(100vw - 200px);
+    grid-template-columns: 100vw;
+    @include media(tablet){
+      grid-template-columns:200px calc(100vw - 200px);
+    }
     .summary-main {
       margin: auto;
       @include media(sm){

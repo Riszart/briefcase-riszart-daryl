@@ -28,6 +28,7 @@
   transition: height .5s;
   overflow: hidden;
   @include media(tablet){
+    left: calc(50% + 100px);
     height: 146px;
     transition: ease-in top 1s .5s, ease-out left 3s, height 0.5s, transform 2s;
   }

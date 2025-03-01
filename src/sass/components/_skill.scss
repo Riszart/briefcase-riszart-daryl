@@ -9,19 +9,20 @@
   }
 }
 .container-skill {
-  // min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
   display: grid;
-  grid-template-columns:200px calc(100vw - 200px);
-  // @include media(sm){
-  //   width: 90%;
-  // }
-  // @include media(tablet){
-  //   width: 90%;
-  // }
-  // @include media(desktop-s){
-  // }
-  // @include media(desktop-m){
-  // }
+  grid-template-columns:100vw;
+  @include media(sm){
+    width: 90%;
+  }
+  @include media(tablet){
+    width: 90%;
+    grid-template-columns:200px calc(100vw - 200px);
+  }
+  @include media(desktop-s){
+  }
+  @include media(desktop-m){
+  }
   .right{
     h2 {
       padding-top: 90px;

@@ -34,7 +34,7 @@ window.addEventListener('load', ()=>{
 			break
 		case `/skill`:
 		case '/public/html/skill.html':
-			setStyle('skill',tittleH1,loadTittlePage)
+			setStyle('my-skill',tittleH1,loadTittlePage)
 			break
 		case `/portafolio`:
 		case '/public/html/portafolio.html':

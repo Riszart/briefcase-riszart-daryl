@@ -638,6 +638,7 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .title-h2-index {
+    left: calc(50% + 100px);
     height: 146px;
     transition: ease-in top 1s 0.5s, ease-out left 3s, height 0.5s, transform 2s;
   }
@@ -770,7 +771,7 @@ a {
 }
 
 .show-navbar {
-  display: none;
+  display: block;
   position: fixed;
   right: 5px;
   height: 50px;
@@ -781,7 +782,6 @@ a {
   border-radius: 5px;
   opacity: 1;
   margin-top: 9px;
-  background-color: #161616;
   overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
@@ -887,13 +887,44 @@ a {
     border-right: solid #00ff75 2px;
   }
 }
+.nav-principal .shadowm_back {
+  width: 120vh;
+  height: 120vh;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  z-index: 1;
+  border-radius: 50%;
+  top: -5vh;
+  left: -36vh;
+  transform: rotate(90deg);
+  animation: orbital 3s linear infinite;
+  overflow: hidden;
+}
+.nav-principal .shadowm_back .blackShadow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #0080ff;
+}
+.nav-principal .shadowm_back .greenShadow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #00ff75;
+}
 .nav-principal .nav-container {
+  position: relative;
+  z-index: 2;
   min-width: 158px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: #161616;
+  outline: solid #161616 15px;
 }
 .nav-principal .nav-container__logo {
   display: flex;
@@ -1022,6 +1053,15 @@ a {
   text-align: center;
   margin-bottom: 0;
   color: #ffffff;
+}
+
+@keyframes orbital {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
