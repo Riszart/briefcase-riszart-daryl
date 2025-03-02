@@ -27,7 +27,7 @@ if(window.innerWidth < 768){
   changeState()
   navSelect.classList.add('modified')
   console.log(window.location.pathname)
-  if(window.location.pathname != "/public/html/index.html"){
+  if(window.location.pathname != ("/index.html" && "/" && "/public/html/index.html")){
     navSelect.classList.remove('modified')
   }else{
     burger.style.display = "none"

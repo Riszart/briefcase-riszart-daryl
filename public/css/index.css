@@ -873,7 +873,7 @@ a {
   padding: 20px;
   top: 0;
   background-color: #161616;
-  z-index: 1000;
+  z-index: 10;
   transition-duration: 0.5s;
   overflow: hidden;
 }
@@ -897,7 +897,7 @@ a {
   z-index: 1;
   border-radius: 50%;
   top: -5vh;
-  left: -36vh;
+  right: calc(50vw - 60vh);
   transform: rotate(90deg);
   animation: orbital 3s linear infinite;
   overflow: hidden;
