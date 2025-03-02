@@ -1,5 +1,8 @@
+
+// console.log('skill')
+
 const contentCourses = document.querySelector('.courses-conteiner')
-URL_DATA_COURSE = 'https://gist.githubusercontent.com/Riszart/b981c4925c007f6a25c29e88b0ca1466/raw/8a172f7dc456560a087e292e482897a0fa856f65/projects-portfolio.json'
+URL_DATA_COURSE = 'https://gist.githubusercontent.com/Riszart/ff8ec2bd9f5f7e8e61483a6d049246c3/raw/ea168fecb09c5da8fc485066dd5fda161b171206/database-course.json'
 
 window.addEventListener('load', ()=>{
   document.querySelector('#skill-html').addEventListener('click', ()=>loadData('html'))
@@ -18,7 +21,6 @@ function loadData(name){
       return response.json()
     })
     .then(dataCurses=>{
-      // console.log(dataCurses)
       const positionH2Ttop  = document.querySelector('.title-h2__select').offsetTop
       dataCurses.forEach(course => {
         let value = course.courses.find(element=>element === name)
@@ -45,7 +47,7 @@ function loadData(name){
         }
       })
       window.scroll({top: positionH2Ttop - 80,behavior: 'smooth'});
-      
+
     })
     .catch(error=>{
     console.log('Error:', error)
