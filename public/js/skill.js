@@ -36,7 +36,7 @@ function loadData(name){
           <div class="course-description">
             <div class="course-name">
               <p class="course-name_percentage">${course.title}</p>
-              <span>100%</span>
+              <span>completed</span>
             </div>
             <div class="course-extra">
               <span class="course-name_rest">${course.coursecareer}</span>
