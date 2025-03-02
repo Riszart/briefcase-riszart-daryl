@@ -1036,7 +1036,7 @@ footer .right-content .footer-down p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  z-index: 1000;
+  z-index: 1;
   border-radius: 50%;
   top: -10vh;
   right: calc(50vw - 60vh);
