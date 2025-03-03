@@ -107,7 +107,7 @@ class Project{
       document.querySelector(".box-float__project-name").innerText = "none"
       document.querySelector(".box-float__project-description").innerText = "none"
       document.querySelector(".box-float__project-programs").innerText = "none"
-      document.querySelector(".show-navbar").style.display = "grid"
+      // document.querySelector(".show-navbar").style.display = "grid"
       document.querySelector(".header-container").style.filter = "blur(0)"
     },400)
     const boxFloat = document.querySelector(".box-float")
