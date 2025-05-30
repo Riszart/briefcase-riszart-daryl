@@ -714,6 +714,7 @@ a {
   border-radius: 5px;
   cursor: pointer;
   z-index: 9;
+  object-fit: cover;
   position: relative;
   height: inherit;
   width: inherit;
