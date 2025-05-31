@@ -1,4 +1,4 @@
-const URL_DATA_PROJECTS = 'https://gist.githubusercontent.com/Riszart/b981c4925c007f6a25c29e88b0ca1466/raw/c62ef06d9db1bd24f5561504b42366ec2ddc889d/projects-portfolio.json'
+const URL_DATA_PROJECTS = 'https://gist.githubusercontent.com/Riszart/b981c4925c007f6a25c29e88b0ca1466/raw/3082ead770fa235df79ce0144663afaf6e66eef4/projects-portfolio.json'
 
 fetch(URL_DATA_PROJECTS)
   .then(response=>response.json())
